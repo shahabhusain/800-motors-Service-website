@@ -1,0 +1,45 @@
+{
+  "landingPage": {
+    "heroSection": {
+      "title": {
+        "span1": "Expert Car Care in Dubai",
+        "span2": "– Anytime, Anywhere Service"
+      },
+      "features": {
+        "247Support": "24/7 Car Service Support",
+        "expertMechanics": "Expert Mechanics You Can Trust",
+        "mobileWorkshop": "Mobile And Workshop Repairs",
+        "fastResponse": "Fast Response Every Time"
+      },
+      "reviews": {
+        "googleRating": "Google ★★★★★ 4.9",
+        "reviewsCount": "(2k+ Reviews)"
+      },
+      "buttons": {
+        "fixMyCar": "Fix My Car",
+        "callNow": "Call Now"
+      }
+    },
+    "form": {
+      "placeholders": {
+        "fullName": "Full name",
+        "email": "Email address",
+        "phone": "Phone"
+      },
+      "labels": {
+        "selectServices": "Select services",
+        "message": "Enter your message"
+      },
+      "textarea": {
+        "placeholder": "Describe the issue..."
+      },
+      "services": {
+        "battery": "Battery",
+        "tyre": "Tyre",
+        "mechanics": "Mechanics",
+        "other": "Other"
+      },
+      "submitButton": "Submit Request"
+    }
+  }
+}

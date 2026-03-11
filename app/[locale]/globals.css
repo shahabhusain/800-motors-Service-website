@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import "tailwindcss";
+
+/* Add dark mode variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Your custom styles below */
+
+body{
+      font-family: "Outfit", sans-serif;
+}
+
+.swiper-pagination-bullet{
+  width: 50px !important;
+  border-radius: 10px !important;
+  background-color: rgb(187, 187, 187) !important;
+}
+
+ .swiper-pagination-bullet-active{
+  background-color: orange !important;
+ }

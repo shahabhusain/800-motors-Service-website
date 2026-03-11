@@ -1,0 +1,45 @@
+{
+  "landingPage": {
+    "heroSection": {
+      "title": {
+        "span1": "خدمة صيانة السيارات في دبي",
+        "span2": "– خدمة متنقلة وورشة على مدار الساعة"
+      },
+      "features": {
+        "247Support": "دعم صيانة السيارات 24/7",
+        "expertMechanics": "ميكانيكيون خبراء تثق بهم",
+        "mobileWorkshop": "إصلاحات متنقلة وفي الورشة",
+        "fastResponse": "استجابة سريعة في كل مرة"
+      },
+      "reviews": {
+        "googleRating": "جوجل ★★★★★ ٤.٩",
+        "reviewsCount": "(أكثر من ٢٠٠٠ تقييم)"
+      },
+      "buttons": {
+        "fixMyCar": "اصلاح سيارتي",
+        "callNow": "اتصل الآن"
+      }
+    },
+    "form": {
+      "placeholders": {
+        "fullName": "الاسم الكامل",
+        "email": "البريد الإلكتروني",
+        "phone": "رقم الهاتف"
+      },
+      "labels": {
+        "selectServices": "اختر الخدمات",
+        "message": "أدخل رسالتك"
+      },
+      "textarea": {
+        "placeholder": "وصف المشكلة..."
+      },
+      "services": {
+        "battery": "بطارية",
+        "tyre": "إطارات",
+        "mechanics": "ميكانيكا",
+        "other": "أخرى"
+      },
+      "submitButton": "إرسال الطلب"
+    }
+  }
+}
