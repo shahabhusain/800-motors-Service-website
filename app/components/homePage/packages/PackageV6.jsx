@@ -9,7 +9,7 @@ const PackageV6 = ({data}) => {
       {data.map((item, index) => (
         <div 
           key={index} 
-          className='bg-white dark:bg-gray-900 w-full p-4 rounded-2xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow'
+          className='bg-white dark:bg-gray-900 w-full flex flex-col gap-y-2 p-4 rounded-2xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow'
         >
           <h1 className='md:text-[24px] text-[20px] font-bold text-[#121212] dark:text-white'>
             {item.title}
@@ -50,7 +50,7 @@ const PackageV6 = ({data}) => {
           </div>
           
           {/* Services List */}
-          <div className='flex flex-col gap-y-3 mt-4'>
+          <div className='flex flex-col gap-y-4 mt-4'>
             {item.services.map((service, i) => (
               <div key={i} className='flex items-center gap-3'>
                 <span className='bg-[#6DD176] dark:bg-green-600/30 p-1 rounded-full text-white dark:text-green-500'>

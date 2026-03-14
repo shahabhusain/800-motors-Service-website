@@ -72,8 +72,8 @@ const Hero = () => {
               <PhoneCall className="w-5 h-5" /> 80064878
             </button>
 
-           <button className="px-7 md:py-3 py-2 border-2 border-[#00AF10] text-gray-800 hover:bg-[#12e32339] dark:text-white hover:text-black dark:hover:text-white font-semibold rounded-lg transition flex items-center gap-2">
-  <FaWhatsapp className="w-5 h-5 text-[#25D366]" />
+           <button className="px-7 md:py-3 py-2 border-2 bg-green-500 text-white  text-gray-800 hover:bg-[#12e32339] dark:text-white hover:text-black dark:hover:text-white font-semibold rounded-lg transition flex items-center gap-2">
+  <FaWhatsapp className="w-5 h-5 " />
   Whatsapp
 </button>
           </div>

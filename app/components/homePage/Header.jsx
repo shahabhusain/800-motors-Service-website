@@ -58,13 +58,13 @@ const Header = () => {
               href="/" 
               className="relative group overflow-hidden"
             >
-              <div className="flex items-center text-xl md:text-2xl font-bold">
+              <div className="flex uppercase items-center text-xl md:text-2xl font-bold">
                 <span className="text-gray-900 dark:text-white">800</span>
                 <span className="text-orange-500 dark:text-orange-500 relative">
                   motor
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
                 </span>
-                <span className="text-gray-900 dark:text-white">guro</span>
+                <span className="text-gray-900 dark:text-white">guru</span>
               </div>
             </Link>
 

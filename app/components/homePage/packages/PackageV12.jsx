@@ -36,7 +36,7 @@ const PackageCard = ({ item, index }) => {
   
   return (
     <div 
-      className={`w-full p-4 rounded-2xl border transition-all duration-300 ${
+      className={`w-full p-4 flex flex-col gap-y-2 rounded-2xl border transition-all duration-300 ${
         isDisabled 
           ? 'pointer-events-none opacity-60' 
           : 'hover:shadow-lg'
@@ -125,7 +125,7 @@ const PackageCard = ({ item, index }) => {
       </div>
       
       {/* Services List */}
-      <div className='flex flex-col gap-y-3 mt-4'>
+      <div className='flex flex-col gap-y-4 mt-4'>
         {item.services.map((service, i) => (
           <div key={i} className='flex items-center gap-3'>
             <span className={`p-1 rounded-full ${

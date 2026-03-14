@@ -9,7 +9,7 @@ const PakageV4 = ({data}) => {
       {data.map((item, index) => (
         <div 
           key={index} 
-          className='bg-white dark:bg-gray-900 w-full p-4 rounded-2xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow'
+          className='bg-white dark:bg-gray-900 flex flex-col gap-y-2 w-full p-4 rounded-2xl border border-gray-100 dark:border-gray-800 hover:shadow-lg transition-shadow'
         >
           <h1 className='md:text-[24px] text-[20px] font-bold text-[#121212] dark:text-white'>
             {item.title}
@@ -50,7 +50,7 @@ const PakageV4 = ({data}) => {
           </div>
           
           {/* Services List */}
-          <div className='flex flex-col gap-y-3 mt-4'>
+          <div className='flex flex-col gap-y-4 mt-4'>
             {item.services.map((service, i) => (
               <div key={i} className='flex items-center gap-3'>
                 <span className='bg-[#6DD176] dark:bg-green-600/30 p-1 rounded-full text-white dark:text-green-500'>
@@ -64,7 +64,7 @@ const PakageV4 = ({data}) => {
           </div>
           
           {/* Button */}
-          <button className='bg-orange-500 dark:bg-orange-600 w-full md:text-[18px] text-[16px] font-semibold text-white py-2 mt-6 px-6 rounded-xl hover:bg-orange-600 dark:hover:bg-orange-500 transition-colors'>
+          <button className='bg-orange-500 dark:bg-orange-600 w-full md:text-[18px] text-[16px] font-semibold text-white py-3 mt-6 px-6 rounded-xl hover:bg-orange-600 dark:hover:bg-orange-500 transition-colors'>
             Buy Now
           </button>
         </div>

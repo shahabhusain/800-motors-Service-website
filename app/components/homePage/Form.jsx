@@ -83,7 +83,7 @@ const Form = () => {
               </label> */}
               <textarea
                 rows="3"
-                placeholder="enter your message"
+                placeholder="Message"
                 className="w-full px-4 py-2 bg-white dark:bg-gray-800  text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none resize-none transition"
               ></textarea>
             </div>
