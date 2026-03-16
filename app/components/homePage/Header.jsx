@@ -22,6 +22,7 @@ const Header = () => {
 
   const navLinks = [
     { href: "/", label: "Home" },
+     { href: "/about-us", label: "About Us" },
     { href: "/services", label: "Services" },
     { href: "/brands", label: "Brands" },
     { href: "/packages", label: "Packages" },
@@ -40,7 +41,7 @@ const Header = () => {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50  flex justify-center transition-all duration-500 ${
           scrolled ? 'pt-2' : ''
         }`}
       >
@@ -51,7 +52,7 @@ const Header = () => {
               : 'max-w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md'
           }`}
         >
-          <div className="w-[90%] mx-auto sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          <div className="w-[90%] mx-auto max-w-7xl sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             
             {/* Logo with animation */}
             <Link 

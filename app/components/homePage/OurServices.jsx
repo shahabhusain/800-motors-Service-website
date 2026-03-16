@@ -67,7 +67,7 @@ const OurServices = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
-      className='flex items-center flex-col md:flex-row md:gap-32 gap-12 justify-between md:w-[85%] w-[95%] mx-auto my-20 overflow-hidden'
+      className='flex items-center flex-col md:flex-row md:gap-32 gap-12 justify-between md:w-[85%] w-[95%] max-w-6xl mx-auto my-20 overflow-hidden'
     >
       {/* Left Content */}
       <motion.div 

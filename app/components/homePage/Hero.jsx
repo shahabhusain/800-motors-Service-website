@@ -25,7 +25,7 @@ const Hero = () => {
 
   return (
     <section className="w-full bg-white dark:bg-black transition-colors duration-300 mt-6">
-      <div className=" md:w-[85%] w-[95%] mx-auto flex flex-col lg:flex-row items-center justify-between md:pt-28 pt-16 pb-16">
+      <div className=" md:w-[85%] max-w-7xl w-[95%] mx-auto flex flex-col lg:flex-row items-center justify-between md:pt-28 pt-16 pb-16">
         
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-y-6 lg:w-[60%]">
