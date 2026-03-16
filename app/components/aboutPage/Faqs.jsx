@@ -36,12 +36,12 @@ const Faqs = () => {
       <h1 className='uppercase text-[46px] font-bold text-center mb-10'>Frequently Asked Questions</h1>
       <div className='flex flex-col gap-y-4'>
         {faqs.map((item, index) => (
-            <div key={index} className='bg-[#F8F8F8] p-5 rounded-lg'>
+            <div key={index} className='bg-[#F8F8F8] dark:bg-gray-950 p-5 rounded-lg'>
                 <div 
                   className='flex items-center justify-between cursor-pointer'
                   onClick={() => toggleFaqs(index)}
                 >
-                    <h1 className='text-[18px] font-semibold text-[#434343]'>{item.question}</h1>
+                    <h1 className='text-[18px] font-semibold text-[#434343] dark:text-gray-300'>{item.question}</h1>
                     <span className='text-[24px] font-bold'>{openFaqs === index ? "-" : "+"}</span>
                 </div>
 
@@ -50,7 +50,7 @@ const Faqs = () => {
                   className={`overflow-hidden transition-all duration-500 ease-in-out`}
                   style={{ maxHeight: openFaqs === index ? "500px" : "0" }}
                 >
-                    <p className='mt-3 text-[#555]'>{item.answer}</p>
+                    <p className='mt-3 text-[#555] dark:text-gray-400'>{item.answer}</p>
                 </div>
             </div>
         ))}

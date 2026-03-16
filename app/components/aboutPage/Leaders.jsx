@@ -30,7 +30,7 @@ const Leaders = () => {
   ]
 
   return (
-    <div className="bg-[#F8F8F8] mt-20">
+    <div className="bg-[#F8F8F8] dark:bg-gray-950 mt-20">
       <div className="flex items-center gap-12 max-w-7xl justify-between w-[85%] mx-auto">
 
         {/* Leaders Images */}
@@ -67,17 +67,17 @@ const Leaders = () => {
 
         {/* Text */}
         <div className="w-[40%] flex flex-col gap-y-3">
-          <h1 className="text-[#121212] text-[40px] font-bold">
+          <h1 className="text-[#121212] dark:text-white text-[40px] font-bold">
             Meet Our Leaders at 800 Motor Guru
           </h1>
 
-          <p className="text-[#00000099] text-[16px]">
+          <p className="text-[#00000099] dark:text-gray-300 text-[16px]">
             Our leadership team brings years of automotive expertise and
             innovation to deliver reliable and professional services across
             the UAE.
           </p>
 
-          <p className="text-[#00000099] text-[16px]">
+          <p className="text-[#00000099] dark:text-gray-300 text-[16px]">
             With a strong focus on customer satisfaction, our leaders ensure
             every service maintains the highest quality standards.
           </p>
