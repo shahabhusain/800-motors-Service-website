@@ -11,7 +11,8 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
-  const dropdownRefs = useRef({});
+  const [dropdownOffsets, setDropdownOffsets] = useState({});
+  const buttonRefs = useRef({});
   const timeoutRef = useRef(null);
   const pathname = usePathname();
 
@@ -22,6 +23,29 @@ const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Calculate offsets for dropdowns to center them
+  useEffect(() => {
+    if (openDropdown && buttonRefs.current[openDropdown]) {
+      const button = buttonRefs.current[openDropdown];
+      const buttonRect = button.getBoundingClientRect();
+      const dropdownWidth = getDropdownWidth(
+        navLinks.find(link => link.label === openDropdown)
+      );
+      
+      // Calculate the numeric value from the width string (e.g., "960px" -> 960)
+      const widthNum = parseInt(dropdownWidth);
+      
+      // Calculate offset to center the dropdown under the button
+      const buttonCenter = buttonRect.left + (buttonRect.width / 2);
+      const dropdownLeft = buttonCenter - (widthNum / 2);
+      
+      setDropdownOffsets(prev => ({
+        ...prev,
+        [openDropdown]: dropdownLeft
+      }));
+    }
+  }, [openDropdown]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -104,12 +128,11 @@ const Header = () => {
     { 
       href: "/brands", 
       label: "Brands",
-      columns: 2,
+      columns: 3,
       dropdown: [
         { category: "Luxury", items: ["BMW", "Mercedes", "Audi", "Lexus"] },
         { category: "Mainstream", items: ["Toyota", "Honda", "Ford", "Nissan"] },
         { category: "European", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
-        { category: "Asian", items: ["Hyundai", "Kia", "Mazda", "Mitsubishi"] }
       ]
     },
     { 
@@ -177,9 +200,9 @@ const Header = () => {
   const getDropdownWidth = (link) => {
     if (!link.dropdown) return 'auto';
     
-    // Base width per column (approximately 220px)
+    // Base width per column (approximately 240px)
     const baseColumnWidth = 240;
-    const columns = link.columns || 1;
+    const columns = link.columns || 2;
     const calculatedWidth = columns * baseColumnWidth;
     
     return `${calculatedWidth}px`;
@@ -228,8 +251,8 @@ const Header = () => {
                   {link.dropdown ? (
                     <>
                       <Link
-                         href={link.href}
-                        ref={el => dropdownRefs.current[link.label] = el}
+                        href={link.href}
+                        ref={el => buttonRefs.current[link.label] = el}
                         className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group ${
                           isActiveLink(link.href)
                             ? "text-orange-500 bg-orange-500/10"
@@ -245,24 +268,23 @@ const Header = () => {
                         />
                       </Link>
                       
-                      {/* Dropdown Menu with Dynamic Width */}
-                      {openDropdown === link.label && (
+                      {/* Centered Dropdown Menu with Dynamic Width */}
+                      {openDropdown === link.label && dropdownOffsets[link.label] && (
                         <div 
-                          className="absolute top-full left-0 mt-2 animate-in fade-in slide-in-from-top-2 duration-200"
-                          style={{ width: getDropdownWidth(link) }}
+                          className="fixed mt-2 animate-in fade-in slide-in-from-top-2 duration-200"
+                          style={{ 
+                            width: getDropdownWidth(link),
+                            left: dropdownOffsets[link.label],
+                            top: buttonRefs.current[link.label]?.getBoundingClientRect().bottom + 8
+                          }}
                         >
+                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white dark:bg-gray-900 border-l border-t border-gray-200 dark:border-gray-800 rotate-45"></div>
                           <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-2xl overflow-hidden">
-                            {/* Dropdown Header */}
-                            <div className="px-5 py-3 bg-gradient-to-r from-orange-500/5 to-transparent border-b border-gray-200 dark:border-gray-800">
-                              <span className="text-xs font-medium text-orange-500 uppercase tracking-wider">
-                                {link.label}
-                              </span>
-                            </div>
-                            
                             {/* Dropdown Content */}
-                            <div className={`p-5 grid gap-6`} 
+                            <div 
+                              className="p-5 grid gap-6" 
                               style={{
-                                gridTemplateColumns: `repeat(${link.columns || 1}, minmax(0, 1fr))`
+                                gridTemplateColumns: `repeat(${link.columns || 2}, minmax(0, 1fr))`
                               }}
                             >
                               {link.dropdown.map((category, idx) => (
@@ -275,10 +297,9 @@ const Header = () => {
                                       <li key={itemIdx}>
                                         <Link
                                           href={`${link.href}/${item.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-')}`}
-                                          className="group flex items-center gap-2 px-3 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 hover:bg-orange-500/5 rounded-lg transition-all duration-200"
+                                          className="group flex items-center gap-2 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-all duration-200"
                                           onClick={() => setOpenDropdown(null)}
                                         >
-                                          <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-orange-500 transition-colors"></span>
                                           <span>{item}</span>
                                         </Link>
                                       </li>
@@ -287,18 +308,6 @@ const Header = () => {
                                 </div>
                               ))}
                             </div>
-                            
-                            {/* Dropdown Footer with CTA
-                            <div className="px-5 py-3 bg-gray-50 dark:bg-gray-800/50 border-t border-gray-200 dark:border-gray-800">
-                              <Link
-                                href={link.href}
-                                className="text-xs text-orange-500 hover:text-orange-600 font-medium flex items-center gap-1 group"
-                                onClick={() => setOpenDropdown(null)}
-                              >
-                                View all {link.label.toLowerCase()}
-                                <span className="group-hover:translate-x-1 transition-transform">→</span>
-                              </Link>
-                            </div> */}
                           </div>
                         </div>
                       )}
