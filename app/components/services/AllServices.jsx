@@ -72,7 +72,8 @@ const AllServices = () => {
   ];
 
   return (
-    <div className="w-[85%] max-w-7xl mx-auto py-12">
+   <div className=" bg-[#f8f8f8]">
+       <div className="w-[85%] max-w-7xl mx-auto py-12 mb-12">
       {/* Simple Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-semibold mb-4 text-gray-800">
@@ -114,25 +115,8 @@ const AllServices = () => {
           );
         })}
       </div>
-
-      {/* Simple CTA */}
-      <div className="mt-16 text-center">
-        <div className="bg-orange-50 rounded-3xl p-8 md:p-12 border border-gray-300">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-            Need a Custom Service?
-          </h2>
-          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-            Contact us for specialized automotive services tailored to your needs
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center px-8 py-4 bg-orange-600 text-white font-semibold rounded-full hover:bg-orange-700"
-          >
-            Get in Touch <FaArrowRight className="ml-2" />
-          </a>
-        </div>
-      </div>
     </div>
+   </div>
   );
 };
 

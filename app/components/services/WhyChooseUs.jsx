@@ -51,7 +51,8 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <div className="w-[85%] max-w-7xl mx-auto py-16">
+       <div className=' bg-[#f8f8f8]'>
+          <div className="w-[85%] max-w-7xl mx-auto py-16">
       {/* Header Section */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-semibold mb-4">
@@ -96,6 +97,7 @@ const WhyChooseUs = () => {
          </div>
   
     </div>
+       </div>
   );
 };
 

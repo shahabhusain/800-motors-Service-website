@@ -211,18 +211,12 @@ const Header = () => {
   return (
     <>
       <header 
-        className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500 ${
-          scrolled ? 'pt-2' : ''
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500`}
       >
         <div 
-          className={`w-full transition-all duration-500 ${
-            scrolled 
-              ? 'max-w-[95%] lg:max-w-[90%] rounded-2xl border border-gray-200/50 dark:border-gray-800/50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl shadow-lg' 
-              : 'max-w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md'
-          }`}
+          className={`w-full transition-all duration-500 max-w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md `}
         >
-          <div className="w-[90%] mx-auto max-w-7xl sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+          <div className="w-[95%] mx-auto max-w-7xl h-16 flex items-center justify-between">
             
             {/* Logo with animation */}
             <Link 
@@ -240,7 +234,7 @@ const Header = () => {
             </Link>
 
             {/* Desktop Navigation with Hover Dropdowns */}
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden md:flex items-center gap-4">
               {navLinks.map((link) => (
                 <div 
                   key={link.href} 
@@ -253,11 +247,7 @@ const Header = () => {
                       <Link
                         href={link.href}
                         ref={el => buttonRefs.current[link.label] = el}
-                        className={`flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group ${
-                          isActiveLink(link.href)
-                            ? "text-orange-500 bg-orange-500/10"
-                            : "text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500 hover:bg-gray-100 dark:hover:bg-gray-800/50"
-                        }`}
+                        className={`flex items-center gap-0 rounded-lg text-sm font-medium transition-all duration-200 group`}
                       >
                         {link.label}
                         <ChevronDown 
@@ -271,7 +261,7 @@ const Header = () => {
                       {/* Centered Dropdown Menu with Dynamic Width */}
                       {openDropdown === link.label && dropdownOffsets[link.label] && (
                         <div 
-                          className="fixed mt-2 animate-in fade-in slide-in-from-top-2 duration-200"
+                          className="fixed mt-4 animate-in fade-in slide-in-from-top-2 duration-200"
                           style={{ 
                             width: getDropdownWidth(link),
                             left: dropdownOffsets[link.label],
