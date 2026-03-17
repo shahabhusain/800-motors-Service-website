@@ -1,28 +1,12 @@
 import React from "react";
 import Form from "./Form";
-import {
-  Car,
-  Clock,
-  MapPin,
-  Toolbox,
-  Phone,
-  PhoneCall,
-} from "lucide-react";
-import { useTranslations } from "next-intl";
 import userReview from "@/public/user.svg";
 import userReview1 from "@/public/userb.svg";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
+import { PhoneCall } from "lucide-react";
 
-const Hero = () => {
-  const t = useTranslations("landingPage");
-  const features = [
-    { icon: <Clock className="w-5 h-5 text-xs md:text-[16px]" />, title: "30min arrival " },
-    { icon: <Toolbox className="w-5 h-5 text-xs md:text-[16px]" />, title: "Certified Techs" },
-    { icon: <Car className="w-5 h-5 text-xs md:text-[16px]" />, title: "30min arrival " },
-    { icon: <MapPin className="w-5 h-5 text-xs md:text-[16px]" />, title: "Certified Techs"},
-  ];
-
+const Hero = ({span1, span2, desc, desc1, features}) => {
   return (
     <section className="w-full bg-white dark:bg-black transition-colors duration-300 mt-6">
       <div className=" md:w-[85%] max-w-7xl w-[95%] mx-auto flex flex-col lg:flex-row items-center justify-between md:pt-28 pt-16 pb-16">
@@ -32,19 +16,19 @@ const Hero = () => {
           
           {/* Headline */}
           <h1 className="lg:text-[40px] md:text-[30px] text-[25px] max-w-[655px] uppercase font-bold p   text-gray-900 dark:text-white">
-           Auto Repair Service in Dubai
+            {span1}
             <span className="text-orange-600">
               {" "}
-24/7 Mobile & Workshop
+              {span2}
             </span>
           </h1>
 
           <p className="md:text-xl text-sm p font-medium text-gray-800 dark:text-gray-200">
-            Your Roadside Lifeline - Faster Than You Expect!
+            {desc}
           </p>
 
-          <p className="text-gray-600 text-xs md:text-[16px] p dark:text-gray-400 text-base">
-            Dead Battery, Flat Tire, or Breakdown? We’ll Get You Back on the Road!
+          <p className="text-gray-600 max-w-xl text-xs md:text-[16px] p dark:text-gray-400 text-base">
+            {desc1}
           </p>
 
           {/* Feature bullets */}
