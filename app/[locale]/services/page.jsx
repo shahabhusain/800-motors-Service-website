@@ -26,9 +26,10 @@ const ServicesPage = () => {
 />
       <AllServices />
       <ServicePackage />
+      <WhyChooseUs />
       <Brands />
       <HowItWorks />
-      <WhyChooseUs />
+      
       <Testimonial />
     </div>
   )

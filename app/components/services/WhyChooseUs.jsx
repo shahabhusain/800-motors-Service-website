@@ -51,7 +51,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-       <div className=' bg-[#f8f8f8]'>
+       <div className=''>
           <div className="w-[85%] max-w-7xl mx-auto py-16">
       {/* Header Section */}
       <div className="text-center mb-12">
@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
             Choose Us
           </span>
         </h2>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-600 dark:text-gray-200 text-lg max-w-2xl mx-auto">
           Experience the difference with our premium automotive services and customer-first approach
         </p>
       </div>
@@ -73,7 +73,7 @@ const WhyChooseUs = () => {
           return (
             <div 
               key={feature.id} 
-              className="bg-white rounded-2xl border border-gray-300 p-6"
+              className="bg-white dark:bg-gray-950 dark:border-gray-700 rounded-2xl border border-gray-300 p-6"
             >
               {/* Icon Container - Orange background only */}
               <div className="w-16 h-16 rounded-xl bg-orange-500 p-3 mb-4">
@@ -81,12 +81,12 @@ const WhyChooseUs = () => {
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold mb-2 text-gray-800">
+              <h3 className="text-xl font-bold mb-2 dark:text-gray-300 text-gray-800">
                 {feature.title}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>

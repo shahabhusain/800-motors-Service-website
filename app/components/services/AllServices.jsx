@@ -72,14 +72,14 @@ const AllServices = () => {
   ];
 
   return (
-   <div className=" bg-[#f8f8f8]">
+   <div className="">
        <div className="w-[85%] max-w-7xl mx-auto py-12 mb-12">
       {/* Simple Header */}
       <div className="text-center mb-12">
-        <h1 className="text-4xl md:text-5xl font-semibold mb-4 text-gray-800">
+        <h1 className="text-4xl md:text-5xl font-semibold mb-4 text-gray-800 dark:text-white">
           Our <span className="text-orange-600">Services</span>
         </h1>
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+        <p className="text-gray-600 text-lg max-w-2xl mx-auto dark:text-gray-100">
           Professional car care services tailored to keep your vehicle in perfect condition
         </p>
       </div>
@@ -92,17 +92,17 @@ const AllServices = () => {
           return (
             <div
               key={service.id}
-              className="bg-white rounded-2xl border border-gray-300 p-6 flex flex-col"
+              className="bg-white dark:bg-gray-950 rounded-2xl border border-gray-300 dark:border-gray-700 p-6 flex flex-col"
             >
               {/* Icon Container */}
               <div className="w-16 h-16 rounded-xl bg-orange-500 p-3 mb-4">
                 <Icon className="w-full h-full text-white" />
               </div>
 
-              <h2 className="text-xl font-bold mb-2 text-gray-800">
+              <h2 className="text-xl font-bold mb-2 text-gray-800 dark:text-gray-200">
                 {service.title}
               </h2>
-              <p className="text-gray-600 mb-4 flex-grow text-sm">
+              <p className="text-gray-600 dark:text-gray-400 mb-4 flex-grow text-sm">
                 {service.description}
               </p>
               <a
