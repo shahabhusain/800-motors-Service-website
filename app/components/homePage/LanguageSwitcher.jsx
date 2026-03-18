@@ -51,7 +51,7 @@ const LanguageSwitcher = () => {
           className={`px-2 py-1 text-sm font-medium rounded-sm transition-colors ${
             locale === 'en' 
               ? 'bg-orange-600 text-white' 
-              : 'text-gray-600 dark:text-gray-400 hover:text-orange-600'
+              : 'text-gray-600  hover:text-orange-600'
           }`}
         >
           EN

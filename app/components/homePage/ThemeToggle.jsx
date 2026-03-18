@@ -16,7 +16,7 @@ export default function ThemeToggle() {
       onClick={() =>
         setTheme(resolvedTheme === "dark" ? "light" : "dark")
       }
-      className="px-3 py-2 rounded bg-gray-200 dark:bg-gray-800 dark:text-white transition"
+      className="px-3 py-2 rounded bg-gray-800 text-white transition"
     >
       {resolvedTheme === "dark" ? <Lightbulb size={16} /> : <Moon size={16} />}
     </button>

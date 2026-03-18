@@ -12,10 +12,10 @@ const Form = () => {
       {/* RIGHT FORM (Desktop) */}
       <div className=" mt-12 md:mt-0 w-full mx-auto p">
          
-        <div className="bg-[#F8F8F8] dark:bg-gray-900 backdrop-blur-lg rounded-2xl  px-6 pb-8 pt-4 transition-colors">
-         <h1 className='text-[24px] font-semibold'>Get a quote</h1>
+        <div className="bg-[#f8f8f815] backdrop-blur-lg rounded-2xl  px-6 pb-8 pt-4 transition-colors">
+         <h1 className='text-[24px] text-white font-semibold uppercase'>Get a quote</h1>
           <form className="space-y-5 mt-4">
-               <div className='w-full px-4 py-2 flex items-center gap-x-3 bg-white dark:bg-gray-800  text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
+               <div className='w-full px-4 py-2 flex  items-center gap-x-3 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
                 <FaUser className=' text-[15px] text-gray-500' />
                 <input
               type="text"
@@ -24,7 +24,7 @@ const Form = () => {
             />
                </div>
 
-               <div className=' flex items-center gap-x-3 w-full px-4 py-2 bg-white dark:bg-gray-800  text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
+               <div className=' flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
                    <Mail size={18} className=' text-gray-500' />
                       <input
               type="email"
@@ -34,7 +34,7 @@ const Form = () => {
                </div>
 
        
-              <div className=' flex items-center gap-x-3 w-full px-4 py-2 bg-white dark:bg-gray-800  text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
+              <div className=' flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
                 <Phone size={18} className=' text-gray-500' />
                     <input
               type="tel"
@@ -44,7 +44,7 @@ const Form = () => {
               </div>
          
 
-               <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-white dark:bg-gray-800  text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
+               <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
                 <MdLocationPin className=' text-[15px] text-gray-500' />
   <input
               type="location"
@@ -84,7 +84,7 @@ const Form = () => {
               <textarea
                 rows="3"
                 placeholder="Message"
-                className="w-full px-4 py-2 bg-white dark:bg-gray-800  text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none resize-none transition"
+                className="w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none resize-none transition"
               ></textarea>
             </div>
 

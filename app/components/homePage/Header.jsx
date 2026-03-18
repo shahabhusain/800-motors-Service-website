@@ -218,27 +218,39 @@ const Header = () => {
         className={`fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-500`}
       >
         <div 
-          className={`w-full transition-all duration-500 max-w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md `}
+          className={`w-full transition-all duration-500 max-w-full ${
+            scrolled 
+              ? "bg-white dark:bg-gray-900 backdrop-blur-2xl text-gray-900 dark:text-white shadow-lg" 
+              : "bg-black/20 dark:bg-black/40 backdrop-blur-lg text-white dark:text-gray-200"
+          }`}
         >
           <div className="w-[90%] mx-auto max-w-7xl h-16 flex items-center justify-between">
             
-            {/* Logo with animation */}
+            {/* Logo with theme support */}
             <Link 
               href="/" 
               className="relative group overflow-hidden"
             >
               <div className="flex uppercase items-center text-xl md:text-2xl font-bold">
-                <span className="text-gray-900 dark:text-white">800</span>
-                <span className="text-orange-500 dark:text-orange-500 relative">
+                <span className={
+                  scrolled 
+                    ? "text-gray-900 dark:text-white" 
+                    : "text-white dark:text-gray-200"
+                }>800</span>
+                <span className="text-orange-500 relative">
                   motor
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 group-hover:w-full transition-all duration-300"></span>
                 </span>
-                <span className="text-gray-900 dark:text-white">guru</span>
+                <span className={
+                  scrolled 
+                    ? "text-gray-900 dark:text-white" 
+                    : "text-white dark:text-gray-200"
+                }>guru</span>
               </div>
             </Link>
 
             {/* Desktop Navigation with Hover Dropdowns */}
-            <nav className="hidden md:flex items-center gap-4">
+            <nav className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => (
                 <div 
                   key={link.href} 
@@ -252,13 +264,21 @@ const Header = () => {
                       <Link
                         href={link.href}
                         ref={el => buttonRefs.current[link.label] = el}
-                        className={`flex items-center gap-0 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500 group`}
+                        className={`flex items-center gap-0 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 group ${
+                          scrolled 
+                            ? "text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400" 
+                            : "text-gray-200 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400"
+                        }`}
                       >
                         {link.label}
                         <ChevronDown 
                           size={16} 
                           className={`ml-0.5 transition-all duration-300 ${
                             openDropdown === link.label ? 'rotate-180 translate-y-0.5' : ''
+                          } ${
+                            scrolled 
+                              ? "text-gray-700 dark:text-gray-300" 
+                              : "text-gray-200 dark:text-gray-300"
                           }`}
                         />
                       </Link>
@@ -273,8 +293,8 @@ const Header = () => {
                             top: buttonRefs.current[link.label]?.getBoundingClientRect().bottom + 8
                           }}
                         >
-                          <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white dark:bg-gray-900 border-l border-t border-gray-200 dark:border-gray-800 rotate-45"></div>
-                          <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-2xl overflow-hidden">
+                          <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white dark:bg-gray-800 border-l border-t border-gray-200 dark:border-gray-700 rotate-45"></div>
+                          <div className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-2xl overflow-hidden">
                             {/* Dropdown Content */}
                             <div 
                               className="p-5 grid gap-6" 
@@ -299,7 +319,7 @@ const Header = () => {
                                           /* For other dropdowns, keep as links */
                                           <Link
                                             href={`${link.href}/${item.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-')}`}
-                                            className="group flex items-center gap-2 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-all duration-200"
+                                            className="group flex items-center gap-2 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 transition-all duration-200"
                                             onClick={() => setOpenDropdown(null)}
                                           >
                                             <span>{item}</span>
@@ -318,7 +338,11 @@ const Header = () => {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500`}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        scrolled 
+                          ? "text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400" 
+                          : "text-gray-200 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400"
+                      }`}
                     >
                       {link.label}
                     </Link>
@@ -331,13 +355,17 @@ const Header = () => {
             <div className="flex items-center gap-2 sm:gap-3">
               <LanguageSwitcher />
               <ThemeToggle />
-              <button className="relative hidden md:block group overflow-hidden rounded-lg bg-orange-500 px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-500/25">
+              <button className="relative hidden md:block group overflow-hidden rounded-lg bg-orange-500 px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-500/25 dark:hover:shadow-orange-500/40">
                 <span className="relative z-10">Book Now</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </button>
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden relative w-10 h-10 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800/50 text-gray-900 dark:text-white transition-all duration-200 group"
+                className={`md:hidden relative w-10 h-10 rounded-full transition-all duration-200 group ${
+                  scrolled 
+                    ? "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300" 
+                    : "hover:bg-white/10 dark:hover:bg-gray-800 text-white dark:text-gray-300"
+                }`}
                 aria-label="Toggle menu"
               >
                 <div className="absolute inset-0 rounded-full bg-orange-500/0 group-hover:bg-orange-500/10 transition-colors duration-200"></div>
@@ -360,7 +388,7 @@ const Header = () => {
         onClick={() => setMobileMenuOpen(false)}
       >
         <div 
-          className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-500 ${
+          className={`absolute inset-0 bg-black/50 dark:bg-black/70 backdrop-blur-sm transition-opacity duration-500 ${
             mobileMenuOpen ? 'opacity-100' : 'opacity-0'
           }`}
         ></div>
@@ -368,7 +396,7 @@ const Header = () => {
         <div
           className={`
             absolute top-24 left-1/2 -translate-x-1/2 w-[90%] max-w-md
-            bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-800
+            bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700
             shadow-2xl transition-all duration-500 ease-out max-h-[70vh] overflow-y-auto
             ${mobileMenuOpen 
               ? "opacity-100 translate-y-0 scale-100" 
@@ -377,7 +405,7 @@ const Header = () => {
           `}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-800 sticky top-0 bg-white dark:bg-gray-900 z-10">
+          <div className="px-6 py-4 border-b border-gray-200 dark:border-gray-700 sticky top-0 bg-white dark:bg-gray-900 z-10">
             <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Menu</h3>
           </div>
 
@@ -389,13 +417,13 @@ const Header = () => {
                     {/* For mobile, main link is clickable */}
                     <Link
                       href={link.href}
-                      className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors"
+                      className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <span className="font-medium">{link.label}</span>
                       <ChevronDown 
                         size={18}
-                        className={`text-gray-400 transition-transform duration-300 ${
+                        className={`text-gray-400 dark:text-gray-500 transition-transform duration-300 ${
                           openDropdown === link.label ? 'rotate-180' : ''
                         }`}
                         onClick={(e) => {
@@ -410,7 +438,7 @@ const Header = () => {
                       <div className="pl-4 pr-2 pb-2 space-y-4 mt-2 animate-in slide-in-from-top-2 duration-200">
                         {link.dropdown.map((category, idx) => (
                           <div key={idx} className="space-y-1">
-                            <h4 className="text-sm font-semibold text-orange-500 px-4">
+                            <h4 className="text-sm font-semibold text-orange-500 dark:text-orange-400 px-4">
                               {category.category}
                             </h4>
                             <div className="space-y-1">
@@ -419,7 +447,7 @@ const Header = () => {
                                 link.label === "Packages" ? (
                                   <div
                                     key={itemIdx}
-                                    className="block px-8 py-2 text-sm text-gray-600 dark:text-gray-400 cursor-default"
+                                    className="block px-8 py-2 text-sm text-gray-500 dark:text-gray-400 cursor-default"
                                   >
                                     {item}
                                   </div>
@@ -427,7 +455,7 @@ const Header = () => {
                                   <Link
                                     key={itemIdx}
                                     href={`${link.href}/${item.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-')}`}
-                                    className="block px-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 hover:bg-orange-500/5 rounded-lg transition-colors"
+                                    className="block px-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 dark:hover:text-orange-400 hover:bg-orange-500/5 dark:hover:bg-orange-400/10 rounded-lg transition-colors"
                                     onClick={() => {
                                       setMobileMenuOpen(false);
                                       setOpenDropdown(null);
@@ -448,8 +476,8 @@ const Header = () => {
                     href={link.href}
                     className={`block px-4 py-3 rounded-xl transition-all duration-200 ${
                       isActiveLink(link.href)
-                        ? "bg-orange-500/10 text-orange-500 font-medium"
-                        : "text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/50"
+                        ? "bg-orange-500/10 dark:bg-orange-400/10 text-orange-500 dark:text-orange-400 font-medium"
+                        : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
                     }`}
                     onClick={() => setMobileMenuOpen(false)}
                   >
@@ -459,8 +487,8 @@ const Header = () => {
               </div>
             ))}
             
-            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-800">
-              <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-200 shadow-lg shadow-orange-500/25">
+            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
+              <button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-4 rounded-xl font-semibold transition-all duration-200 shadow-lg shadow-orange-500/25 dark:shadow-orange-500/30">
                 Book Now
               </button>
             </div>

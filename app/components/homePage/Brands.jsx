@@ -8,7 +8,7 @@ import American from './brands/American'
 import Others from './brands/Others'
 
 const Brands = () => {
-    const [selectedBrands, setSelectedBrands] = useState("Japanese")
+    const [selectedBrands, setSelectedBrands] = useState("German")
   return (
     <div className=' bg-[#F8F8F8] h-[700px] dark:bg-gray-950 flex flex-col items-center pt-20'>
         <h1 className=' md:text-[36px] text-[26px] font-semibold uppercase text-center'>brands we <span className=' text-orange-500'>service</span> <span className=' text-orange-500'>&</span> repair</h1>
