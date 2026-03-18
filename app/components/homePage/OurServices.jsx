@@ -92,12 +92,8 @@ const OurServices = () => {
               key={index}
               variants={fromBottom}
               transition={{ duration: 0.5, delay: index * 0.05 }}
-              whileHover={{ 
-                y: -8,
-                boxShadow: "0 20px 30px -10px rgba(0, 0, 0, 0.15)",
-                transition: { duration: 0.2 }
-              }}
-              className='md:p-6 p-3 rounded-md shadow flex flex-col gap-3 items-center justify-center text-center hover:shadow-lg transition-all bg-white dark:bg-gray-800'
+
+              className='md:p-6 p-3 rounded-md  flex flex-col gap-3 items-center justify-center text-center  border-[2px] border-[#0000001a] transition-all bg-white dark:bg-gray-800'
             >
               <motion.div 
                 whileHover={{ rotate: 5 }}
@@ -127,23 +123,17 @@ const OurServices = () => {
           <motion.button
             variants={fromBottom}
             transition={{ duration: 0.5, delay: 0.6 }}
-            whileHover={{ 
-              y: -3,
-              boxShadow: "0 10px 20px -5px rgba(0, 0, 0, 0.1)"
-            }}
+
             whileTap={{ y: 0 }}
             className='flex-1 bg-[#eeebeb] dark:bg-gray-700 dark:text-white md:py-3 py-2 px-5 rounded-md font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-all'
           >
-            MORE DETAILS
+            All Services
           </motion.button>
           
           <motion.button
             variants={fromBottom}
             transition={{ duration: 0.5, delay: 0.7 }}
-            whileHover={{ 
-              y: -3,
-              boxShadow: "0 10px 20px -5px rgba(249, 115, 22, 0.3)"
-            }}
+
             whileTap={{ y: 0 }}
             className='flex-1 bg-orange-500 text-white md:py-3 py-2 px-5 rounded-md font-medium hover:bg-orange-600 transition-all'
           >

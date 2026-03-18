@@ -128,61 +128,65 @@ const Header = () => {
     { 
       href: "/brands", 
       label: "Brands",
-      columns: 3,
+      columns: 4,
       dropdown: [
-        { category: "Luxury", items: ["BMW", "Mercedes", "Audi", "Lexus"] },
-        { category: "Mainstream", items: ["Toyota", "Honda", "Ford", "Nissan"] },
-        { category: "European", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        { category: "Germen", items: ["BMW", "Mercedes", "Audi", "Lexus"] },
+        { category: "American", items: ["Toyota", "Honda", "Ford", "Nissan"] },
+        { category: "British", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        { category: "French", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        { category: "Japaneses", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        { category: "Korean", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        { category: "Italian", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        { category: "Other", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
       ]
     },
     { 
       href: "/packages", 
       label: "Packages",
-      columns: 2,
+      columns: 3,
       dropdown: [
         { 
-          category: "Maintenance", 
+          category: "Silver", 
           items: [
-            "Basic Service Package - $99",
-            "Premium Care Package - $199",
-            "Complete Check Package - $299",
-            "Annual Maintenance Package - $499"
+            "3 Minor Services",
+            "2 Major Services",
+            "2 No Time Limit",
+            "15% Off Spare Parts"
           ]
         },
         { 
-          category: "Repair", 
+          category: "Gold", 
           items: [
-            "Brake Service Package",
-            "AC Repair Package",
-            "Engine Diagnostics",
-            "Transmission Service"
+            "3 Minor Services",
+            "2 Major Services",
+            "2 No Time Limit",
+            "15% Off Spare Parts"
           ]
-        }
+        },
+        { 
+          category: "Platinum", 
+          items: [
+            "3 Minor Services",
+            "2 Major Services",
+            "2 No Time Limit",
+            "15% Off Spare Parts"
+          ]
+        },
       ]
     },
     { 
       href: "/offers", 
       label: "Offers",
-      columns: 2,
+      columns: 1,
       dropdown: [
         {
-          category: "Seasonal",
+          category: "Active Offers",
           items: [
-            "Summer Special - 20% Off",
-            "Winter Check - Free Inspection",
-            "Spring Service - $50 Off",
-            "Fall Maintenance - Tire Change Free"
+            "Free Battery",
+            "Ramadan Offer",
+            "New Year 2026 offer",
           ]
         },
-        {
-          category: "Limited Time",
-          items: [
-            "New Customer - 15% Off",
-            "Battery Replacement - $30 Off",
-            "Wheel Alignment - Buy 2 Get 1 Free",
-            "Oil Change - Special Price $29.99"
-          ]
-        }
       ]
     },
     { href: "/blog", label: "Blogs" },
@@ -244,10 +248,11 @@ const Header = () => {
                 >
                   {link.dropdown ? (
                     <>
+                      {/* All dropdown triggers are Links that navigate */}
                       <Link
                         href={link.href}
                         ref={el => buttonRefs.current[link.label] = el}
-                        className={`flex items-center gap-0 rounded-lg text-sm font-medium transition-all duration-200 group`}
+                        className={`flex items-center gap-0 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500 group`}
                       >
                         {link.label}
                         <ChevronDown 
@@ -268,7 +273,7 @@ const Header = () => {
                             top: buttonRefs.current[link.label]?.getBoundingClientRect().bottom + 8
                           }}
                         >
-                            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white dark:bg-gray-900 border-l border-t border-gray-200 dark:border-gray-800 rotate-45"></div>
+                          <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white dark:bg-gray-900 border-l border-t border-gray-200 dark:border-gray-800 rotate-45"></div>
                           <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-2xl overflow-hidden">
                             {/* Dropdown Content */}
                             <div 
@@ -285,13 +290,21 @@ const Header = () => {
                                   <ul className="space-y-1">
                                     {category.items.map((item, itemIdx) => (
                                       <li key={itemIdx}>
-                                        <Link
-                                          href={`${link.href}/${item.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-')}`}
-                                          className="group flex items-center gap-2 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-all duration-200"
-                                          onClick={() => setOpenDropdown(null)}
-                                        >
-                                          <span>{item}</span>
-                                        </Link>
+                                        {/* For Packages dropdown, show as plain text - NOT CLICKABLE */}
+                                        {link.label === "Packages" ? (
+                                          <div className="py-2 text-sm text-gray-600 dark:text-gray-400 cursor-default">
+                                            {item}
+                                          </div>
+                                        ) : (
+                                          /* For other dropdowns, keep as links */
+                                          <Link
+                                            href={`${link.href}/${item.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-')}`}
+                                            className="group flex items-center gap-2 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 transition-all duration-200"
+                                            onClick={() => setOpenDropdown(null)}
+                                          >
+                                            <span>{item}</span>
+                                          </Link>
+                                        )}
                                       </li>
                                     ))}
                                   </ul>
@@ -305,11 +318,7 @@ const Header = () => {
                   ) : (
                     <Link
                       href={link.href}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                        isActiveLink(link.href)
-                          ? "text-orange-500 bg-orange-500/10"
-                          : "text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500 hover:bg-gray-100 dark:hover:bg-gray-800/50"
-                      }`}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 text-gray-700 dark:text-gray-200 hover:text-orange-500 dark:hover:text-orange-500`}
                     >
                       {link.label}
                     </Link>
@@ -377,9 +386,11 @@ const Header = () => {
               <div key={link.href} className="w-full">
                 {link.dropdown ? (
                   <div className="mb-2">
-                    <button
-                      onClick={() => setOpenDropdown(openDropdown === link.label ? null : link.label)}
+                    {/* For mobile, main link is clickable */}
+                    <Link
+                      href={link.href}
                       className="w-full flex items-center justify-between px-4 py-3 rounded-xl text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors"
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       <span className="font-medium">{link.label}</span>
                       <ChevronDown 
@@ -387,8 +398,13 @@ const Header = () => {
                         className={`text-gray-400 transition-transform duration-300 ${
                           openDropdown === link.label ? 'rotate-180' : ''
                         }`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setOpenDropdown(openDropdown === link.label ? null : link.label);
+                        }}
                       />
-                    </button>
+                    </Link>
                     
                     {openDropdown === link.label && (
                       <div className="pl-4 pr-2 pb-2 space-y-4 mt-2 animate-in slide-in-from-top-2 duration-200">
@@ -399,17 +415,27 @@ const Header = () => {
                             </h4>
                             <div className="space-y-1">
                               {category.items.map((item, itemIdx) => (
-                                <Link
-                                  key={itemIdx}
-                                  href={`${link.href}/${item.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-')}`}
-                                  className="block px-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 hover:bg-orange-500/5 rounded-lg transition-colors"
-                                  onClick={() => {
-                                    setMobileMenuOpen(false);
-                                    setOpenDropdown(null);
-                                  }}
-                                >
-                                  {item}
-                                </Link>
+                                /* For mobile - Packages items NOT clickable, others are links */
+                                link.label === "Packages" ? (
+                                  <div
+                                    key={itemIdx}
+                                    className="block px-8 py-2 text-sm text-gray-600 dark:text-gray-400 cursor-default"
+                                  >
+                                    {item}
+                                  </div>
+                                ) : (
+                                  <Link
+                                    key={itemIdx}
+                                    href={`${link.href}/${item.toLowerCase().replace(/[^\w\s]/g, '').replace(/\s+/g, '-')}`}
+                                    className="block px-8 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-orange-500 hover:bg-orange-500/5 rounded-lg transition-colors"
+                                    onClick={() => {
+                                      setMobileMenuOpen(false);
+                                      setOpenDropdown(null);
+                                    }}
+                                  >
+                                    {item}
+                                  </Link>
+                                )
                               ))}
                             </div>
                           </div>
