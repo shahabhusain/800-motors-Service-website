@@ -30,7 +30,7 @@ const Blogs = () => {
   ]
 
   return (
-    <div className='md:w-[85%] w-[95%] mx-auto my-20 flex flex-col items-center justify-center'>
+    <div className='md:w-[90%] w-[95%] max-w-7xl mx-auto my-20 flex flex-col items-center justify-center'>
       <h1 className='uppercase md:text-[36px] text-[26px] font-semibold text-center'>
         LATEST FROM OUR <span className='text-orange-500'>BLOG</span>
       </h1>

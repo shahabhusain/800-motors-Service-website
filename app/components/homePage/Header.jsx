@@ -216,7 +216,7 @@ const Header = () => {
         <div 
           className={`w-full transition-all duration-500 max-w-full border-b border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md `}
         >
-          <div className="w-[95%] mx-auto max-w-7xl h-16 flex items-center justify-between">
+          <div className="w-[90%] mx-auto max-w-7xl h-16 flex items-center justify-between">
             
             {/* Logo with animation */}
             <Link 

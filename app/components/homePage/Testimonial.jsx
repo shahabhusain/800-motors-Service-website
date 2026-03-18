@@ -18,7 +18,7 @@ const Testimonial = () => {
   };
 
   return (
-    <div className='md:w-[85%] w-[95%] max-w-7xl mx-auto my-20'>
+    <div className='md:w-[90%] w-[95%] max-w-7xl mx-auto my-20'>
       <h1 className='uppercase md:text-[36px] text-[26px] font-semibold text-center'>Testimonials</h1>
       <Swiper
         spaceBetween={20}

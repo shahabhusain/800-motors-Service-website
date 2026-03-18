@@ -125,7 +125,7 @@ const About = () => {
       viewport={{ once: true, amount: 0.1 }}
       className="bg-gray-50 dark:bg-gray-900 py-12 transition-colors duration-300 overflow-hidden"
     >
-      <div className="md:w-[85%] w-[95%] max-w-6xl  mx-auto flex flex-col md:flex-row items-center justify-between gap-x-26">
+      <div className="md:w-[90%] w-[95%] max-w-7xl  mx-auto flex flex-col md:flex-row items-center justify-between gap-x-26">
 
         {/* Left Section */}
         <motion.div 
