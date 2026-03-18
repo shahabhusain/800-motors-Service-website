@@ -40,11 +40,10 @@ const Footer = () => {
           
           {/* Company Info */}
           <div className="space-y-4">
-            <Link href="/" className="text-2xl font-semibold tracking-wide inline-block">
+            <Link href="/" className="text-2xl uppercase font-semibold tracking-wide inline-block">
               <span className="text-gray-900 dark:text-white">800</span>
               <span className="text-gray-900 dark:text-white">motor</span>
-              <span className="text-orange-500 font-bold">guro</span>
-              <span className="text-gray-900 dark:text-white">.</span>
+              <span className="text-orange-500 font-bold">guru</span>
             </Link>
             
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">

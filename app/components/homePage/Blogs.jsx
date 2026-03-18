@@ -35,19 +35,17 @@ const Blogs = () => {
         LATEST FROM OUR <span className='text-orange-500'>BLOG</span>
       </h1>
       
-      <div className='mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+      <div className='mt-6 flex items-center justify-between gap-6'>
         {blogData.map((blog) => (
           <div key={blog.id} className='flex flex-col w-full'>
-            <div className='relative w-full h-[200px]'>
+            <div className='relative w-full'>
               <Image 
-                className='rounded-t-2xl object-cover' 
+                className='rounded-t-2xl object-cover  h-[200px]' 
                 src={blog.image} 
                 alt='blog'
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <div className='rounded-b-2xl bg-[#f8f8f8] dark:bg-gray-900 p-4'>
+            <div className='rounded-b-2xl bg-[#f8f8f8] w-full dark:bg-gray-900 p-4'>
               <div className='flex items-center gap-4 text-sm text-gray-600'>
                 <h1 className='flex items-center gap-1'>
                   <FaClock className='text-orange-500' /> {blog.date}
