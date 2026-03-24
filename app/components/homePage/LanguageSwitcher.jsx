@@ -33,17 +33,7 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="flex items-center gap-2">
-      {/* <button
-        onClick={toggleLanguage}
-        className="px-3 py-1.5 text-sm font-medium border border-gray-300 dark:border-gray-600 rounded-sm 
-                 text-gray-900 dark:text-white/90 hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors
-                 flex items-center gap-2"
-        aria-label="Switch language"
-      >
-        <span>{locale === 'en' ? '🇺🇸' : '🇦🇪'}</span>
-        <span>{locale === 'en' ? 'EN' : 'AR'}</span>
-      </button> */}
-      
+
      
       <div className="hidden md:flex gap-1">
         <button
@@ -51,7 +41,7 @@ const LanguageSwitcher = () => {
           className={`px-2 py-1 text-sm font-medium rounded-sm transition-colors ${
             locale === 'en' 
               ? 'bg-orange-600 text-white' 
-              : 'text-gray-600  hover:text-orange-600'
+              : 'text-gray-600 dark:text-gray-400 hover:text-orange-600'
           }`}
         >
           EN

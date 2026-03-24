@@ -30,7 +30,8 @@ const HowItWorks = () => {
   ]
 
   return (
-    <div className='flex md:w-[90%] w-[95%] max-w-7xl mx-auto flex-col items-center justify-center my-20'>
+       <div className=' bg-[#f8f8f8] py-20'>
+           <div className='flex md:w-[90%] w-[95%] max-w-7xl mx-auto flex-col items-center justify-center '>
       <h1 className='md:text-[36px] text-[26px] uppercase font-semibold mb-6 text-center dark:text-white'>
         <span className='text-orange-500 dark:text-orange-500'>How it</span> Works
         <p className='text-[#00000099] dark:text-gray-400 md:text-[16px] text-[14px] font-normal text-center mt-3'>
@@ -65,6 +66,7 @@ const HowItWorks = () => {
         ))}
       </div>
     </div>
+       </div>
   )
 }
 

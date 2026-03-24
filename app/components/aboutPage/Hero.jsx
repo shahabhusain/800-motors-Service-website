@@ -1,11 +1,13 @@
+import Image from 'next/image'
 import React from 'react'
-
-const Hero = () => {
+import bg from '@/public/herobg.jpg'
+const Hero = ({about}) => {
   return (
-    <div className=' mt-32 mb-20'>
-         <div className=' flex flex-col gap-y-3 items-center justify-center'>
-            <h1 className=' text-[46px] font-[700] uppercase'>About Us</h1>
-            <button className=' bg-[#0000000D] py-2 px-5 rounded-full '>Home / <span>About</span></button>
+    <div className=' relative'>
+        <Image src={bg} alt='bg-image' className=' h-[400px] w-full object-cover ' />
+         <div className=' bg-[#0000007a] absolute top-0 h-[400px] w-full '></div>
+         <div className=' flex flex-col absolute top-44 left-[41%] text-white gap-y-3 items-center justify-center'>
+            <h1 className=' text-[46px] font-[700] uppercase'>{about}</h1>
          </div>
     </div>
   )

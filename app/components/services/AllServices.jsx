@@ -1,75 +1,10 @@
 import React from "react";
 import {
-  FaCarBattery,
-  FaTools,
-  FaOilCan,
-  FaCarCrash,
-  FaTachometerAlt,
-  FaSnowflake,
-  FaCarSide,
-  FaWrench,
   FaArrowRight,
 } from "react-icons/fa";
 
-const AllServices = () => {
-  const services = [
-    {
-      id: 1,
-      icon: FaCarBattery,
-      title: "Battery Replacement",
-      description: "Quick and reliable car battery replacement service at your location.",
-      url: "/services/battery-replacement",
-    },
-    {
-      id: 2,
-      icon: FaTools,
-      title: "General Car Service",
-      description: "Complete car inspection and maintenance to keep your vehicle running smoothly.",
-      url: "/services/general-service",
-    },
-    {
-      id: 3,
-      icon: FaOilCan,
-      title: "Oil Change",
-      description: "High-quality engine oil replacement to improve performance and engine life.",
-      url: "/services/oil-change",
-    },
-    {
-      id: 4,
-      icon: FaCarCrash,
-      title: "Emergency Car Repair",
-      description: "Professional repair services to restore your car after an accident.",
-      url: "/services/accident-repair",
-    },
-    {
-      id: 5,
-      icon: FaTachometerAlt,
-      title: "Engine Diagnostics",
-      description: "Advanced diagnostics to identify and fix engine issues quickly.",
-      url: "/services/engine-diagnostics",
-    },
-    {
-      id: 6,
-      icon: FaSnowflake,
-      title: "AC Repair",
-      description: "Car AC repair and gas refill for a comfortable driving experience.",
-      url: "/services/ac-repair",
-    },
-    {
-      id: 7,
-      icon: FaCarSide,
-      title: "Car Detailing",
-      description: "Interior and exterior detailing to make your car look brand new.",
-      url: "/services/car-detailing",
-    },
-    {
-      id: 8,
-      icon: FaWrench,
-      title: "Mechanical Repair",
-      description: "Expert mechanical repairs for all types of vehicle issues.",
-      url: "/services/mechanical-repair",
-    },
-  ];
+const AllServices = ({services, button, span, span1, desc}) => {
+
 
   return (
    <div className="">
@@ -77,10 +12,10 @@ const AllServices = () => {
       {/* Simple Header */}
       <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-semibold mb-4 text-gray-800 dark:text-white">
-          Our <span className="text-orange-600">Services</span>
+          {span} <span className="text-orange-600">{span1}</span>
         </h1>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto dark:text-gray-100">
-          Professional car care services tailored to keep your vehicle in perfect condition
+          {desc}
         </p>
       </div>
 
@@ -109,7 +44,7 @@ const AllServices = () => {
                 href={service.url}
                 className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-700"
               >
-                View Details <FaArrowRight className="ml-2 w-4 h-4" />
+              {button ? <>  {button} <FaArrowRight className="ml-2 w-4 h-4" /></> : null}
               </a>
             </div>
           );
