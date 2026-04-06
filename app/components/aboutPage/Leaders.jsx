@@ -31,7 +31,7 @@ const Leaders = () => {
 
   return (
     <div className="bg-[#F8F8F8] dark:bg-gray-950 mt-20">
-      <div className="flex items-center gap-12 max-w-7xl justify-between w-[85%] mx-auto">
+      <div className="flex items-center gap-12 justify-between w-[85%] mx-auto">
 
         {/* Leaders Images */}
         <div className="flex w-[60%] ">

@@ -44,9 +44,9 @@ const ServiceAreas = () => {
   return (
     <div>
          {/* Filtered Service Areas Section with Buttons */}
-      <div className=" w-[85%] max-w-7xl my-20 mx-auto">
+      <div className=" w-[85%] my-20 mx-auto">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold dark:text-white text-gray-900 mb-4">
             Our Service <span className="text-orange-600">Areas</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-8">
@@ -59,8 +59,8 @@ const ServiceAreas = () => {
               onClick={() => setActiveCity('dubai')}
               className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeCity === 'dubai'
-                  ? 'bg-orange-600 text-white shadow-lg transform scale-105'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  ? 'bg-orange-600  text-white shadow-lg transform scale-105'
+                  : 'bg-gray-200 dark:bg-gray-950 dark:text-white text-gray-700 hover:bg-gray-300'
               }`}
             >
               Dubai Areas
@@ -70,7 +70,7 @@ const ServiceAreas = () => {
               className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 ${
                 activeCity === 'abudhabi'
                   ? 'bg-orange-600 text-white shadow-lg transform scale-105'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  : 'bg-gray-200 dark:bg-gray-950 dark:text-white text-gray-700 hover:bg-gray-300'
               }`}
             >
               Abu Dhabi Areas
@@ -82,11 +82,11 @@ const ServiceAreas = () => {
         {activeCity === 'dubai' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {dubaiServiceAreas.map((area) => (
-              <div key={area.id} className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
+              <div key={area.id} className="bg-white dark:bg-gray-950 rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
                 <div className="flex items-center gap-3">
                   <area.icon className="w-6 h-6 text-orange-600" />
                   <div>
-                    <h3 className="font-semibold text-gray-800">{area.area}</h3>
+                    <h3 className="font-semibold text-gray-800 dark:text-white">{area.area}</h3>
                     <p className="text-sm text-gray-500">{area.zone}</p>
                   </div>
                 </div>

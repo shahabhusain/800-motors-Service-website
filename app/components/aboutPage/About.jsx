@@ -4,7 +4,7 @@ import about from '@/public/about/about.png'
 const About = () => {
   return (
     <div className=' dark:bg-gray-950 bg-[#F8F8F8]  py-20'>
-       <div className=' w-[85%] mx-auto max-w-6xl flex items-center justify-between'>
+       <div className=' w-[85%] mx-auto flex items-center justify-between'>
          <div className=' w-1/2 flex flex-col gap-y-6'>
            <h1 className=' text-[32px] font-semibold'>What you should know about 800 Motor Guru? </h1>
           <p className=' text-[#00000099] dark:text-gray-300 text-[16px] font-normal'>Welcome to 800 Motor Guru, a trusted provider of onsite car repair and maintenance services in the UAE. Our skilled technicians deliver fast, reliable automotive solutions directly to your location, making car care simple and convenient.</p>

@@ -60,7 +60,7 @@ const BmwModels = () => {
                 BMW Models We Service
             </h1>
 
-            <div className="container mx-auto w-[85%] max-w-7xl mt-12">
+            <div className="container mx-auto w-[85%] mt-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {bmwModels.map((car, index) => (
                         <div 

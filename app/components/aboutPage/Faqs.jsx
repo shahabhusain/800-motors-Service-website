@@ -32,7 +32,7 @@ const Faqs = () => {
    }
 
   return (
-    <div className='w-[85%] mx-auto max-w-7xl my-20'>
+    <div className='w-[85%] mx-auto  my-20'>
       <h1 className='uppercase text-[46px] font-bold text-center mb-10'>Frequently Asked Questions</h1>
       <div className='flex flex-col gap-y-4'>
         {faqs.map((item, index) => (

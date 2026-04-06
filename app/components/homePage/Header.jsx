@@ -224,7 +224,7 @@ const Header = () => {
               : "bg-black/20 dark:bg-black/40 backdrop-blur-lg text-white dark:text-gray-200"
           }`}
         >
-          <div className="w-[90%] mx-auto max-w-7xl h-16 flex items-center justify-between">
+          <div className="w-[90%] mx-auto h-16 flex items-center justify-between">
             
             {/* Logo with theme support */}
             <Link 

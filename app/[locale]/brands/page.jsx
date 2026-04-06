@@ -2,7 +2,6 @@ import Hero from '@/app/components/homePage/Hero'
 import React from 'react'
 import herobg from '@/public/herobg.jpg'
 import { Car, Clock, MapPin, Toolbox } from 'lucide-react';
-import About from '@/app/components/homePage/About';
 import AllServices from '@/app/components/services/AllServices';
 import {
   FaCarBattery,
@@ -86,7 +85,6 @@ const BrandsPage = () => {
   return (
     <div>
       <Hero span1="All Car Brands Repair & Maintenance" span2="Services in Dubai by 800 Motor Guru" desc="We provide expert repair and maintenance services for all major car brands across Dubai with fast, reliable mobile support at your location." features={features} img={herobg} />
-      <About />
       <AllServices services={services} span="Services Available " span1="for All Car Brands" desc="We provide expert repair and maintenance services for all major car brands across Dubai with fast, reliable mobile support at your location." />
       <Brands />
       <WhyChooseUs />

@@ -8,10 +8,10 @@ import { PhoneCall } from "lucide-react";
 const Hero = ({span1, span2, desc, features, img}) => {
   return (
     <section className="w-full relative">
-        <Image className=" h-screen object-cover" src={img}  alt="hero-bg"/>
-         <div className=" bg-[#000000b0] w-full h-screen absolute top-0"></div>
+        <Image className=" max-h-[750px] h-full object-cover" src={img}  alt="hero-bg"/>
+         <div className=" bg-[#000000b0] w-full max-h-[750px] h-full absolute top-0"></div>
         <div className=" absolute top-4 flex items-center justify-center w-full">
-            <div className=" md:w-[90%] max-w-7xl w-[95%] mx-auto flex flex-col lg:flex-row items-center justify-between md:pt-28 pt-16 pb-16">    
+            <div className=" md:w-[90%]  w-[95%] mx-auto flex flex-col lg:flex-row items-center justify-between md:pt-28 pt-16 pb-16">    
         {/* LEFT CONTENT */}
         <div className="flex flex-col gap-y-4 lg:w-[60%]">
           

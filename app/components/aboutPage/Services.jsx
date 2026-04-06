@@ -52,7 +52,7 @@ const Services = () => {
         },
     ]
   return (
-    <div className='w-[85%] mx-auto flex flex-col gap-6 mt-20 items-center justify-center max-w-6xl'>
+    <div className='w-[85%] mx-auto flex flex-col gap-6 mt-20 items-center justify-center'>
         <div className=' flex flex-col gap-y-5 '>
             <Image src={serviceImage} alt='service'/>
             <p className=' text-[16px] text-center font-normal text-[#00000099] dark:text-white'>Welcome to 800 Motor Guru, a trusted provider of onsite car repair and maintenance services in the UAE. Our skilled technicians deliver fast, reliable automotiv.Welcome to 800 Motor Guru, a trusted provider of onsite car repair and maintenance services in the UAE. Our skilled technicians deliver fast, reliable automotive solutions directly to your location, making car care simple and convenient. At 800 Motor Guru, we focus on keeping your vehicle safe and running smoothly. From emergency roadside support to routine maintenance, our team provides professional service wherever you are across the UAE.</p>

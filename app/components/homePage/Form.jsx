@@ -13,7 +13,7 @@ const Form = () => {
       <div className=" mt-12 md:mt-0 w-full mx-auto p">
          
         <div className="bg-[#f8f8f815] backdrop-blur-lg rounded-2xl  px-6 pb-8 pt-4 transition-colors">
-         <h1 className='text-[24px] text-white font-semibold uppercase'>Get a quote</h1>
+         <h2 className='text-[24px] text-white font-semibold uppercase'>Get a quote</h2>
           <form className="space-y-5 mt-4">
                <div className='w-full px-4 py-2 flex  items-center gap-x-3 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
                 <FaUser className=' text-[15px] text-gray-500' />
@@ -54,33 +54,8 @@ const Form = () => {
                </div>
             
 
-            {/* Services
-            <div>
-              <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                {t('labels.selectServices')}
-              </label>
-
-              <div className="flex flex-wrap gap-2">
-                <span className="px-4 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-300 rounded-md text-sm font-medium cursor-pointer hover:bg-orange-200 dark:hover:bg-orange-800 transition">
-                  {t('services.battery')}
-                </span>
-                <span className="px-4 py-1 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md text-sm font-medium cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition">
-                  {t('services.tyre')}
-                </span>
-                <span className="px-4 py-1 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md text-sm font-medium cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition">
-                  {t('services.mechanics')}
-                </span>
-                <span className="px-4 py-1 bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-300 rounded-md text-sm font-medium cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 transition">
-                  {t('services.other')}
-                </span>
-              </div>
-            </div> */}
-
             {/* Message */}
             <div>
-              {/* <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">
-                {t('labels.message')}
-              </label> */}
               <textarea
                 rows="3"
                 placeholder="Message"
