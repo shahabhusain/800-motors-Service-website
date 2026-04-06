@@ -166,7 +166,7 @@ const CompleteAutoRepair = () => {
                             </>
                         ) : (
                             <>
-                                Load More Services ({remainingItems} remaining)
+                                Load More
                                 <span className='text-xl'>↓</span>
                             </>
                         )}

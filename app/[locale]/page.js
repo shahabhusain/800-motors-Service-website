@@ -9,6 +9,12 @@ import AutoRepair from '../components/homePage/AutoRepair'
 import CompleteAutoRepair from '../components/homePage/CompleteAutoRepair'
 import HowCarRepair from '../components/homePage/HowCarRepair'
 import NearMe from '../components/homePage/NearMe'
+import HowItWorks from '../components/homePage/HowItWorks'
+import Location from '../components/homePage/Location'
+import CarServices from '../components/homePage/CarServices'
+import RepairEngine from '../components/homePage/RepairEngine'
+import FastRepairs from '../components/homePage/FastRepairs'
+import Contact from '../components/homePage/Contact'
 
 export const metadata = {
   title: "800 Motor Guru | Auto Repair Service in Dubai",
@@ -41,6 +47,12 @@ const page = () => {
             <ServicePackage />
             <HowCarRepair />
             <NearMe />
+            <HowItWorks />
+            <Location />
+            <CarServices />
+            <RepairEngine />
+            <FastRepairs />
+            <Contact />
     </div>
   );
 };
