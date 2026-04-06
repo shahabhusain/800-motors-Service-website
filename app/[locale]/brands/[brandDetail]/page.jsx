@@ -14,7 +14,6 @@ import {
   FaWrench,
 } from "react-icons/fa";
 import WhyChooseUs from '@/app/components/services/WhyChooseUs';
-import HowItWorks from '@/app/components/homePage/HowItWorks';
 import Testimonial from '@/app/components/homePage/Testimonial';
 import Faqs from '@/app/components/aboutPage/Faqs';
 import BmwModels from '@/app/components/bands/BmwModels';
@@ -88,7 +87,6 @@ const BrandDetail = () => {
       <Hero img={bg} span1="BMW Repair Services in Dubai " span2="Expert Mobile Technicians" desc="We provide professional BMW repair and maintenance services across Dubai with same-day mobile support, keeping your car safe and road-ready." features={features} />
       <AllServices services={services} span="BMW Repair" span1="Service" desc="We provide professional BMW repair and maintenance services across Dubai with same-day mobile support, keeping your car safe and road-ready." />
       <WhyChooseUs />
-      <HowItWorks />
       <Testimonial />
       <BmwModels />
       <Faqs />

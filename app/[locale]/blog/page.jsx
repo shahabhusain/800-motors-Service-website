@@ -1,5 +1,4 @@
 import Hero from '@/app/components/aboutPage/Hero'
-import Blogs from '@/app/components/homePage/Blogs'
 import blogs from '@/public/blogs.jpg'
 import React from 'react'
 
@@ -72,7 +71,7 @@ const BlogsPage = () => {
   return (
     <div>
       <Hero about="Our Blogs" />
-      <Blogs blogData={blogData} />
+      {/* <Blogs blogData={blogData} /> */}
     </div>
   )
 }

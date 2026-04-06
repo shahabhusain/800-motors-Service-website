@@ -1,6 +1,5 @@
 import Brands from '@/app/components/homePage/Brands'
 import Hero from '@/app/components/homePage/Hero'
-import HowItWorks from '@/app/components/homePage/HowItWorks'
 import ServicePackage from '@/app/components/homePage/ServicePackage'
 import Testimonial from '@/app/components/homePage/Testimonial'
 import AllServices from '@/app/components/services/AllServices'
@@ -98,7 +97,6 @@ const ServicesPage = () => {
       <WhyChooseUs />
       <Brands />
             <Testimonial />
-      <HowItWorks />
       
 
     </div>

@@ -13,9 +13,7 @@ import {
   FaWrench,
 } from "react-icons/fa";
 import AllServices from '@/app/components/services/AllServices';
-import About from '@/app/components/homePage/About';
 import ServicePackage from '@/app/components/homePage/ServicePackage';
-import HowItWorks from '@/app/components/homePage/HowItWorks';
 import WhyChooseUs from '@/app/components/services/WhyChooseUs';
 import Testimonial from '@/app/components/homePage/Testimonial';
 import Faqs from '@/app/components/aboutPage/Faqs';
@@ -91,13 +89,11 @@ const ServiceDetail = () => {
     <div className=''>
       <Hero span1=" Battery Replacement in Dubai" span2="30-Minute Mobile Service at Your Location" desc="800 Motor Guru provides quick and reliable battery replacement anywhere in Dubai with genuine batteries and professional installation." img={herobg} features={features} />
       <AllServices services={services} span="Our" span1="Services" desc="Professional car care services tailored to keep your vehicle in perfect condition" />
-      <About />
       
      <ServiceAreas />
  
       <ServicePackage />
       <WhyChooseUs />
-      <HowItWorks />
       <Testimonial />
       <Faqs />
     </div>
