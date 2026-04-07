@@ -27,7 +27,7 @@ const Hero = ({ span1, span2, desc, features, img }) => {
         
         {/* Content Container */}
         <div className="absolute inset-0 flex items-center justify-center w-full">
-            <div className="md:w-[90%] w-[95%] mx-auto flex flex-col lg:flex-row items-center justify-between md:pt-32 pt-24 pb-20 px-4 sm:px-6">    
+            <div className="md:w-[90%] w-[95%] mx-auto flex flex-col lg:flex-row items-center justify-between md:pt-32 pt-24 pb-20">    
                 {/* LEFT CONTENT */}
                 <div className="flex flex-col gap-y-4 lg:w-[60%] w-full">
                     

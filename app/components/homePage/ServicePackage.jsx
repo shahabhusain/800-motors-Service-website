@@ -204,7 +204,7 @@ const ServicePackage = () => {
         },
     ]
   return (
-    <div className='p flex flex-col items-center justify-center leading-[2rem] text-center md:text-left leading-tight bg-white dark:bg-gray-950 py-12'>
+    <div className='p flex flex-col items-center justify-center leading-[2rem] text-center md:text-left leading-tight bg-[#f8f8f8] dark:bg-gray-950 py-12'>
     <h1 className='text-4xl md:text-5xl font-bold mb-6'><span className=' text-orange-500'>Select</span> Packages</h1>
     <p className=' text-[#00000099] dark:text-gray-300 md:text-[16px] text-[14px] font-normal'>Choose the plan that fits your needs · flexible engine options</p>
       <div className=' flex items-center gap-x-12 bg-[#f8f8f8] dark:bg-gray-900  p-2  rounded-xl mt-5'>

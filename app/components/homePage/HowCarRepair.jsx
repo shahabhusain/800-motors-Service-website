@@ -40,7 +40,7 @@ const HowCarRepair = () => {
     ];
 
     return (
-          <div className=' bg-[#f8f8f8] dark:bg-gray-950 py-20'>
+          <div className=' bg-[#fff] dark:bg-gray-950 py-20'>
               <div className='w-[90%] mx-auto'>
             {/* Header Section */}
             <div className='text-center mb-12'>
@@ -66,19 +66,19 @@ const HowCarRepair = () => {
                 }}
                 breakpoints={{
                     640: {
-                        slidesPerView: 1.5,
+                        slidesPerView: 1,
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 1.5,
+                        slidesPerView: 1,
                         spaceBetween: 24,
                     },
                     1024: {
-                        slidesPerView: 2.5,
+                        slidesPerView: 3,
                         spaceBetween: 24,
                     },
                     1280: {
-                        slidesPerView: 2.5,
+                        slidesPerView: 3,
                         spaceBetween: 24,
                     },
                 }}

@@ -122,7 +122,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div className='bg-[#f8f8f8] dark:bg-gray-950 py-20'>
+    <div className='bg-[#fff] dark:bg-gray-950 py-20'>
       <div className='md:w-[90%] w-[95%] flex flex-col gap-y-3 items-center justify-center mx-auto'>
         <h1 className=' text-4xl md:text-5xl font-bold text-center'>Auto Repair and Maintenance Reviews</h1>
         <p className='max-w-4xl text-center text-gray-500'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aperiam impedit a vel ipsum maiores tempora temporibus! Reiciendis accusantium, ullam natus aperiam sapiente eligendi voluptatum, nulla libero sed quidem saepe!</p>
