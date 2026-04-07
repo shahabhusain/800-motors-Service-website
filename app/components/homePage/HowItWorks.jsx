@@ -36,8 +36,8 @@ const HowItWorks = () => {
     return (
         <div className='w-[90%] mx-auto my-20'>
             {/* Header Section */}
-            <div className='text-center mb-12'>
-                <h2 className='text-3xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800'>
+            <div className='text-center flex flex-col gap-3 items-center justify-center mb-12'>
+                <h2 className='text-3xl md:text-3xl max-w-3xl lg:text-5xl font-bold mb-4 text-gray-800'>
                     How to Find Best Auto Repair Company <span className='text-orange-500'>Near Me?</span>
                 </h2>
                 <p className='text-lg text-gray-600 max-w-3xl mx-auto'>

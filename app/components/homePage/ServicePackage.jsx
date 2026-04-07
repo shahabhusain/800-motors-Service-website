@@ -205,9 +205,9 @@ const ServicePackage = () => {
     ]
   return (
     <div className='p flex flex-col items-center justify-center leading-[2rem] text-center md:text-left leading-tight bg-white dark:bg-gray-950 py-12'>
-    <h1 className='md:text-[36px] text-[26px] uppercase font-semibold mb-6'><span className=' text-orange-500'>Select</span> Packages</h1>
+    <h1 className='text-4xl md:text-5xl font-bold mb-6'><span className=' text-orange-500'>Select</span> Packages</h1>
     <p className=' text-[#00000099] dark:text-gray-300 md:text-[16px] text-[14px] font-normal'>Choose the plan that fits your needs · flexible engine options</p>
-      <div className=' flex items-center gap-x-12 bg-white dark:bg-gray-900  p-2  rounded-xl mt-5'>
+      <div className=' flex items-center gap-x-12 bg-[#f8f8f8] dark:bg-gray-900  p-2  rounded-xl mt-5'>
         <button onClick={()=>setSelectService("v4")} className={ ` font-medium${selectService === "v4" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[10px] md:rounded-xl rounded-sm`}>V4</button>
         <button onClick={()=>setSelectService("v6")} className={ ` font-medium${selectService === "v6" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[10px] md:rounded-xl rounded-sm`}>V6</button>
         <button onClick={()=>setSelectService("v8")} className={ ` font-medium${selectService === "v8" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[10px] md:rounded-xl rounded-sm`}>V8</button>

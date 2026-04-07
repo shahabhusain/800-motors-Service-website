@@ -1,63 +1,42 @@
 "use client"
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
+import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
-import { FaCalendarAlt, FaCar, FaClipboardList, FaTools, FaMoneyBillWave, FaKey, FaHeadset, FaCheckCircle } from 'react-icons/fa';
+import Image from 'next/image';
+import auto from '@/public/home/auto.jpeg'
 
 const HowCarRepair = () => {
     const data = [
         {
-            step: "01",
-            title: "Book Your Appointment",
+            title: "Book in 60 Second",
             desc: "Schedule your car repair service online or by phone. Choose your preferred date, time, and service type.",
             color: "from-orange-500 to-red-500",
         },
         {
-            step: "02",
-            title: "Free Pickup & Drop-off",
+            title: "Free Pick-Up From Anywhere in Dubai",
             desc: "Our professional driver will pick up your car from your home or office in Dubai at the scheduled time.",
             color: "from-blue-500 to-cyan-500",
         },
         {
-            step: "03",
-            title: "Comprehensive Inspection",
+            title: "Diagnosis and Written Quote",
             desc: "Certified mechanics perform a thorough 50+ point inspection to identify all issues and provide detailed report.",
             color: "from-green-500 to-emerald-500",
         },
         {
-            step: "04",
-            title: "Expert Repair Service",
+            title: "Repair With Real Time Updates",
             desc: "Our skilled technicians use state-of-the-art equipment to perform high-quality repairs with genuine parts.",
             color: "from-purple-500 to-pink-500",
         },
         {
-            step: "05",
-            title: "Quality Check & Test",
+            title: "Same Day Collection or Free Drop Off",
             desc: "Every repair undergoes rigorous quality testing and road test to ensure everything works perfectly.",
             color: "from-indigo-500 to-blue-500",
         },
-        {
-            step: "06",
-            title: "Easy Payment Options",
-            desc: "Pay securely online, by card, or cash on delivery. Transparent pricing with no hidden charges.",
-            color: "from-yellow-500 to-orange-500",
-        },
-        {
-            step: "07",
-            title: "Free Delivery",
-            desc: "Your car will be delivered back to your doorstep, clean and fully repaired with all documents.",
-            color: "from-red-500 to-pink-500",
-        },
-        {
-            step: "08",
-            title: "24/7 Support",
-            desc: "Round-the-clock customer support for any questions or assistance even after service completion.",
-            color: "from-teal-500 to-cyan-500",
-        }
+
     ];
 
     return (
@@ -88,19 +67,19 @@ const HowCarRepair = () => {
                 }}
                 breakpoints={{
                     640: {
-                        slidesPerView: 2,
+                        slidesPerView: 1.5,
                         spaceBetween: 20,
                     },
                     768: {
-                        slidesPerView: 2.5,
+                        slidesPerView: 1.5,
                         spaceBetween: 24,
                     },
                     1024: {
-                        slidesPerView: 3,
+                        slidesPerView: 2.5,
                         spaceBetween: 24,
                     },
                     1280: {
-                        slidesPerView: 4,
+                        slidesPerView: 2.5,
                         spaceBetween: 24,
                     },
                 }}
@@ -110,15 +89,10 @@ const HowCarRepair = () => {
                     <SwiperSlide key={index}>
                         <div className='group relative h-full mb-12'>
                             {/* Card */}
-                            <div className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full'>
+                            <div className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform p-6 hover:-translate-y-2 h-full flex items-center justify-between gap-6'>
                                 
-                                <div className='p-6'>
-                                    {/* Step Number */}
-                                    <div className='flex justify-between items-start mb-4'>
-                                        <div className={`text-5xl font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent opacity-20`}>
-                                            {item.step}
-                                        </div>
-                                    </div>
+                                <div className=''>
+                      
                                     
                                     
                                     {/* Title */}
@@ -132,6 +106,7 @@ const HowCarRepair = () => {
                                     </p>
                      
                                 </div>
+                                <Image className=' w-[150px] h-[150px] rounded-lg object-cover' src={auto} alt='image'/>
                             </div>
 
                         </div>

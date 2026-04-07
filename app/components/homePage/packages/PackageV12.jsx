@@ -146,17 +146,7 @@ const PackageCard = ({ item, index }) => {
         ))}
       </div>
       
-      {/* Button */}
-      <button 
-        className={`w-full md:text-[18px] text-[14px] font-semibold py-2 mt-6 px-6 rounded-xl transition-all ${
-          isDisabled 
-            ? 'bg-gray-200 text-gray-400 cursor-not-allowed dark:bg-gray-800 dark:text-gray-600' 
-            : 'bg-orange-500 text-white hover:bg-orange-600 dark:bg-orange-600 dark:hover:bg-orange-500 dark:hover:shadow-lg dark:hover:shadow-orange-600/25'
-        }`}
-        disabled={isDisabled}
-      >
-        {item.button ? item.button : "Book Now"}
-      </button>
+
     </div>
   );
 }

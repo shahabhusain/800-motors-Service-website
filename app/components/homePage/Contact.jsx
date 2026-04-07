@@ -75,7 +75,7 @@ const ContactFaqSection = () => {
     <div className="w-full bg-white">
           {/* Contact Heading Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-12">
-        <h2 className="text-3xl text-center md:text-4xl lg:text-4xl font-bold mb-4 text-gray-800">
+        <h2 className="text-4xl md:text-5xl font-bold text-center  mb-4 text-gray-800">
           Contact <span className="text-orange-500">800 Motor Guru</span> For Auto Repair Services in Dubai?
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -106,8 +106,8 @@ const ContactFaqSection = () => {
 
       {/* FAQ Section */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mb-16">
-        <div className="text-center mb-10">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+        <div className="text-center mb-10 flex flex-col gap-y-3">
+          <h3 className="text-4xl md:text-5xl font-bold text-gray-800 mb-2">
             Frequently Asked <span className="text-orange-500">Questions</span>
           </h3>
           <p className="text-gray-500">Everything you need to know about our services</p>

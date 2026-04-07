@@ -106,20 +106,14 @@ const NearMe = () => {
                                 onClick={() => setSelectedFeature(index)}
                             >
                                 <div className='flex items-start gap-4'>
-                                    <div className={`transition-colors duration-300 ${
-                                        selectedFeature === index ? 'text-orange-500' : 'text-gray-400'
-                                    }`}>
-                                        {feature.icon}
-                                    </div>
+      
                                     <div className='flex-1'>
                                         <h3 className={`font-semibold mb-1 ${
                                             selectedFeature === index ? 'text-orange-600' : 'text-gray-800'
                                         }`}>
                                             {feature.title}
                                         </h3>
-                                        <p className='text-sm text-gray-600'>
-                                            {feature.desc}
-                                        </p>
+
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +126,6 @@ const NearMe = () => {
                     <div className='bg-gradient-to-br from-orange-50 to-white rounded-2xl p-6 shadow-lg'>
                         {/* Title */}
                         <h2 className='text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2'>
-                            <span className='text-orange-500'>{currentFeature.icon}</span>
                             <span>{currentFeature.title}</span>
                         </h2>
                         
@@ -154,25 +147,7 @@ const NearMe = () => {
                             />
                         </div>
 
-                        {/* Trust Badges */}
-                        <div className='flex flex-wrap gap-3 mt-6 pt-4 border-t border-gray-200'>
-                            <div className='flex items-center gap-2 bg-green-50 px-3 py-1 rounded-full'>
-                                <FaCheckCircle className='text-green-500 text-sm' />
-                                <span className='text-xs text-gray-700'>12 Months Warranty</span>
-                            </div>
-                            <div className='flex items-center gap-2 bg-green-50 px-3 py-1 rounded-full'>
-                                <FaCheckCircle className='text-green-500 text-sm' />
-                                <span className='text-xs text-gray-700'>Genuine Parts Only</span>
-                            </div>
-                            <div className='flex items-center gap-2 bg-green-50 px-3 py-1 rounded-full'>
-                                <FaCheckCircle className='text-green-500 text-sm' />
-                                <span className='text-xs text-gray-700'>Free Car Wash with Service</span>
-                            </div>
-                            <div className='flex items-center gap-2 bg-green-50 px-3 py-1 rounded-full'>
-                                <FaCheckCircle className='text-green-500 text-sm' />
-                                <span className='text-xs text-gray-700'>100% Satisfaction Guaranteed</span>
-                            </div>
-                        </div>
+                
                     </div>
                 </div>
             </div>

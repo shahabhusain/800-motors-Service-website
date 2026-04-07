@@ -23,7 +23,7 @@ const RepairEngine = () => {
         </h1>
         
         <p className='text-gray-600 leading-relaxed'>
-          At 8MG, we offer a complete range of automotive services to keep your vehicle running at its best. 
+          At 800MG, we offer a complete range of automotive services to keep your vehicle running at its best. 
           From routine maintenance to complex repairs, our certified technicians use state-of-the-art equipment 
           and genuine parts to deliver exceptional results. Whether you drive a luxury European car, a reliable 
           Japanese sedan, or a powerful American SUV, we have the expertise to handle all your automotive needs.

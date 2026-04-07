@@ -3,11 +3,11 @@ import React from "react";
 const Location = () => {
   return (
     <section className="w-full py-16 bg-white">
-      <div className="w-[90%] mx-auto">
+      <div className="w-[90%] mx-auto flex flex-col gap-y-3 items-center justify-center">
 
         {/* Heading */}
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-10">
-          800 Motor Guru: Auto Repairs Across All Major Dubai Areas
+        <h2 className="text-center text-4xl md:text-5xl font-bold max-w-3xl mb-10">
+         Auto Repairs Across All Major Dubai Areas
         </h2>
 
         {/* Map Container */}

@@ -63,10 +63,7 @@ const PackageV8 = ({data}) => {
             ))}
           </div>
           
-          {/* Button */}
-          <button className='bg-orange-500 dark:bg-orange-600 w-full md:text-[18px] text-[16px] font-semibold text-white py-2 mt-6 px-6 rounded-xl hover:bg-orange-600 dark:hover:bg-orange-500 transition-colors'>
-            Buy Now
-          </button>
+   
         </div>
       ))}
     </div>
