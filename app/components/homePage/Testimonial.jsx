@@ -122,9 +122,9 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div className='bg-[#f8f8f8] py-20'>
+    <div className='bg-[#f8f8f8] dark:bg-gray-950 py-20'>
       <div className='md:w-[90%] w-[95%] flex flex-col gap-y-3 items-center justify-center mx-auto'>
-        <h1 className='uppercase text-4xl md:text-5xl font-bold text-center'>Testimonials</h1>
+        <h1 className=' text-4xl md:text-5xl font-bold text-center'>Auto Repair and Maintenance Reviews</h1>
         <p className='max-w-4xl text-center text-gray-500'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aperiam impedit a vel ipsum maiores tempora temporibus! Reiciendis accusantium, ullam natus aperiam sapiente eligendi voluptatum, nulla libero sed quidem saepe!</p>
         
         <div className='flex justify-center gap-4 mt-8 mb-12'>
@@ -140,7 +140,6 @@ const Testimonial = () => {
                 : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-orange-500'
             }`}
           >
-            <FcGoogle size={24} />
             <span>Google Reviews</span>
           </button>
 
@@ -156,7 +155,6 @@ const Testimonial = () => {
                 : 'bg-white text-gray-700 border-2 border-gray-300 hover:border-red-500'
             }`}
           >
-            <FaYoutube size={24} className='text-red-600' />
             <span>Video Reviews</span>
           </button>
         </div>

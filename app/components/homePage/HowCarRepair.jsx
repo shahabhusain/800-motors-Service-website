@@ -40,14 +40,13 @@ const HowCarRepair = () => {
     ];
 
     return (
-          <div className=' bg-[#f8f8f8] py-20'>
+          <div className=' bg-[#f8f8f8] dark:bg-gray-950 py-20'>
               <div className='w-[90%] mx-auto'>
             {/* Header Section */}
             <div className='text-center mb-12'>
-                <h2 className='text-4xl md:text-5xl font-bold mb-4 text-gray-800'>
+                <h2 className='text-4xl md:text-5xl dark:text-white font-bold mb-4 text-gray-800'>
                     How Car Repair Works in <span className='text-orange-500 relative inline-block'>
                         Dubai
-                        <span className='absolute bottom-0 left-0 w-full h-1 bg-orange-500 rounded-full'></span>
                     </span>
                 </h2>
                 <p className='text-gray-600 text-lg max-w-3xl mx-auto'>
@@ -89,14 +88,14 @@ const HowCarRepair = () => {
                     <SwiperSlide key={index}>
                         <div className='group relative h-full mb-12'>
                             {/* Card */}
-                            <div className='bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform p-6 hover:-translate-y-2 h-full flex items-center justify-between gap-6'>
+                            <div className='bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform p-6 hover:-translate-y-2 h-full flex flex-col  items-center justify-between gap-6'>
                                 
                                 <div className=''>
                       
                                     
                                     
                                     {/* Title */}
-                                    <h3 className='text-xl font-bold mb-3 text-gray-800 group-hover:text-orange-500 transition-colors duration-300'>
+                                    <h3 className='text-xl dark:text-white font-bold mb-3 text-gray-800 group-hover:text-orange-500 transition-colors duration-300'>
                                         {item.title}
                                     </h3>
                                     
@@ -106,7 +105,7 @@ const HowCarRepair = () => {
                                     </p>
                      
                                 </div>
-                                <Image className=' w-[150px] h-[150px] rounded-lg object-cover' src={auto} alt='image'/>
+                                <Image className=' md:w-[150px] w-full h-[150px] rounded-lg object-cover' src={auto} alt='image'/>
                             </div>
 
                         </div>

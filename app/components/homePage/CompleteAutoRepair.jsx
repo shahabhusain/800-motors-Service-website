@@ -92,13 +92,14 @@ const CompleteAutoRepair = () => {
     };
 
     return (
-        <div className='w-[90%] mx-auto my-20'>
+           <div className=' dark:bg-gray-950 dark:py-20'>
+             <div className='w-[90%] mx-auto my-20 dark:my-0'>
             {/* Header Section */}
             <div className='text-center mb-12'>
-                <h2 className='text-4xl md:text-5xl font-bold mb-4 text-gray-800'>
+                <h2 className='text-4xl md:text-5xl dark:text-white font-bold mb-4 text-gray-800'>
                     Complete Auto Repair Solution in <span className='text-orange-500 relative inline-block'>
                         Dubai
-                        <span className='absolute bottom-0 left-0 w-full h-1 bg-orange-500 rounded-full'></span>
+                        
                     </span>
                 </h2>
                 <p className='text-gray-600 text-lg max-w-3xl mx-auto'>
@@ -111,7 +112,7 @@ const CompleteAutoRepair = () => {
                 {visibleData.map((item, index) => (
                     <div 
                         key={index} 
-                        className='bg-white rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow duration-300 relative overflow-visible pt-10'
+                        className='bg-white dark:bg-gray-900 dark:border-gray-800 rounded-2xl border border-gray-200 hover:shadow-xl transition-shadow duration-300 relative overflow-visible pt-10'
                     >
                         {/* Icon Circle - Now fully visible */}
                         <div className='absolute -top-6 left-1/2 transform -translate-x-1/2 z-10'>
@@ -124,7 +125,7 @@ const CompleteAutoRepair = () => {
                         
                         <div className='p-6 pt-8 text-center'>
                             {/* Title */}
-                            <h3 className='text-xl font-bold mb-3 text-gray-800'>
+                            <h3 className='text-xl dark:text-white font-bold mb-3 text-gray-800'>
                                 {item.title}
                             </h3>
                             
@@ -182,6 +183,7 @@ const CompleteAutoRepair = () => {
                 )}
             </div>
         </div>
+           </div>
     );
 };
 

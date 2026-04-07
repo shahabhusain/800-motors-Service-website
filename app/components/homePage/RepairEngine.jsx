@@ -5,7 +5,8 @@ import { FaCheckCircle, FaCar, FaTools, FaShieldAlt, FaClock, FaStar } from 'rea
 
 const RepairEngine = () => {
   return (
-    <div className='w-[85%] mx-auto my-20 flex flex-col md:flex-row items-center gap-8 md:gap-12'>
+    <div className=' dark:bg-gray-950 dark:py-20'>
+    <div className='w-[85%] mx-auto my-20 dark:my-0 flex flex-col md:flex-row items-center gap-8 md:gap-12'>
 
             {/* Right Side - Image */}
       <div className='w-full md:w-[40%]'>
@@ -18,7 +19,7 @@ const RepairEngine = () => {
       {/* Left Side - Content */}
       <div className='w-full md:w-[60%] space-y-6'>
         
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight'>
+        <h1 className='text-3xl dark:text-white md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight'>
            <span className='text-orange-500'>Repair Engine, AC, Brakes, and Suspension </span>  Before Dubai Heat Causes Damage
         </h1>
         
@@ -34,6 +35,7 @@ const RepairEngine = () => {
   
         
       
+    </div>
     </div>
   )
 }

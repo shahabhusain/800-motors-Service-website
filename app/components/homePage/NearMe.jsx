@@ -76,17 +76,18 @@ const NearMe = () => {
     const currentFeature = features[selectedFeature];
 
     return (
-        <div className='w-[90%] mx-auto my-20'>
+         <div className=' dark:bg-gray-950 dark:py-20'>
+             <div className='w-[90%] mx-auto my-20 dark:my-0'>
             {/* Header Section */}
             <div className='text-center mb-12'>
-                <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-gray-800'>
+                <h1 className='text-4xl dark:text-white md:text-5xl lg:text-5xl font-bold mb-4 text-gray-800'>
                     Best Auto Repair Near Me in <span className='text-orange-500 relative inline-block'>
                         Dubai
                         <span className='absolute bottom-0 left-0 w-full h-1 bg-orange-500 rounded-full'></span>
                     </span>
                 </h1>
                 <p className='text-xl text-gray-600 max-w-3xl mx-auto mb-6'>
-                    The best auto repair near you in Dubai is <span className='text-orange-500 font-bold text-2xl'>8MG</span>
+                    The best auto repair near you in Dubai is <span className='text-orange-500 font-bold text-2xl'>800MG</span>
                 </p>
              
             </div>
@@ -98,7 +99,7 @@ const NearMe = () => {
                         {features.map((feature, index) => (
                             <div 
                                 key={index} 
-                                className={`bg-white rounded-xl shadow-md transition-all duration-300 p-5 border-l-4 cursor-pointer ${
+                                className={`bg-white dark:bg-gray-900 rounded-xl shadow-md transition-all duration-300 p-5 border-l-4 cursor-pointer ${
                                     selectedFeature === index 
                                         ? 'border-orange-500 bg-orange-50 shadow-lg' 
                                         : 'border-gray-200 hover:shadow-xl'
@@ -109,7 +110,7 @@ const NearMe = () => {
       
                                     <div className='flex-1'>
                                         <h3 className={`font-semibold mb-1 ${
-                                            selectedFeature === index ? 'text-orange-600' : 'text-gray-800'
+                                            selectedFeature === index ? 'text-orange-600' : 'text-gray-800 dark:text-gray-300'
                                         }`}>
                                             {feature.title}
                                         </h3>
@@ -123,15 +124,15 @@ const NearMe = () => {
 
                 {/* Right Side - Dynamic Content and Image */}
                 <div className='w-full lg:w-[60%]'>
-                    <div className='bg-gradient-to-br from-orange-50 to-white rounded-2xl p-6 shadow-lg'>
+                    <div className='bg-orange-50 dark:bg-gray-800 rounded-2xl p-6 shadow-lg'>
                         {/* Title */}
-                        <h2 className='text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2'>
+                        <h2 className='text-2xl font-bold dark:text-white text-gray-800 mb-4 flex items-center gap-2'>
                             <span>{currentFeature.title}</span>
                         </h2>
                         
                         {/* Dynamic Paragraph */}
                         <div className='mb-6'>
-                            <p className='text-gray-700 leading-relaxed'>
+                            <p className='text-gray-700 dark:text-gray-400 leading-relaxed'>
                                 {currentFeature.paragraph}
                             </p>
                         </div>
@@ -170,6 +171,7 @@ const NearMe = () => {
                 }
             `}</style>
         </div>
+         </div>
     )
 }
 

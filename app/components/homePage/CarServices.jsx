@@ -5,15 +5,16 @@ import { FaCheckCircle, FaCar, FaTools, FaShieldAlt, FaClock, FaStar } from 'rea
 
 const CarServices = () => {
   return (
-    <div className='w-[85%] mx-auto my-20 flex flex-col md:flex-row items-center gap-8 md:gap-12'>
+      <div className=' dark:bg-gray-950 dark:py-20'>
+         <div className='w-[85%] mx-auto my-20 dark:my-0 flex flex-col md:flex-row items-center gap-8 md:gap-12'>
       {/* Left Side - Content */}
       <div className='w-full md:w-[60%] space-y-6'>
         
-        <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight'>
+        <h1 className='text-3xl md:text-4xl lg:text-5xl dark:text-white font-bold text-gray-800 leading-tight'>
            <span className='text-orange-500'>Book Your Car Service in Dubai Today</span>  Before Slots Run Out
         </h1>
         
-        <p className='text-gray-600 leading-relaxed'>
+        <p className='text-gray-600 dark:text-gray-500 leading-relaxed'>
           At 8MG, we offer a complete range of automotive services to keep your vehicle running at its best. 
           From routine maintenance to complex repairs, our certified technicians use state-of-the-art equipment 
           and genuine parts to deliver exceptional results. Whether you drive a luxury European car, a reliable 
@@ -33,6 +34,7 @@ const CarServices = () => {
         
       
     </div>
+      </div>
   )
 }
 
