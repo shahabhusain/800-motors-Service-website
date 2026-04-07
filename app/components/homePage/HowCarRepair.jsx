@@ -88,7 +88,7 @@ const HowCarRepair = () => {
                     <SwiperSlide key={index}>
                         <div className='group relative h-full mb-12'>
                             {/* Card */}
-                            <div className='bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform p-6 hover:-translate-y-2 h-full flex flex-col  items-center justify-between gap-6'>
+                            <div className='bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform p-6 hover:-translate-y-2 h-full flex flex-col md:flex-row  items-center justify-between gap-6'>
                                 
                                 <div className=''>
                       
