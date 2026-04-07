@@ -10,7 +10,7 @@ import Others from './brands/Others'
 const Brands = () => {
     const [selectedBrands, setSelectedBrands] = useState("German")
   return (
-    <div className=' bg-[#F8F8F8] md:h-[700px] h-full dark:bg-gray-950 flex flex-col gap-y-3 items-center pt-20'>
+    <div className=' bg-[#F8F8F8] md:h-[750px] h-full dark:bg-gray-950 flex flex-col gap-y-3 items-center pt-20'>
         <h2 className=' text-4xl md:text-5xl font-bold  text-center'>The Best Multi-Brand Car <span className=' text-orange-500'>Repair Shop </span> <span className=' text-orange-500'>in</span> Dubai</h2>
         <div className=' bg-white mt-12 dark:bg-gray-900 md:p-3 p-1.5 md:rounded-2xl text-sm flex items-center md:gap-x-20 mt-5'>
                    <button onClick={() => setSelectedBrands("German")} className={`md:py-2 py-1 md:px-6 px-3 md:text-[16px] sm:text-[12px] text-[8px] rounded-md ${selectedBrands === "German" ? "bg-orange-500 text-white" : ""}`}>German</button>
