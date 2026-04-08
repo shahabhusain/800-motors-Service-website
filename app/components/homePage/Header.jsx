@@ -143,51 +143,10 @@ const Header = () => {
     { 
       href: "/packages", 
       label: "Packages",
-      columns: 3,
-      dropdown: [
-        { 
-          category: "Silver", 
-          items: [
-            "3 Minor Services",
-            "2 Major Services",
-            "2 No Time Limit",
-            "15% Off Spare Parts"
-          ]
-        },
-        { 
-          category: "Gold", 
-          items: [
-            "3 Minor Services",
-            "2 Major Services",
-            "2 No Time Limit",
-            "15% Off Spare Parts"
-          ]
-        },
-        { 
-          category: "Platinum", 
-          items: [
-            "3 Minor Services",
-            "2 Major Services",
-            "2 No Time Limit",
-            "15% Off Spare Parts"
-          ]
-        },
-      ]
     },
     { 
       href: "/offers", 
       label: "Offers",
-      columns: 1,
-      dropdown: [
-        {
-          category: "Active Offers",
-          items: [
-            "Free Battery",
-            "Ramadan Offer",
-            "New Year 2026 offer",
-          ]
-        },
-      ]
     },
     { href: "/blog", label: "Blogs" },
     { href: "/shop", label: "Shop" },
