@@ -92,7 +92,7 @@ const CompleteAutoRepair = () => {
     };
 
     return (
-           <div className=' dark:bg-gray-950 bg-[#f8f8f8] py-20'>
+           <div className=' dark:bg-gray-950 bg-[#f8f8f8] py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
              <div className='w-[90%] mx-auto'>
             {/* Header Section */}
             <div className='text-center mb-12'>

@@ -40,7 +40,7 @@ const HowCarRepair = () => {
     ];
 
     return (
-          <div className=' bg-[#fff] dark:bg-gray-950 py-20'>
+          <div className=' bg-[#fff] dark:bg-gray-950 py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
               <div className='w-[90%] mx-auto'>
             {/* Header Section */}
             <div className='text-center mb-12'>

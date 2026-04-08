@@ -32,11 +32,12 @@ const Faqs = () => {
    }
 
   return (
-    <div className='w-[85%] mx-auto  my-20'>
-      <h1 className='uppercase text-[46px] font-bold text-center mb-10'>Frequently Asked Questions</h1>
+     <div className=' bg-[#f8f8f8] dark:bg-gray-950 dark:border-b-[#f8f8f82e] dark:border-b-[1px] py-20'>
+         <div className='w-[85%] mx-auto'>
+      <h2 className='lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold text-center mb-10'>Frequently Asked Questions</h2>
       <div className='flex flex-col gap-y-4'>
         {faqs.map((item, index) => (
-            <div key={index} className='bg-[#F8F8F8] dark:bg-gray-950 p-5 rounded-lg'>
+            <div key={index} className='bg-[#fff] dark:bg-gray-900 p-5 rounded-lg'>
                 <div 
                   className='flex items-center justify-between cursor-pointer'
                   onClick={() => toggleFaqs(index)}
@@ -56,6 +57,7 @@ const Faqs = () => {
         ))}
       </div>
     </div>
+     </div>
   )
 }
 

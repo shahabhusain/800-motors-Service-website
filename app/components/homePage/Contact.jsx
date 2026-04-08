@@ -57,7 +57,7 @@ const ContactFaqSection = () => {
   return (
     <div className="w-full bg-[#f8f8f8] dark:bg-gray-950">
       {/* FAQ Section */}
-      <div className="md:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="md:max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 dark:border-b-[#f8f8f82e] dark:border-b-[1px]">
         <div className="text-center mb-10 flex flex-col gap-y-3">
           <h3 className="text-4xl dark:text-white md:text-5xl font-bold text-gray-800 mb-2">
             Frequently Asked <span className="text-orange-500">Questions</span>

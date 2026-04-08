@@ -76,7 +76,7 @@ const NearMe = () => {
     const currentFeature = features[selectedFeature];
 
     return (
-         <div className=' bg-[#f8f8f8] dark:bg-gray-950 py-20'>
+         <div className=' bg-[#f8f8f8] dark:bg-gray-950 py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
              <div className='w-[90%] mx-auto '>
             {/* Header Section */}
             <div className='text-center mb-12'>

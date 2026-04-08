@@ -57,7 +57,7 @@ const AutoRepair = () => {
     };
 
     return (
-        <div className='w-full bg-gray-50  dark:bg-gray-950 py-8 sm:py-12 md:py-16 overflow-hidden'>
+        <div className='w-full bg-gray-50  dark:bg-gray-950 py-8 sm:py-12 md:py-16 overflow-hidden dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
             <div className='text-center mb-8 sm:mb-10 md:mb-12 flex flex-col items-center justify-center px-4'>
                 <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl dark:text-white font-bold mb-3 sm:mb-4 text-gray-800'>
                     Repair Your Autos From Best <span className='text-orange-500'>Car Service in Dubai</span>

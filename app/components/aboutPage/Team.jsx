@@ -49,10 +49,11 @@ const Team = () => {
         },
     ]
   return (
-    <div className=' w-[85%] mx-auto mt-20 flex flex-col items-center justify-center gap-y-3 '>
-        <h1 className=' text-[32px] font-semibold'>Meet the team behind 800 Motor Guru </h1>
+       <div className=' bg-[#f8f8f8] dark:bg-gray-950 py-20 mt-20 dark:mt-0 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
+         <div className=' w-[85%] mx-auto flex flex-col items-center justify-center gap-y-3 '>
+        <h1 className='lg:text-5xl md:text-4xl text-center sm:text-3xl text-2xl font-bold'>Meet the team behind 800 Motor Guru </h1>
         <p className=' text-[#00000099] dark:text-gray-300  text-[16px] font-normal text-center'>Welcome to 800 Motor Guru, a trusted provider of onsite car repair and maintenance services in the UAE. Our skilled technicians deliver fast, reliable automotiv.Welcome to 80UAE. </p>
-        <div className=' grid grid-cols-3 gap-12 w-full mt-12'>
+        <div className=' grid md:grid-cols-3 grid-cols-1 gap-12 w-full mt-12'>
            {
             team.map((item, index) => (
                 <div key={index} className=' flex flex-col gap-y-2 '>
@@ -73,6 +74,7 @@ const Team = () => {
            }
         </div>
     </div>
+       </div>
   )
 }
 

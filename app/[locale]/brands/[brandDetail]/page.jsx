@@ -2,7 +2,6 @@ import Hero from '@/app/components/homePage/Hero'
 import React from 'react'
 import bg from '@/public/herobg.jpg'
 import { Car, Clock, MapPin, Toolbox } from 'lucide-react';
-import AllServices from '@/app/components/services/AllServices';
 import {
   FaCarBattery,
   FaTools,
@@ -13,7 +12,6 @@ import {
   FaCarSide,
   FaWrench,
 } from "react-icons/fa";
-import WhyChooseUs from '@/app/components/services/WhyChooseUs';
 import Testimonial from '@/app/components/homePage/Testimonial';
 import Faqs from '@/app/components/aboutPage/Faqs';
 import BmwModels from '@/app/components/bands/BmwModels';
@@ -85,8 +83,6 @@ const BrandDetail = () => {
   return (
     <div>
       <Hero img={bg} span1="BMW Repair Services in Dubai " span2="Expert Mobile Technicians" desc="We provide professional BMW repair and maintenance services across Dubai with same-day mobile support, keeping your car safe and road-ready." features={features} />
-      <AllServices services={services} span="BMW Repair" span1="Service" desc="We provide professional BMW repair and maintenance services across Dubai with same-day mobile support, keeping your car safe and road-ready." />
-      <WhyChooseUs />
       <Testimonial />
       <BmwModels />
       <Faqs />

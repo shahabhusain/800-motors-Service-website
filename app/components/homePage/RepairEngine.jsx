@@ -5,7 +5,7 @@ import { FaCheckCircle, FaCar, FaTools, FaShieldAlt, FaClock, FaStar } from 'rea
 
 const RepairEngine = () => {
   return (
-    <div className=' dark:bg-gray-950 bg-[#f8f8f8] py-20'>
+    <div className=' dark:bg-gray-950 bg-[#f8f8f8] py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
     <div className='w-[85%] mx-auto  flex flex-col md:flex-row items-center gap-8 md:gap-12'>
 
             {/* Right Side - Image */}

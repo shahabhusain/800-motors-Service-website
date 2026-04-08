@@ -14,7 +14,6 @@ import {
   FaWrench,
 } from "react-icons/fa";
 import Brands from '@/app/components/homePage/Brands';
-import WhyChooseUs from '@/app/components/services/WhyChooseUs';
 import Testimonial from '@/app/components/homePage/Testimonial';
 import Faqs from '@/app/components/aboutPage/Faqs';
 const BrandsPage = () => {
@@ -87,7 +86,6 @@ const BrandsPage = () => {
       <Hero span1="All Car Brands Repair & Maintenance" span2="Services in Dubai by 800 Motor Guru" desc="We provide expert repair and maintenance services for all major car brands across Dubai with fast, reliable mobile support at your location." features={features} img={herobg} />
       <AllServices services={services} span="Services Available " span1="for All Car Brands" desc="We provide expert repair and maintenance services for all major car brands across Dubai with fast, reliable mobile support at your location." />
       <Brands />
-      <WhyChooseUs />
       <Testimonial />
       <Faqs />
     </div>

@@ -88,7 +88,7 @@ const Location = () => {
         : locations.filter(location => location.city === activeFilter);
 
     return (
-        <section className="w-full py-16 bg-[#f8f8f8] dark:bg-gray-950">
+        <section className="w-full py-16 bg-[#f8f8f8] dark:bg-gray-950 dark:border-b-[#f8f8f82e] dark:border-b-[1px]">
             <div className="w-[90%] mx-auto flex flex-col gap-y-3 items-center justify-center">
                 {/* Heading */}
                 <h2 className="text-center text-4xl md:text-5xl font-bold mb-6">
