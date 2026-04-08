@@ -3,7 +3,6 @@ import { Car, Clock, MapPin, Toolbox } from 'lucide-react';
 import bg from '@/public/herobg.jpg'
 import React from 'react'
 import ServicePackage from '@/app/components/homePage/ServicePackage';
-import WhyChooseUs from '@/app/components/services/WhyChooseUs';
 import Testimonial from '@/app/components/homePage/Testimonial';
 import Faqs from '@/app/components/aboutPage/Faqs';
 
@@ -17,7 +16,6 @@ const Packages = () => {
   return (
     <div>
       <Hero img={bg} span1="Maintenance Packages in Dubai" span2="Convenient and Professional" desc="Choose from a range of tailored packages by 800 Motor Guru to keep your car running at peak performance." features={features} />
-      <WhyChooseUs />
       <ServicePackage />
       <Testimonial />
       <Faqs />
