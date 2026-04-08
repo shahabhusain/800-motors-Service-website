@@ -15,6 +15,7 @@ import CarServices from '../components/homePage/CarServices'
 import RepairEngine from '../components/homePage/RepairEngine'
 import FastRepairs from '../components/homePage/FastRepairs'
 import Contact from '../components/homePage/Contact'
+import Cta from '../components/homePage/Cta'
 
 export const metadata = {
   title: "800 Motor Guru | Auto Repair Service in Dubai",
@@ -52,6 +53,7 @@ const page = () => {
             <CarServices />
             <RepairEngine />
             <FastRepairs />
+            <Cta />
             <Contact />
     </div>
   );

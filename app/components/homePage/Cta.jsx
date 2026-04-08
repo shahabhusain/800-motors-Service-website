@@ -28,7 +28,7 @@ const Cta = () => {
             <a
               href="https://wa.me/971000000000"
               target="_blank"
-              className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 transition px-6 py-3 rounded-full text-white font-medium"
+              className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 transition px-6 py-3 rounded-md text-white font-medium"
             >
               <FaWhatsapp />
               WhatsApp
@@ -37,7 +37,7 @@ const Cta = () => {
             {/* Call */}
             <a
               href="tel:+971000000000"
-              className="flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-200 transition px-6 py-3 rounded-full font-medium"
+              className="flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-200 transition px-6 py-3 rounded-md font-medium"
             >
               <FaPhoneAlt />
               Call Now

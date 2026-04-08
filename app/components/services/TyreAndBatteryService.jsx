@@ -149,8 +149,8 @@ const TyreAndBatteryService = () => {
                   {item.desc}
                 </p>
               </div>
-              
-           
+                
+               <Link href={item.link} className=' mt-4 py-2 px-5 rounded-md bg-orange-500 text-white'>View more</Link>
             </div>
           ))}
         </div>

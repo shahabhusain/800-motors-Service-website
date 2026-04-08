@@ -28,17 +28,11 @@ const ServicesPage = () => {
   img={herobg}
 />
 <TyreAndBatteryService />
-      <CompleteAutoRepair />
        <Brands />
    <ServicePackage />
-     
        <Testimonial />
       <CarService />
       <Cta />
-         
-     
-      
-
     </div>
   )
 }
