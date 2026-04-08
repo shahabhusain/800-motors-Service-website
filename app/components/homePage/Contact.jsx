@@ -66,7 +66,7 @@ const ContactFaqSection = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center bg-[#f8f8f8] dark:bg-gray-900 py-3 rounded-md gap-3 mb-10">
+        <div className="flex flex-wrap justify-center bg-[#fff] dark:bg-gray-900 py-3 rounded-md gap-3 mb-10">
           {filterCategories.map((category) => (
             <button
               key={category}
@@ -88,7 +88,7 @@ const ContactFaqSection = () => {
             filteredFaqs.map((faq, idx) => (
               <details
                 key={idx}
-                className="group bg-gray-50 dark:bg-gray-900 rounded-xl p-5 cursor-pointer transition-all hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="group bg-white dark:bg-gray-900 rounded-xl p-5 cursor-pointer transition-all hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 <summary className="flex dark:text-white justify-between items-center font-semibold text-gray-800 text-lg list-none">
                   <span>{faq.question}</span>
