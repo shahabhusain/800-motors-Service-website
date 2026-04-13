@@ -88,10 +88,10 @@ const Location = () => {
         : locations.filter(location => location.city === activeFilter);
 
     return (
-        <section className="w-full py-16 bg-[#f8f8f8] dark:bg-gray-950 dark:border-b-[#f8f8f82e] dark:border-b-[1px]">
-            <div className="w-[90%] mx-auto flex flex-col gap-y-3 items-center justify-center">
+        <section className="w-full md:py-16 py-10 bg-[#f8f8f8] dark:bg-gray-950 dark:border-b-[#f8f8f82e] dark:border-b-[1px]">
+            <div className="md:w-[90%] w-[95%] mx-auto flex flex-col gap-y-3 items-center justify-center">
                 {/* Heading */}
-                <h2 className="text-center text-4xl md:text-5xl font-bold mb-6">
+                <h2 className="text-center text-3xl md:text-5xl font-bold mb-6">
                     Auto Repairs Across All Major UAE Areas
                 </h2>
                 <p className="text-center text-gray-600 mb-10 max-w-2xl">
@@ -100,12 +100,12 @@ const Location = () => {
                 </p>
 
                 {/* Filter Buttons */}
-                <div className="flex flex-wrap justify-center gap-3 mb-10 dark:bg-gray-900 bg-[#f8f8f8] px-4 py-3 rounded-md">
+                <div className="flex  justify-center gap-3 mb-10 dark:bg-gray-900 bg-[#f8f8f8] md:px-4 md:py-3 px-2 py-1.5 rounded-md">
                     {filters.map((filter) => (
                         <button
                             key={filter.id}
                             onClick={() => setActiveFilter(filter.id)}
-                            className={`px-6 py-2 rounded-md font-semibold transition-all duration-300 transform hover:scale-105 ${
+                            className={`md:px-6 md:py-2 px-2 py-1 md:text-[16px] text-[10px] rounded-md font-semibold transition-all duration-300 transform hover:scale-105 ${
                                 activeFilter === filter.id
                                     ? ` bg-orange-500 text-white shadow-lg`
                                     : ""

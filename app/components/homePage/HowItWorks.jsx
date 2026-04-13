@@ -28,8 +28,8 @@ const HowItWorks = () => {
     ];
 
     return (
-          <div className=' dark:bg-gray-950 dark:py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
-              <div className='w-[90%] mx-auto my-20 dark:my-0'>
+          <div className=' dark:bg-gray-950 dark:py-20 md:dark:py-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
+              <div className='w-[90%] mx-auto md:my-20 my-10 dark:my-0'>
             {/* Header Section */}
             <div className='text-center flex flex-col gap-3 items-center justify-center mb-12'>
                 <h2 className='text-3xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800 dark:text-white'>

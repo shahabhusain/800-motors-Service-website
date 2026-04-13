@@ -50,7 +50,7 @@ const AutoRepair = () => {
                             <span className='text-orange-500'> Service Center in Dubai</span>
                         </h2>
 
-                        <p className='text-white text-[13px] sm:text-[14px] md:text-[15px] max-h-[140px] md:max-h-[120px] overflow-y-auto custom-scroll'>
+                        <p className='text-white text-[13px] sm:text-[14px] md:text-[15px] md:h-[70px] h-[50px] overflow-y-auto custom-scroll'>
                             800 Motor Guru is a top-rated car service company in Dubai with over 2,000 customer reviews and a five-star rating on Google. The company provides reliable auto repair services with certified technicians trained in engine diagnostics, electrical systems, and AC repair. It uses diagnostic tools such as computerized scanners, engine analyzers, and wheel alignment machines. 800 Motor Guru maintains clear pricing and defined service steps, which help customers understand the repair process before work starts.
                         </p>
 

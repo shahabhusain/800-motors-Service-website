@@ -204,19 +204,19 @@ const ContactFaqSection = () => {
       {/* FAQ Section */}
       <div className="md:max-w-4xl  mx-auto px-4 sm:px-6 lg:px-8 py-12 dark:border-b-[#f8f8f82e] dark:border-b-[1px]">
         <div className="text-center mb-10 flex flex-col gap-y-3">
-          <h3 className="text-4xl dark:text-white md:text-5xl font-bold text-gray-800 mb-2">
+          <h3 className="text-3xl dark:text-white md:text-5xl font-bold text-gray-800 mb-2">
             Frequently Asked <span className="text-orange-500">Questions</span>
           </h3>
           <p className="text-gray-500">Everything you need to know about our services</p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center bg-[#fff] dark:bg-gray-900 py-3 rounded-md gap-3 mb-10">
+        <div className="flex flex-wrap justify-center bg-[#fff] dark:bg-gray-900 md:py-3 py-1 rounded-md gap-3 mb-10">
           {filterCategories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveFilter(category)}
-              className={`px-4 py-2  rounded-md font-medium transition-all duration-300 ${
+              className={`md:px-4 md:py-2 py-1 px-2 md:text-[16px] text-[10px]   rounded-md font-medium transition-all duration-300 ${
                 activeFilter === category
                   ? "bg-orange-500 text-white shadow-lg shadow-orange-200 dark:shadow-gray-800"
                   : ""
@@ -236,14 +236,14 @@ const ContactFaqSection = () => {
                 className="group bg-white dark:bg-gray-900 rounded-xl p-5 cursor-pointer transition-all hover:bg-gray-100 dark:hover:bg-gray-800"
               >
                 <summary className="flex dark:text-white justify-between items-center font-semibold text-gray-800 text-lg list-none">
-                  <span>{faq.question}</span>
+                  <span className=' md:text-[16px] text-[12px]'>{faq.question}</span>
                   <span className="text-orange-500 group-open:rotate-180 transition-transform duration-200">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </span>
                 </summary>
-                <p className="mt-3 text-gray-600 dark:text-gray-300 leading-relaxed pl-0 border-l-0">
+                <p className="mt-3 md:text-[16px] text-[12px] text-gray-600 dark:text-gray-300 leading-relaxed pl-0 border-l-0">
                   {faq.answer}
                 </p>
               </details>

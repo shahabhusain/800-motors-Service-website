@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Facebook, Twitter, Instagram, Youtube, Mail, Phone, MapPin, Linkedin,  } from "lucide-react";
+import {FaTiktok} from 'react-icons/fa'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,24 +11,26 @@ const Footer = () => {
     { href: "/services", label: "Services" },
     { href: "/about-us", label: "About Us" },
     { href: "/contact", label: "Contact" },
-    { href: "/privacy", label: "Privacy Policy" },
-    { href: "/terms", label: "Terms of Service" },
+    // { href: "/privacy", label: "Privacy Policy" },
+    // { href: "/terms", label: "Terms of Service" },
   ];
 
   const services = [
-    { href: "/services/oil-change", label: "Oil Change" },
-    { href: "/services/brake-repair", label: "Brake Repair" },
-    { href: "/services/engine-diagnostic", label: "Engine Diagnostic" },
-    { href: "/services/tire-service", label: "Tire Service" },
-    { href: "/services/battery-service", label: "Battery Service" },
-    { href: "/services/ac-service", label: "AC Service" },
+    { href: "/services/battery-replacement", label: "Battery Replacement" },
+    // { href: "/services/brake-repair", label: "Brake Repair" },
+    // { href: "/services/engine-diagnostic", label: "Engine Diagnostic" },
+    // { href: "/services/tire-service", label: "Tire Service" },
+    // { href: "/services/battery-service", label: "Battery Service" },
+    // { href: "/services/ac-service", label: "AC Service" },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Youtube, href: "https://youtube.com", label: "Youtube" },
+    { icon: Facebook, href: "https://www.facebook.com/800MotorGuruOfficial", label: "Facebook" },
+    { icon: Twitter, href: "https://x.com/800MotorGuru", label: "Twitter" },
+    { icon: Instagram, href: "https://www.instagram.com/800motorguruofficial", label: "Instagram" },
+    { icon: Youtube, href: "https://www.youtube.com/@motorguru-m7b", label: "Youtube" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/800motorguruofficial", label: "Linkedin" },
+     { icon: FaTiktok, href: "https://www.tiktok.com/@800motorguruofficial", label: "Tiktok" },
   ];
 
   return (
@@ -108,19 +111,19 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-orange-600 dark:text-orange-500 shrink-0 mt-0.5" />
                 <span className="text-gray-600 dark:text-gray-400 text-sm">
-                  123 Auto Street, Car City, CC 12345
+                  Warehouse No. 9, 22nd Street – Al Marabea’ St – Al Quoz Industrial Area 3 – Dubai
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-orange-600 dark:text-orange-500 shrink-0" />
-                <a href="tel:+1234567890" className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-500 text-sm transition-colors">
-                  +1 (234) 567-890
+                <a href="tel:+80064878" className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-500 text-sm transition-colors">
+                  80064878
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-orange-600 dark:text-orange-500 shrink-0" />
-                <a href="mailto:info@800motorguro.com" className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-500 text-sm transition-colors">
-                  info@800motorguro.com
+                <a href="mailto:info@800motorguru.com" className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-500 text-sm transition-colors">
+                  info@800motorguru.com
                 </a>
               </li>
             </ul>

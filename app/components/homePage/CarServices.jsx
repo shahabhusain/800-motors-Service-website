@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 const CarServices = () => {
   return (
-      <div className=' dark:bg-gray-950 dark:py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
-         <div className='w-[85%] mx-auto my-20 dark:my-0 flex flex-col md:flex-row items-center gap-8 md:gap-12'>
+      <div className=' dark:bg-gray-950 dark:py-20 md:dark:py-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
+         <div className='w-[85%] mx-auto md:my-20 my-10  dark:my-0 flex flex-col md:flex-row items-center gap-8 md:gap-12'>
       {/* Left Side - Content */}
       <div className='w-full md:w-[60%] space-y-6'>
         

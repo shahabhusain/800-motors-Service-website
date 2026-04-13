@@ -6,7 +6,7 @@ import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa"
 
 const Cta = () => {
   return (
-    <div className="w-full py-20 dark:bg-gray-950">
+    <div className="w-full md:py-20 py-10 dark:bg-gray-950">
       
       <div className="bg-orange-500 backdrop-blur-2xl rounded-3xl w-[90%] md:w-[85%] mx-auto px-6 py-10 md:py-10 flex flex-col md:flex-row items-center justify-between gap-10">
 

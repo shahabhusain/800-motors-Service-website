@@ -48,11 +48,11 @@ const HowCarRepair = () => {
     ];
 
     return (
-          <div className=' bg-[#fff] dark:bg-gray-950 py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
+          <div className=' bg-[#fff] dark:bg-gray-950 md:py-20 py-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
               <div className='w-[90%] mx-auto'>
             {/* Header Section */}
             <div className='text-center mb-12 flex items-center justify-center flex-col'>
-                <h2 className='text-4xl md:text-5xl max-w-5xl text-center  dark:text-white font-bold mb-4 text-gray-800'>
+                <h2 className='text-3xl md:text-5xl max-w-5xl text-center  dark:text-white font-bold mb-4 text-gray-800'>
                    How Car Repair Works in Dubai  <span className='text-orange-500 relative inline-block'>
                         From Booking to Pickup
                     </span>

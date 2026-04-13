@@ -63,11 +63,11 @@ const CompleteAutoRepair = () => {
     };
 
     return (
-           <div className=' dark:bg-gray-950 bg-[#f8f8f8] py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
+           <div className=' dark:bg-gray-950 bg-[#f8f8f8] md:py-20 py-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
              <div className='w-[90%] mx-auto'>
             {/* Header Section */}
             <div className='text-center mb-12 flex flex-col items-center justify-center gap-y-3'>
-                <h2 className='text-4xl md:text-5xl max-w-5xl text-center dark:text-white font-bold mb-4 text-gray-800'>
+                <h2 className='text-3xl md:text-5xl max-w-5xl text-center dark:text-white font-bold mb-4 text-gray-800'>
                     800 Motor Guru: Complete Auto Repair Solutions in <span className='text-orange-500 relative inline-block'>
                         Dubai
                         

@@ -84,11 +84,11 @@ const NearMe = () => {
     const currentFeature = features[selectedFeature];
 
     return (
-         <div className=' bg-[#f8f8f8] dark:bg-gray-950 py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
+         <div className=' bg-[#f8f8f8] dark:bg-gray-950 md:py-20 py-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
              <div className='w-[90%] mx-auto '>
             {/* Header Section */}
             <div className='text-center mb-12'>
-                <h1 className='text-4xl dark:text-white md:text-5xl lg:text-5xl font-bold mb-4 text-gray-800'>
+                <h1 className='text-3xl dark:text-white md:text-5xl lg:text-5xl font-bold mb-4 text-gray-800'>
                     Best Auto Repair Near Me in <span className='text-orange-500 relative inline-block'>
                         Dubai
                     </span>
