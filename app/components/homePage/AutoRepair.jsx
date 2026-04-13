@@ -1,163 +1,96 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import logo from '@/public/home/logo.png';
+import React from 'react';
+import award from '@/public/home/award.jpeg';
 import Image from 'next/image';
 
 const AutoRepair = () => {
-    const [hoveredIndex, setHoveredIndex] = useState(null);
-    const [isMobile, setIsMobile] = useState(false);
 
-    // Detect mobile device for touch interactions
-    useEffect(() => {
-        const checkMobile = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-        return () => window.removeEventListener('resize', checkMobile);
-    }, []);
-
-    // All brands use the same logo PNG
-    const brands = [
-        { 
-            award: "5-Star ESMA Rating & ISO 9001:2008 Certified - Largest multi-brand service network in UAE" 
+    const data = [
+        {
+            title: "Best Onsite Car Care",
+            desc: "800 Motor Guru provides on-site car repair services across Dubai.",
+            hoverDesc: "800 Motor Guru received this recognition for quick 24/7 roadside support, including car battery replacement, fuel delivery, and jump start services. The team reaches customers' locations and completes essential repairs without delay.",
+            awardImg: award
         },
-        { 
-            award: "Best Customer Service Award 2023 - Western-owned with 10+ years excellence" 
+        {
+            title: "Mobility Excellence",
+            desc: "800 Motor Guru supports smooth and reliable car and vehicle movement in Dubai.",
+            hoverDesc: "800 Motor Guru earned this recognition by reducing vehicle breakdown time through quick response and efficient repair services. The company helps drivers continue their journey with minimal disruption.",
+            awardImg: award
         },
-        { 
-            award: "36+ Years of Excellence - RTA approved with ISO standards certification" 
+        {
+            title: "Customer Choice",
+            desc: "Customers across Dubai trust 800 Motor Guru.",
+            hoverDesc: "800 Motor Guru achieved this recognition through 2,000+ positive Google reviews and consistent service quality. Customers select the company due to clear pricing, reliable repair, and professional behavior.",
+            awardImg: award
         },
-        { 
-            award: "Best Luxury & Sports Car Workshop Dubai 2024 - 55+ expert technicians" 
-        },
-        { 
-            award: "30+ Years of Service Excellence - Premier auto maintenance since 1993" 
-        },
-        { 
-            award: "Best Premium Auto Service Provider 2024 - Certified luxury car specialists" 
-        },
-        { 
-            award: "Best Luxury Automotive Service 2024 - Global presence in Dubai, London & Riyadh" 
-        },
-        { 
-            award: "Best Corporate Identity Award 2023 - Innovative auto care solutions" 
-        }
     ];
 
-    // Duplicate for infinite scroll (3 times for seamless loop)
-    const infiniteBrands = [...brands, ...brands, ...brands];
-
-    // Handle touch for mobile devices
-    const handleTouchStart = (index) => {
-        if (isMobile) {
-            setHoveredIndex(hoveredIndex === index ? null : index);
-        }
-    };
-
     return (
-        <div className='w-full bg-gray-50  dark:bg-gray-950 py-8 sm:py-12 md:py-16 overflow-hidden dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
-            <div className='text-center mb-8 sm:mb-10 md:mb-12 flex flex-col items-center justify-center px-4'>
-                <h2 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl dark:text-white font-bold mb-3 sm:mb-4 text-gray-800'>
-                    Repair Your Autos From Best <span className='text-orange-500'>Car Service in Dubai</span>
-                </h2>
-                <p className='text-gray-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2'>
-                    {isMobile ? 'Tap any logo to see their award-winning achievements' : 'Hover over any logo to see their award-winning achievements'}
-                </p>
-            </div>
+        <div className='relative mb-16 md:mb-20'>
 
-            {/* Infinite Scroll Container - Mobile Responsive */}
-            <div className='relative '>
-                <div className='flex overflow-x-hidden'>
-                    <div 
-                        className={`flex ${isMobile ? 'animate-infinite-scroll-mobile' : 'animate-infinite-scroll'}`}
-                        style={{ animationDuration: isMobile ? '35s' : '25s' }}
-                    >
-                        {infiniteBrands.map((brand, index) => (
-                            <div
-                                key={index}
-                                className='flex-shrink-0 w-36 sm:w-40 md:w-44 lg:w-48 mx-2 sm:mx-3 md:mx-4 relative group'
-                                onMouseEnter={() => !isMobile && setHoveredIndex(index)}
-                                onMouseLeave={() => !isMobile && setHoveredIndex(null)}
-                                onClick={() => isMobile && handleTouchStart(index)}
-                            >
-                                <div className='bg-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-2xl'>
-                                    {/* Logo Container - Responsive sizing */}
-                                    <div className='h-32 sm:h-40 md:h-44 lg:h-48 flex items-center justify-center bg-gradient-to-br from-orange-50 to-orange-100 p-4 sm:p-5 md:p-6'>
-                                        <div className={`relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 transition-all duration-300 ${
-                                            hoveredIndex === index ? 'scale-110' : 'scale-100'
-                                        }`}>
-                                            <Image
-                                                src={logo}
-                                                alt='Brand logo'
-                                                fill
-                                                className='object-contain'
-                                                sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, (max-width: 1024px) 112px, 128px"
-                                            />
-                                        </div>
-                                    </div>
+            {/* Background */}
+            <Image
+                src={award}
+                className='w-full h-[1050px] sm:h-[600px] md:h-[330px] object-cover'
+                alt='award-bg'
+            />
 
-                                    {/* Dropdown Description - Responsive positioning */}
-                                    <div 
-                                        className={`absolute bottom-0 left-0 right-0 bg-gradient-to-r from-orange-500 to-orange-600 transition-all duration-300 overflow-hidden ${
-                                            hoveredIndex === index ? 'max-h-24 sm:max-h-28 md:max-h-32 py-2 sm:py-3' : 'max-h-0 py-0'
-                                        }`}
-                                    >
-                                        <div className='px-2 sm:px-3 text-center'>
-                                            <p className='text-white text-xs sm:text-sm leading-relaxed font-medium'>
-                                                🏆 {brand.award}
-                                            </p>
-                                        </div>
-                                    </div>
+            {/* Overlay */}
+            <div className='absolute top-0 w-full h-full bg-[#00000040] backdrop-blur-xl py-10 md:py-16'>
+
+                <div className='w-[92%] md:w-[90%] mx-auto flex flex-col md:flex-row gap-10 md:gap-12 items-center justify-between'>
+
+                    {/* Left Content */}
+                    <div className='flex flex-col gap-y-4 md:w-1/2 text-center md:text-left'>
+
+                        <h2 className='text-white font-bold text-[26px] sm:text-[30px] md:text-[35px] lg:text-[40px] leading-snug'>
+                            Repair Your Autos from Best Car
+                            <span className='text-orange-500'> Service Center in Dubai</span>
+                        </h2>
+
+                        <p className='text-white text-[13px] sm:text-[14px] md:text-[15px] max-h-[140px] md:max-h-[120px] overflow-y-auto custom-scroll'>
+                            800 Motor Guru is a top-rated car service company in Dubai with over 2,000 customer reviews and a five-star rating on Google. The company provides reliable auto repair services with certified technicians trained in engine diagnostics, electrical systems, and AC repair. It uses diagnostic tools such as computerized scanners, engine analyzers, and wheel alignment machines. 800 Motor Guru maintains clear pricing and defined service steps, which help customers understand the repair process before work starts.
+                        </p>
+
+                    </div>
+
+                    {/* Cards */}
+                    <div className='flex flex-col md:flex-row md:justify-end gap-4 md:w-1/2'>
+
+                        {data.map((item, index) => (
+                            <div key={index} className='relative group w-full sm:w-[180px] md:w-[200px]'>
+
+                                <Image
+                                    className='w-full h-[220px] md:h-[250px] object-cover rounded-2xl'
+                                    src={item.awardImg}
+                                    alt='award'
+                                />
+
+                                {/* Default Text */}
+                                <div className='absolute bottom-3 left-3 right-3 z-10 text-white group-hover:hidden'>
+                                    <h2 className='text-[14px] font-bold'>{item.title}</h2>
+                                    <p className='text-[11px]'>{item.desc}</p>
                                 </div>
+
+                                {/* Dark Layer */}
+                                <div className='absolute top-0 w-full h-full bg-[#00000070] rounded-2xl'></div>
+
+                                {/* Hover Text */}
+                                <div className='absolute top-0 w-full h-full flex items-center justify-center text-white rounded-2xl group-hover:backdrop-blur-lg p-3'>
+                                    <p className='text-[12px] md:text-[14px] text-center font-medium hidden group-hover:block'>
+                                        {item.hoverDesc}
+                                    </p>
+                                </div>
+
                             </div>
                         ))}
+
                     </div>
+
                 </div>
             </div>
-
-
-            <style jsx>{`
-                @keyframes infiniteScroll {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
-                
-                @keyframes infiniteScrollMobile {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-50%);
-                    }
-                }
-                
-                .animate-infinite-scroll {
-                    animation: infiniteScroll 25s linear infinite;
-                }
-                
-                .animate-infinite-scroll-mobile {
-                    animation: infiniteScrollMobile 35s linear infinite;
-                }
-                
-                .animate-infinite-scroll:hover,
-                .animate-infinite-scroll-mobile:hover {
-                    animation-play-state: paused;
-                }
-                
-                /* Touch-friendly improvements for mobile */
-                @media (max-width: 768px) {
-                    .group {
-                        cursor: pointer;
-                        -webkit-tap-highlight-color: transparent;
-                    }
-                }
-            `}</style>
         </div>
     );
 };

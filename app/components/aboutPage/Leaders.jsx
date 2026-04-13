@@ -30,7 +30,7 @@ const Leaders = () => {
   ]
 
   return (
-    <div className="bg-[#fff] dark:bg-gray-950 dark:md:mt-0 mt-16 py-12 md:py-0 dark:py-16 md:dark:py-20 dark:border-b-[#f8f8f82e] dark:border-b">
+    <div className="bg-[#fff] dark:bg-gray-950 md:dark:mt-0 mt-16 py-12 md:py-0 dark:py-16 md:dark:py-20 dark:border-b-[#f8f8f82e] dark:border-b">
       
       <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12 justify-between w-[90%] md:w-[85%] mx-auto">
         

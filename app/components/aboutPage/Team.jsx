@@ -68,7 +68,6 @@ const Team = () => {
                           <Link className=' bg-[#F8F8F8] dark:bg-gray-600 dark:text-white text-[#000000] p-4 rounded-full' href={item.twit}><FaTwitter /></Link>
                     </div>
                      </div>
-
                 </div>
             ))
            }

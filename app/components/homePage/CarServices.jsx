@@ -1,7 +1,6 @@
 import React from 'react'
-import auto from '@/public/home/auto.jpeg'
+import support from '@/public/home/support.webp'
 import Image from 'next/image'
-import { FaCheckCircle, FaCar, FaTools, FaShieldAlt, FaClock, FaStar } from 'react-icons/fa'
 
 const CarServices = () => {
   return (
@@ -15,10 +14,8 @@ const CarServices = () => {
         </h1>
         
         <p className='text-gray-600 dark:text-gray-500 leading-relaxed'>
-          At 8MG, we offer a complete range of automotive services to keep your vehicle running at its best. 
-          From routine maintenance to complex repairs, our certified technicians use state-of-the-art equipment 
-          and genuine parts to deliver exceptional results. Whether you drive a luxury European car, a reliable 
-          Japanese sedan, or a powerful American SUV, we have the expertise to handle all your automotive needs.
+800 Motor Guru provides fast and reliable auto repair services in Dubai for all car brands, including German, Japanese, American, British, and French vehicles. Many customers book daily for battery service, engine repair, AC work, and roadside assistance, which fills service slots quickly. Early booking helps customers avoid delays and secure timely repair support. 800 Motor Guru inspects vehicle problems with diagnostic tools and assigns trained technicians for each repair. The team provides clear pricing, quick response, and complete solutions for every car issue. Customers who book in advance receive faster service and reduce the risk of breakdown or waiting time.
+
         </p>
         
       </div>
@@ -26,7 +23,7 @@ const CarServices = () => {
       {/* Right Side - Image */}
       <div className='w-full md:w-[40%]'>
           <Image 
-            src={auto} 
+            src={support} 
             alt='Car Service Dubai' 
             className='w-full rounded-2xl h-auto object-cover transition-transform duration-500 group-hover:scale-105'
           />

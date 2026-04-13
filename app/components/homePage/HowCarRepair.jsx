@@ -7,34 +7,42 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import Image from 'next/image';
-import auto from '@/public/home/auto.jpeg'
+import support from '@/public/home/support.webp'
+import freePickup from '@/public/home/freePickup.jpeg'
+import diagnose from '@/public/home/diagnose.webp'
+import repair from '@/public/home/repair.webp'
 
 const HowCarRepair = () => {
     const data = [
         {
-            title: "Book in 60 Second",
-            desc: "Schedule your car repair service online or by phone. Choose your preferred date, time, and service type.",
+            title: "Step 1: Book in 60 Second",
+            desc: "The customer books the service online or by call within a few seconds by providing vehicle and location details.",
             color: "from-orange-500 to-red-500",
+            img:support
         },
         {
-            title: "Free Pick-Up From Anywhere in Dubai",
-            desc: "Our professional driver will pick up your car from your home or office in Dubai at the scheduled time.",
+            title: "Step 2: Free Pick-Up from Anywhere in Dubai",
+            desc: "800 Motor Guru collects the vehicle from the customer location without any extra charge across Dubai.",
             color: "from-blue-500 to-cyan-500",
+            img:freePickup
         },
         {
-            title: "Diagnosis and Written Quote",
-            desc: "Certified mechanics perform a thorough 50+ point inspection to identify all issues and provide detailed report.",
+            title: "Step 3: Diagnosis and Written Quote",
+            desc: "The team inspects the vehicle using diagnostic tools and provides a written quote before starting the repair.",
             color: "from-green-500 to-emerald-500",
+            img:diagnose
         },
         {
-            title: "Repair With Real Time Updates",
-            desc: "Our skilled technicians use state-of-the-art equipment to perform high-quality repairs with genuine parts.",
+            title: "Step 4: Repair With Real Time Updates",
+            desc: "The technicians repair the vehicle and share service updates with the customer during the process.",
             color: "from-purple-500 to-pink-500",
+            img:repair
         },
         {
-            title: "Same Day Collection or Free Drop Off",
-            desc: "Every repair undergoes rigorous quality testing and road test to ensure everything works perfectly.",
+            title: "Step 5: Same Day Collection or Free Drop Off",
+            desc: "800 Motor Guru completes the service and returns the vehicle on the same day or delivers it back to the customer's location.",
             color: "from-indigo-500 to-blue-500",
+            img:freePickup
         },
 
     ];
@@ -43,14 +51,15 @@ const HowCarRepair = () => {
           <div className=' bg-[#fff] dark:bg-gray-950 py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
               <div className='w-[90%] mx-auto'>
             {/* Header Section */}
-            <div className='text-center mb-12'>
-                <h2 className='text-4xl md:text-5xl dark:text-white font-bold mb-4 text-gray-800'>
-                    How Car Repair Works in <span className='text-orange-500 relative inline-block'>
-                        Dubai
+            <div className='text-center mb-12 flex items-center justify-center flex-col'>
+                <h2 className='text-4xl md:text-5xl max-w-5xl text-center  dark:text-white font-bold mb-4 text-gray-800'>
+                   How Car Repair Works in Dubai  <span className='text-orange-500 relative inline-block'>
+                        From Booking to Pickup
                     </span>
                 </h2>
                 <p className='text-gray-600 text-lg max-w-3xl mx-auto'>
-                    From Booking to Pickup - A Seamless, Transparent, and Hassle-Free Process
+Car repair in Dubai follows a simple process that starts with booking a service, includes inspection and repair, and ends with vehicle pickup or delivery.
+
                 </p>
             </div>
 
@@ -105,7 +114,7 @@ const HowCarRepair = () => {
                                     </p>
                      
                                 </div>
-                                <Image className=' md:w-[150px] w-full h-[150px] rounded-lg object-cover' src={auto} alt='image'/>
+                                <Image className=' md:w-[150px] w-full h-[150px]  rounded-lg object-cover' src={item.img} alt='image'/>
                             </div>
 
                         </div>

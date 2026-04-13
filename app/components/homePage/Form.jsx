@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, ArrowLeft, Mail, Phone } from 'lucide-react';
-import { FaUser } from 'react-icons/fa';
+import { FaServicestack, FaUser } from 'react-icons/fa';
 import { MdLocationPin } from "react-icons/md";
 const Form = () => {
   const t = useTranslations('landingPage.form');
@@ -44,13 +44,25 @@ const Form = () => {
               </div>
          
 
-               <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
-                <MdLocationPin className=' text-[15px] text-gray-500' />
+               <div className='flex items-center justify-between gap-x-3'>
+                   <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
+                            <MdLocationPin className=' text-[15px] text-gray-500' />
   <input
               type="location"
               placeholder="Location"
               className="w-full focus:outline-none border-none"
             />
+                   </div>
+                      <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
+                            <FaServicestack className=' text-[15px] text-gray-500' />
+                             <select className='w-full focus:outline-none border-none'>
+                              <option  className=' bg-black text-white' value="Select Services" disabled selected>Select Services</option>
+                              <option value="Tyre Replacement" className=' bg-black text-white'>Tyre Replacement</option>
+                              <option value="Battery Replacement" className=' bg-black text-white'>Battery Replacement</option>
+                               <option value="Engine Service" className=' bg-black text-white'>Engine Service</option>
+
+                             </select>
+                   </div>
                </div>
             
 

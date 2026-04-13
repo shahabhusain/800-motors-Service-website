@@ -2,7 +2,15 @@
 import Image from 'next/image';
 import React, { useState } from 'react'
 import { FaTools, FaShieldAlt, FaMoneyBillWave, FaTruck, FaClock, FaUserGraduate, FaGoogle, FaStar, FaCheckCircle } from 'react-icons/fa'
-import autoRepairImg from '@/public/home/auto.jpeg'; // Replace with your actual image path
+import hiddenFee from '@/public/home/hiddenFee.webp';
+import skill from '@/public/home/skill.webp';
+import garage from '@/public/home/garage.webp';
+import autoRepair from '@/public/home/autoRepair.webp';
+import drivers from '@/public/home/drivers.webp';
+import car from '@/public/home/car.webp';
+import issues from '@/public/home/issues.webp';
+import tech from '@/public/home/tech.webp';
+
 
 const NearMe = () => {
     const [selectedFeature, setSelectedFeature] = useState(0); // Default to first feature
@@ -10,66 +18,66 @@ const NearMe = () => {
     const features = [
         {
             icon: <FaMoneyBillWave className="text-2xl" />,
-            title: "Transparent Vehicles Maintenance Pricing",
+            title: "Transparent Vehicle Maintenance Pricing Without Hidden Fees",
             desc: "Without Hidden Fees",
-            paragraph: "At 8MG, we believe in complete transparency when it comes to pricing. You'll receive a detailed estimate before any work begins, with absolutely no hidden fees or surprise charges. Our pricing structure is clear, competitive, and designed to give you peace of mind. We break down every cost - from parts to labor - so you know exactly what you're paying for. No hidden diagnosis fees, no unexpected add-ons, just honest pricing you can trust.",
-            image: autoRepairImg
+            paragraph: "800 Motor Guru provides clear pricing before repair and shares a written estimate with the customer. The company explains service costs and parts details to avoid hidden charges.",
+            image: hiddenFee
         },
         {
             icon: <FaUserGraduate className="text-2xl" />,
-            title: "Skilled Automotive Professionals",
+            title: "Skilled Automotive Professionals for Every Make and Model",
             desc: "for Every Make and Model",
-            paragraph: "Our team consists of highly trained and certified automotive professionals with expertise across all vehicle makes and models. From German luxury cars like BMW, Mercedes, and Audi to Japanese reliability from Toyota, Honda, and Nissan - our mechanics have brand-specific training. We continuously invest in our team's education, ensuring they stay updated with the latest automotive technologies and repair techniques.",
-            image: autoRepairImg
+            paragraph: "800 Motor Guru assigns trained technicians for German, Japanese, American, British, and French vehicles. The team handles engine, electrical, AC, and diagnostic work for each brand.",
+            image: skill
         },
         {
             icon: <FaShieldAlt className="text-2xl" />,
             title: "Follows International Car Garage Standards",
             desc: "ISO Certified",
-            paragraph: "8MG operates under strict international garage standards and holds ISO certifications that guarantee quality service. Our facility meets global benchmarks for equipment, safety protocols, and service delivery. We follow manufacturer-recommended procedures and use industry-best practices for every repair. This commitment to international standards ensures your vehicle receives the same level of care as it would at a dealership, but at more affordable rates.",
-            image: autoRepairImg
+            paragraph: "800 Motor Guru follows defined repair procedures and uses proper tools for each service. The team maintains quality standards during inspection, repair, and final check.",
+            image: garage
         },
         {
             icon: <FaTools className="text-2xl" />,
-            title: "Complete Car and Auto Repair Services",
+            title: "Complete Car and Auto Repair Services Without Needing Anyone Else",
             desc: "without needing anyone else",
-            paragraph: "Why go to multiple shops when 8MG offers everything under one roof? From engine diagnostics and transmission repair to AC service, electrical work, brake replacement, suspension repair, and routine maintenance - we do it all. Our comprehensive service offering means you don't need to take your car to different specialists for different problems. Save time, money, and hassle by choosing 8MG for all your auto repair needs.",
-            image: autoRepairImg
+            paragraph: "800 Motor Guru provides all car repair and maintenance services under one workshop. The company handles roadside support, mechanical repair, and body work in one place.",
+            image: autoRepair
         },
         {
             icon: <FaMoneyBillWave className="text-2xl" />,
-            title: "Affordable Service Packages",
+            title: "Affordable Service Packages Designed for Dubai Drivers",
             desc: "Designed for Dubai Drivers",
-            paragraph: "We understand that Dubai drivers have unique needs, which is why we've created affordable service packages tailored to local driving conditions. Choose from our basic, standard, or premium maintenance packages that include everything from oil changes to comprehensive inspections. Our packages are designed to save you up to 40% compared to individual services. Perfect for fleet owners, families with multiple cars, or anyone looking for cost-effective vehicle maintenance.",
-            image: autoRepairImg
+            paragraph: "800 Motor Guru offers service packages with fixed pricing and scheduled maintenance plans. The packages help customers manage repair cost and avoid sudden expenses.",
+            image: drivers
         },
         {
             icon: <FaGoogle className="text-2xl" />,
-            title: "2,500+ Google Reviews",
+            title: "2,500+ Google Reviews with a 4.9★ Rating by Dubai Residents",
             desc: "with a 4.9★ Rating by Dubai Residents",
-            paragraph: "Join over 2,500 satisfied Dubai residents who have rated us 4.9 stars on Google! Our stellar reputation is built on years of consistent quality service, honest dealings, and customer satisfaction. Reading our reviews will show you why Dubai drivers trust us with their vehicles. From prompt service to quality repairs and friendly staff - our customers love what we do, and we're proud of every 5-star review we receive.",
-            image: autoRepairImg
+            paragraph: "800 Motor Guru has received over 2,500 Google reviews with a 4.9 rating from customers in Dubai. The reviews reflect consistent service quality and customer satisfaction.",
+            image: garage
         },
         {
             icon: <FaTruck className="text-2xl" />,
-            title: "Free Pick-Up and Drop-Off",
+            title: "Free Pick-Up and Drop-Off Across Dubai",
             desc: "Across Dubai",
-            paragraph: "Enjoy the convenience of our complimentary vehicle collection and delivery service anywhere in Dubai. Whether you're in Downtown, Marina, JBR, Dubai Hills, or anywhere else in the city, we'll pick up your car and return it after service - completely free of charge. This service saves you valuable time and eliminates the hassle of waiting at the garage. Just book your service, and we'll handle the logistics.",
-            image: autoRepairImg
+            paragraph: "800 Motor Guru collects and delivers vehicles from customer locations without extra charge. The service saves time and provides convenience across Dubai.",
+            image: car
         },
         {
             icon: <FaClock className="text-2xl" />,
-            title: "Same-Day Repairs",
+            title: "Same-Day Repairs for Most Common Issues",
             desc: "for Most Common Issues",
-            paragraph: "Need your car fixed quickly? Our efficient team handles most common repairs on the same day. From brake pad replacement and oil changes to AC repairs and electrical diagnostics - we work fast without compromising quality. We understand that being without your car in Dubai is inconvenient, so we prioritize quick turnaround times. Drop your car in the morning, and it's often ready by evening.",
-            image: autoRepairImg
+            paragraph: "800 Motor Guru completes common repairs such as battery replacement, oil change, and tyre service on the same day. The service reduces waiting time and keeps vehicles running.",
+            image: issues
         },
         {
             icon: <FaUserGraduate className="text-2xl" />,
-            title: "Certified Technicians",
+            title: "Certified Technicians with Brand-Specific Training",
             desc: "with Brand-Specific Training",
-            paragraph: "Our technicians don't just have general automotive knowledge - they have brand-specific certifications and ongoing training. Whether it's BMW, Mercedes, Audi, Porsche, Lexus, or any other brand, our mechanics understand the unique engineering and requirements of your vehicle. We invest heavily in continuous education, sending our team to manufacturer training programs and keeping them updated on the latest diagnostic tools and repair techniques.",
-            image: autoRepairImg
+            paragraph: "800 Motor Guru uses certified technicians trained for different car brands and systems. The team performs repair work based on manufacturer standards and technical knowledge.",
+            image: tech
         }
     ];
 
@@ -83,11 +91,10 @@ const NearMe = () => {
                 <h1 className='text-4xl dark:text-white md:text-5xl lg:text-5xl font-bold mb-4 text-gray-800'>
                     Best Auto Repair Near Me in <span className='text-orange-500 relative inline-block'>
                         Dubai
-                        <span className='absolute bottom-0 left-0 w-full h-1 bg-orange-500 rounded-full'></span>
                     </span>
                 </h1>
-                <p className='text-xl text-gray-600 max-w-3xl mx-auto mb-6'>
-                    The best auto repair near you in Dubai is <span className='text-orange-500 font-bold text-2xl'>800MG</span>
+                <p className='text-xl text-gray-600 max-w-3xl mx-auto mb-6 h-[60px] overflow-y-auto custom-scroll'>
+                   800 Motor Guru provides auto repair services near you in Dubai with fast response and reliable support. 800 Motor Guru reaches customer locations across Dubai for roadside assistance and workshop services. Many customers choose 800 Motor Guru as the best auto repair near them in Dubai due to consistent service results and verified reviews. 800 Motor Guru handles battery replacement, fuel delivery, jump start, engine repair, diagnostics, AC service, and tyre work for all vehicle types. The team uses trained technicians and diagnostic tools such as computerized scanners, engine analyzers, and alignment machines to identify and repair vehicle issues. 800 Motor Guru provides clear pricing before repair and keeps the service process simple for customers. 800 Motor Guru ensures quick access to auto repair services near your location and helps keep your vehicle in working condition without delay.
                 </p>
              
             </div>

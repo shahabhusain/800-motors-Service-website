@@ -1,5 +1,5 @@
 import React from 'react'
-import auto from '@/public/home/auto.jpeg'
+import ac from '@/public/home/Ac.webp'
 import Image from 'next/image'
 import { FaCheckCircle, FaCar, FaTools, FaShieldAlt, FaClock, FaStar } from 'react-icons/fa'
 
@@ -11,7 +11,7 @@ const RepairEngine = () => {
             {/* Right Side - Image */}
       <div className='w-full md:w-[40%]'>
           <Image 
-            src={auto} 
+            src={ac} 
             alt='Car Service Dubai' 
             className='w-full rounded-2xl h-auto object-cover transition-transform duration-500 group-hover:scale-105'
           />
@@ -24,10 +24,8 @@ const RepairEngine = () => {
         </h1>
         
         <p className='text-gray-600 leading-relaxed'>
-          At 800MG, we offer a complete range of automotive services to keep your vehicle running at its best. 
-          From routine maintenance to complex repairs, our certified technicians use state-of-the-art equipment 
-          and genuine parts to deliver exceptional results. Whether you drive a luxury European car, a reliable 
-          Japanese sedan, or a powerful American SUV, we have the expertise to handle all your automotive needs.
+          800 Motor Guru provides complete repair services in Dubai for engine, AC, brakes, and suspension systems for all car brands. High temperature in Dubai increases engine heat, reduces AC cooling, wears brake components, and affects suspension performance. Many vehicles develop major faults when these issues are not repaired on time. 800 Motor Guru inspects these systems with diagnostic tools and identifies faults before damage increases. The team repairs or replaces worn parts and restores vehicle performance for safe driving. Early service helps customers avoid costly repairs and prevents sudden breakdown during extreme weather conditions.
+
         </p>
         
       </div>

@@ -204,9 +204,11 @@ const ServicePackage = () => {
         },
     ]
   return (
-    <div className='p flex flex-col items-center justify-center leading-[2rem] text-center md:text-left leading-tight bg-[#f8f8f8] dark:bg-gray-950 py-12 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
-    <h1 className='text-4xl md:text-5xl font-bold mb-6'><span className=' text-orange-500'>Select</span> Packages</h1>
-    <p className=' text-[#00000099] dark:text-gray-300 md:text-[16px] text-[14px] font-normal'>Choose the plan that fits your needs · flexible engine options</p>
+    <div className='p flex flex-col items-center justify-center leading-[2rem] text-center md:text-left leading-tight bg-[#f8f8f8] dark:bg-gray-950 py-12 dark:border-b-[#f8f8f82e] dark:border-b-[1px] flex flex-col gap-y-6'>
+   <h2 className=' text-4xl md:text-5xl font-bold max-w-5xl   text-center'>800 Motor Guru: Flexible 
+ <span className=' text-orange-500'> Car Workshop Packages in </span> <span className=' text-orange-500'>in</span> Dubai</h2>
+  
+   <p className=' md:text-[15px] text-[12px] text-black max-w-5xl text-center  '>800 Motor Guru provides flexible car service packages in Dubai for different vehicle needs. The company offers Silver, Gold, and Platinum maintenance plans with options based on engine type, such as V4, V6, V8, and V12. These packages include minor and major services, oil replacement, inspection, and spare parts discounts to reduce long-term repair costs. The packages help customers manage maintenance with fixed pricing and scheduled service support.</p>
       <div className=' flex items-center gap-x-12 bg-[#fff] dark:bg-gray-900  p-2  rounded-xl mt-5'>
         <button onClick={()=>setSelectService("v4")} className={ ` font-medium${selectService === "v4" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[10px] md:rounded-xl rounded-sm`}>V4</button>
         <button onClick={()=>setSelectService("v6")} className={ ` font-medium${selectService === "v6" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[10px] md:rounded-xl rounded-sm`}>V6</button>

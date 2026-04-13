@@ -91,36 +91,36 @@ const Header = () => {
           category: "Powers", 
           items: [
             "Battery Replacement",
-            "Jumpstart Service",
-            "Battery Testing",
-            "Alternator Repair"
+            // "Jumpstart Service",
+            // "Battery Testing",
+            // "Alternator Repair"
           ]
         },
         { 
           category: "Tyre & Wheels", 
           items: [
-            "Flat Tyre Change",
-            "New Tyre Fitting",
-            "Wheel Balancing",
-            "Nitrogen Filling"
+            // "Flat Tyre Change",
+            // "New Tyre Fitting",
+            // "Wheel Balancing",
+            // "Nitrogen Filling"
           ]
         },
         { 
           category: "Mechanic", 
           items: [
-            "Oil Change",
-            "Brake Service",
-            "AC Repair",
-            "Engine Diagnostics"
+            // "Oil Change",
+            // "Brake Service",
+            // "AC Repair",
+            // "Engine Diagnostics"
           ]
         },
         { 
           category: "Emergency", 
           items: [
-            "Roadside Recovery",
-            "Fuel Delivery",
-            "Lockout Service",
-            "Towing Service"
+            // "Roadside Recovery",
+            // "Fuel Delivery",
+            // "Lockout Service",
+            // "Towing Service"
           ]
         }
       ]
@@ -130,14 +130,14 @@ const Header = () => {
       label: "Brands",
       columns: 4,
       dropdown: [
-        { category: "Germen", items: ["BMW", "Mercedes", "Audi", "Lexus"] },
-        { category: "American", items: ["Toyota", "Honda", "Ford", "Nissan"] },
-        { category: "British", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
-        { category: "French", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
-        { category: "Japaneses", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
-        { category: "Korean", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
-        { category: "Italian", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
-        { category: "Other", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        { category: "Germen", items: ["Audi",] },   // "Mercedes", "BMW", "Lexus"
+        { category: "American", items: [] }, // "Toyota", "Honda", "Ford", "Nissan"
+        { category: "British", items: [] }, // "Volkswagen", "Peugeot", "Renault", "Fiat"
+        { category: "French", items: [] }, // "Volkswagen", "Peugeot", "Renault", "Fiat"
+        // { category: "Japaneses", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        // { category: "Korean", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        // { category: "Italian", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
+        // { category: "Other", items: ["Volkswagen", "Peugeot", "Renault", "Fiat"] },
       ]
     },
     { 
@@ -148,8 +148,8 @@ const Header = () => {
       href: "/offers", 
       label: "Offers",
     },
-    { href: "/blog", label: "Blogs" },
-    { href: "/shop", label: "Shop" },
+    // { href: "/blog", label: "Blogs" },
+    // { href: "/shop", label: "Shop" },
   ];
 
   const isActiveLink = (href) => {

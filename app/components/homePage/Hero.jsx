@@ -40,7 +40,7 @@ const Hero = ({ span1, span2, desc, features, img }) => {
                         </span>
                     </h1>
 
-                    <p className="md:text-xl text-base sm:text-lg max-w-2xl font-medium text-gray-200">
+                    <p className="md:text-xl custom-scroll text-base sm:text-lg max-w-2xl font-medium text-gray-200 h-[60px] overflow-y-auto">
                         {desc}
                     </p>
 
@@ -70,14 +70,19 @@ const Hero = ({ span1, span2, desc, features, img }) => {
 
                     {/* Buttons */}
                     <div className="flex flex-wrap gap-3 sm:gap-4 mt-6">
-                        <button className="px-6 sm:px-8 md:py-3 py-2.5 bg-[#CE0E0F] hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition flex items-center gap-2 text-sm sm:text-base">
+                        <a href="tel:80064878" className="px-6 sm:px-8 md:py-3 py-2.5 bg-[#CE0E0F] hover:bg-red-700 text-white font-semibold rounded-lg shadow-md transition flex items-center gap-2 text-sm sm:text-base">
                             <PhoneCall className="w-4 h-4 sm:w-5 sm:h-5" /> 80064878
-                        </button>
+                        </a>
 
-                        <button className="px-6 sm:px-8 md:py-3 py-2.5 bg-green-500 text-white hover:bg-green-600 font-semibold rounded-lg transition flex items-center gap-2 text-sm sm:text-base">
-                            <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5" />
-                            Whatsapp
-                        </button>
+                     <a 
+  href="https://wa.me/97180064878" 
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 sm:px-8 md:py-3 py-2.5 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all duration-300 flex items-center gap-2 text-sm sm:text-base group hover:scale-105 active:scale-95"
+>
+  <FaWhatsapp className="w-4 h-4 sm:w-5 sm:h-5 group-hover:animate-pulse" />
+  <span>WhatsApp</span>
+</a>
                     </div>
                 </div>
 

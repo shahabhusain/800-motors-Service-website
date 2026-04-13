@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import React from "react"
-import heroImg from "@/public/home/auto.jpeg" // replace with your image
+import heroImg from "@/public/home/support.webp" // replace with your image
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa"
 
 const Cta = () => {
@@ -14,25 +14,25 @@ const Cta = () => {
         <div className="text-white md:w-[60%] w-full">
 
           <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-4">
-            Reliable Car Service at Your Doorstep with 800 Motoguru
+            Contact 800 Motor Guru For Auto Repair Services in Dubai
           </h1>
 
           <p className="text-white/80 text-sm sm:text-base mb-6">
-            800 Motoguru provides professional car repair and maintenance services you can trust. From routine servicing to emergency repairs, our expert mechanics ensure your vehicle stays in top condition—quickly, efficiently, and affordably.
+            800 Motor Guru provides fast contact and booking support for auto repair services across Dubai. The team handles booking, roadside assistance, diagnostics, and workshop repair for all car brands with quick response and clear guidance. 800 Motor Guru assists customers with battery service, engine repair, AC work, tyre change, fuel delivery, jump start, and general maintenance. The team ensures smooth communication from booking to final delivery of the vehicle.
           </p>
 
           {/* BUTTONS */}
           <div className="flex flex-col sm:flex-row gap-4">
    <a
-              href="tel:+971000000000"
+              href="tel:80064878"
               className="flex items-center justify-center gap-2 bg-white text-black hover:bg-gray-200 transition px-6 py-3 rounded-md font-medium"
             >
               <FaPhoneAlt />
-              Call Now
+              Call (80064878)
             </a>
             {/* WhatsApp */}
             <a
-              href="https://wa.me/971000000000"
+              href="https://wa.me/97180064878"
               target="_blank"
               className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 transition px-6 py-3 rounded-md text-white font-medium"
             >

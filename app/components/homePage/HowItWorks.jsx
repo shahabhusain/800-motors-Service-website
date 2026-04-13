@@ -6,24 +6,24 @@ const HowItWorks = () => {
     
     const locations = [
         {
-            name: "Dubai",
+            name: "Auto Repair Services in Dubai",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231236.406041291!2d55.1224406!3d25.2048493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s",
-            description: "8MG serves all areas of Dubai including Downtown, Marina, JBR, Business Bay, Dubai Hills, Emirates Hills, Palm Jumeirah, JLT, Al Barsha, Mirdif, and Deira. Our mobile team and free pickup service ensure your car gets expert care no matter where you are in Dubai. With our strategically located service centers, we can reach any location within 30-45 minutes.",
+            description: "800 Motor Guru provides complete auto repair services across Dubai with fast roadside and workshop support. The company also extends its service coverage to nearby areas like Downtown, Marina, JBR, Business Bay, Dubai Hills, Emirates Hills, Palm Jumeirah, JLT, Al Barsha, Mirdif, and Deira. The company handles battery replacement, fuel delivery, jump start, engine repair, AC service, tyre work, diagnostics, and denting and painting. 800 Motor Guru reaches customer locations in all areas of Dubai and provides quick repair solutions with trained technicians.",
         },
         {
-            name: "Ajman",
+            name: "Auto Repair Services in Ajman",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230659.4012118241!2d55.21409576483171!3d25.403031624812638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5764dd8fbe79%3A0xcda090de6445a819!2sAjman%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1775554631049!5m2!1sen!2s",
-            description: "Ajman car owners can now access 8MG's premium auto repair services without traveling to other emirates. We cover all areas including Al Jurf, Al Nuaimiya, Al Rashidiya, and Emirates City. Our team provides prompt service, genuine parts, and expert repairs while offering free vehicle collection and return across Ajman. Experience dealership-quality service at affordable rates.",
+            description: "800 Motor Guru provides car repair services in Ajman with fast response and professional support. The company covers all areas in Ajman, including Al Jurf, Al Nuaimiya, Al Rashidiya, and Emirates City. The company offers battery replacement, jump start, fuel delivery, engine repair, tyre service, and general maintenance for all car brands. The team ensures quick assistance and proper repair solutions for customers in Ajman.",
         },
         {
-            name: "Abu Dhabi",
+            name: "Auto Repair Services in Abu Dhabi",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d465132.9733051786!2d54.22896072524702!3d24.386473908627888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e440f723ef2b9%3A0xc7cc2e9341971108!2sAbu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1775554704141!5m2!1sen!2s",
-            description: "Extending our premium auto repair services to Abu Dhabi and surrounding areas including Yas Island, Saadiyat Island, Khalifa City, Al Reem Island, and Mussafah. Our team regularly services clients in the capital, offering the same quality repairs, free pickup, and drop-off services. We understand the specific needs of Abu Dhabi drivers and provide tailored solutions.",
+            description: "800 Motor Guru provides auto repair and maintenance services in Abu Dhabi with reliable support for all vehicle types. The company also includes its auto repair service to Yas Island, Saadiyat Island, Khalifa City, Al Reem Island, and Mussafah. The services include engine diagnostics, battery service, tire change, AC repair, oil change, and roadside assistance. The team provides on-site support and workshop repair depending on customer needs in Abu Dhabi.",
         },
         {
-            name: "Sharjah",
+            name: "Auto Repair Services in Sharjah",
             map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d230818.00714316455!2d55.54627715!3d25.3199447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5f5fede7964b%3A0x2a830aa19c1f6d89!2sSharjah%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1775554362243!5m2!1sen!2s",
-            description: "8MG proudly serves Sharjah residents across all major areas including Al Nahda, Al Qasimia, Al Majaz, Al Khan, University City, and Muwaileh. Our team understands the unique traffic patterns and driving conditions in Sharjah, providing efficient, reliable, and affordable auto repair services with the same free pickup and delivery convenience.",
+            description: "800 Motor Guru provides complete auto repair services in Sharjah with fast roadside and workshop support. 8MG proudly serves Sharjah residents across major areas, including Al Nahda, Al Qasimia, Al Majaz, Al Khan, University City, and Muwaileh. The team understands local traffic conditions and provides quick, reliable, and affordable repair solutions. 800 Motor Guru offers battery replacement, fuel delivery, jump start, engine repair, AC service, tyre work, and general maintenance with free pick-up and drop-off convenience.",
         }
     ];
 
@@ -35,9 +35,8 @@ const HowItWorks = () => {
                 <h2 className='text-3xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800 dark:text-white'>
                     How to Find Best Auto Repair Company <span className='text-orange-500'>Near Me?</span>
                 </h2>
-                <p className='text-lg text-gray-600 max-w-3xl mx-auto'>
-                    8MG provides professional auto repair services across all locations in the UAE. 
-                    No matter where you are, we're just a call away with free pickup and delivery.
+                <p className='text-lg text-gray-600 max-w-3xl mx-auto h-[60px] overflow-y-auto custom-scroll '>
+                    Customers in Dubai look for quick response, clear pricing, and reliable service when searching for an auto repair company nearby. 800 Motor Guru provides services across all areas of Dubai with fast booking, on-site support, and workshop repair options. The team reaches the customer location, inspects the vehicle, and offers the right solution without delay. This makes 800 Motor Guru a convenient and dependable choice for customers in any part of Dubai.
                 </p>
             </div>
 

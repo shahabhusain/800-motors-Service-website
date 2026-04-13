@@ -9,64 +9,35 @@ const CompleteAutoRepair = () => {
     const allData = [
         {
             icon: <FaCar className="text-3xl" />,
-            title: "Engine Repair & Diagnostics",
-            desc: "Expert engine diagnostics and repair services using advanced technology to identify and fix issues quickly.",
+            title: "Car Battery Replacement Dubai",
+            desc: "800 Motor Guru provides car battery replacement service in Dubai. The service includes battery voltage testing, a condition check, removal of the old battery, and installation of a new compatible battery. The team selects the correct battery based on the vehicle model and power requirement. Customers face battery failure, slow engine start, and sudden breakdown on the road. Many vehicles do not start due to weak battery performance in high-temperature conditions. 800 Motor Guru tests battery health by using a digital battery tester and multimeter to check voltage and condition, then replaces it with the correct battery. The team reaches the customer’s location, installs the battery safely, and restores vehicle start without delay. Customers can request support through the Car Battery Replacement Dubai service page.",
         },
         {
             icon: <FaTools className="text-3xl" />,
-            title: "Brake System Service",
-            desc: "Complete brake inspection, pad replacement, rotor resurfacing, and brake fluid change for your safety.",
+            title: "Car Tyre Change Dubai",
+            desc: "800 Motor Guru provides car tyre change service in Dubai. The service includes tyre inspection, removal of worn tyres, installation of new tyres, wheel balancing, and an alignment check. The team selects the correct tyre size based on vehicle type and road use. Customers experience tyre wear, punctures, low grip, and vehicle vibration while driving. Many vehicles lose stability due to damaged or uneven tyres, which affects safety on the road. 800 Motor Guru solves these problems by inspecting tyre condition, replacing damaged tyres, and balancing the wheels with alignment machines. The team ensures proper grip, smooth driving, and vehicle stability after service. Customers can request support through the Car Tire Change Dubai service page.",
         },
         {
             icon: <FaOilCan className="text-3xl" />,
-            title: "Oil Change & Maintenance",
-            desc: "Regular oil changes with premium quality oil and comprehensive vehicle maintenance checks.",
+            title: "Jump Start Dubai",
+            desc: "800 Motor Guru provides jump-start service in Dubai. The team checks the car’s battery and connection for a safe jump start and vehicle restart at the customer’s location. The team uses jump cables and portable jump starter devices to restore power. Customers experience a dead battery, no engine start, and vehicle breakdown in parking areas or on the road. Many drivers cannot start the car due to a low battery charge or electrical power loss. 800 Motor Guru solves these problems by connecting jump cables correctly and using a portable jump starter to restart the vehicle safely. The team reaches the location quickly and restores engine start without delay. Customers can request support through the Jump Start Dubai service page.",
         },
         {
             icon: <FaBatteryFull className="text-3xl" />,
-            title: "Electrical System Repair",
-            desc: "Fix all electrical issues including battery problems, alternator issues, and wiring repairs.",
+            title: "Dubai Fuel Delivery: Petrol and Diesel",
+            desc: "800 Motor Guru provides fuel delivery service in Dubai for petrol and diesel vehicles. The company refills fuel on location, checks fuel quality, and handles it safely during delivery. The team carries fuel in certified containers to ensure fuel safety. Many drivers face inconvenience when nearby fuel stations are out of reach. 800 Motor Guru solves these problems by delivering fuel quickly to the customer’s location. The team refills petrol or diesel safely and gets the vehicle back on the road without delay. Customers can request support through the Dubai Fuel Delivery Petrol & Diesel service page.",
         },
         {
             icon: <FaSnowflake className="text-3xl" />,
-            title: "AC Service & Repair",
-            desc: "Keep your car cool with professional AC maintenance, gas refilling, and complete repair services.",
+            title: "Car Engine Repair Dubai",
+            desc: "800 Motor Guru provides car engine repair service in Dubai. The service includes engine diagnostics, fault detection, minor and major engine repairs, and replacement of damaged parts. The team uses modern engine analyzers and specialized tools to ensure proper repair. Customers experience engine misfiring, overheating, loss of power, or unusual noises while driving. Many drivers face repeated breakdowns due to improper diagnosis at other workshops. 800 Motor Guru solves these problems by inspecting the engine with diagnostic tools, identifying the exact fault, and repairing or replacing the faulty parts. The team ensures engine performance, reliability, and longer vehicle life. Customers can request support through the Car Engine Repair Dubai service page.",
         },
         {
             icon: <FaTachometerAlt className="text-3xl" />,
-            title: "Transmission Service",
-            desc: "Expert transmission repair, fluid change, clutch replacement, and gearbox maintenance.",
+            title: "Car Oil Change Dubai",
+            desc: "800 Motor Guru provides car oil change service in Dubai. The service includes draining old oil, replacing the oil filter, refilling high-quality engine oil, and inspecting the engine for any early issues. Customers experience engine wear, reduced fuel efficiency, and overheating due to delayed or poor-quality oil changes. Many drivers face costly engine repairs when oil maintenance is neglected. 800 Motor Guru solves these problems by changing the oil on time, using premium oil, and checking engine health during service. The team ensures smooth engine operation, better mileage, and longer engine life. Customers can request support through the Car Oil Change Dubai service page.",
         },
-        {
-            icon: <FaWrench className="text-3xl" />,
-            title: "Tire & Wheel Alignment",
-            desc: "Professional tire rotation, balancing, wheel alignment, and puncture repair services.",
-        },
-        {
-            icon: <FaCogs className="text-3xl" />,
-            title: "Suspension System Repair",
-            desc: "Complete suspension repair, shock absorber replacement, and steering system maintenance.",
-        },
-        {
-            icon: <FaThermometerHalf className="text-3xl" />,
-            title: "Cooling System Service",
-            desc: "Radiator repair, coolant flush, water pump replacement, and overheating solutions.",
-        },
-        {
-            icon: <FaFan className="text-3xl" />,
-            title: "Heating System Repair",
-            desc: "Complete heating system diagnostics and repair to keep you warm during winter.",
-        },
-        {
-            icon: <FaMicrochip className="text-3xl" />,
-            title: "ECU Programming & Tuning",
-            desc: "Advanced ECU programming, chip tuning, and performance optimization services.",
-        },
-        {
-            icon: <FaCar className="text-3xl" />,
-            title: "Exhaust System Repair",
-            desc: "Complete exhaust system repair, muffler replacement, and emission testing.",
-        }
+     
     ];
 
     // Get current visible data
@@ -95,20 +66,21 @@ const CompleteAutoRepair = () => {
            <div className=' dark:bg-gray-950 bg-[#f8f8f8] py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
              <div className='w-[90%] mx-auto'>
             {/* Header Section */}
-            <div className='text-center mb-12'>
-                <h2 className='text-4xl md:text-5xl dark:text-white font-bold mb-4 text-gray-800'>
-                    Complete Auto Repair Solution in <span className='text-orange-500 relative inline-block'>
+            <div className='text-center mb-12 flex flex-col items-center justify-center gap-y-3'>
+                <h2 className='text-4xl md:text-5xl max-w-5xl text-center dark:text-white font-bold mb-4 text-gray-800'>
+                    800 Motor Guru: Complete Auto Repair Solutions in <span className='text-orange-500 relative inline-block'>
                         Dubai
                         
                     </span>
                 </h2>
-                <p className='text-gray-600 text-lg max-w-3xl mx-auto'>
-                    Professional auto repair services with certified mechanics and state-of-the-art equipment
+                <p className='text-gray-600 text-lg max-w-3xl mx-auto h-[60px] overflow-y-auto custom-scroll'>
+                   800 Motor Guru delivers complete auto repair solutions in Dubai for passenger cars, commercial vehicles, and SUVs. The company provides roadside support and workshop repair through services such as battery replacement, fuel delivery, jump start, engine diagnostics, AC repair, tyre service, and body work. 800 Motor Guru follows a clear process that includes fault check, problem confirmation, and repair execution for each vehicle. Many customers state that 800 Motor Guru is the best car garage in Dubai based on consistent service results and verified Google, Facebook, and website reviews. 800 Motor Guru, with 13 years of experience, supports customers with fast response times across Dubai. The company uses diagnostic scanners, alignment machines, and engine testing tools to identify issues before repair. The team provides price details before work and assigns the right technician for each vehicle service. Battery service means replacement of weak or failed batteries after voltage testing. Tyre service means replacement, balancing, and alignment to maintain road grip and stability. Engine diagnostics means fault detection through computerised scanning tools. AC service means cooling system check, gas refill, and component repair. Roadside assistance means on-location support for breakdown cases such as battery failure or fuel shortage.
+
                 </p>
             </div>
             
             {/* Cards Grid */}
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12'>
                 {visibleData.map((item, index) => (
                     <div 
                         key={index} 
@@ -130,7 +102,7 @@ const CompleteAutoRepair = () => {
                             </h3>
                             
                             {/* Description */}
-                            <p className='text-gray-600 mb-5 leading-relaxed'>
+                            <p className='text-gray-600 h-[70px] custom-scroll overflow-y-auto mb-5 leading-relaxed'>
                                 {item.desc}
                             </p>
                             

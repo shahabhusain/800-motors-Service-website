@@ -21,3 +21,39 @@ body{
  .swiper-pagination-bullet-active{
   background-color: orange !important;
  }
+
+
+/* Custom orange scrollbar with transparent background */
+.custom-scroll::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #ea580c, #c2410c);
+}
+
+/* For Firefox - transparent doesn't work well in Firefox, so using very light color */
+.custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #f97316 rgba(0, 0, 0, 0.05);
+}
+
+/* Dark mode support - keep track transparent in webkit */
+.dark .custom-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dark .custom-scroll {
+    scrollbar-color: #f97316 rgba(255, 255, 255, 0.05);
+}

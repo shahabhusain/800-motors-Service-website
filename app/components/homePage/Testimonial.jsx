@@ -16,65 +16,56 @@ const Testimonial = () => {
 
   const googleReviews = [
     {
-      name: "John Doe",
+      name: "Ahmad Halim",
       rating: 5,
-      review: "Great service! Highly recommended for everyone looking for quality work.",
-      date: "March 15, 2024",
-      avatar: "JD"
+      review: "I recently had an issue with my car battery, and I was extremely impressed with the service I received. The technician * Hasanen * was professional, knowledgeable, and very efficient in diagnosing and fixing the problem quickly.",
+      date: "One Month Ago",
+      avatar: "AH"
     },
     {
-      name: "Sarah Ahmed",
+      name: "Vareena Kumar",
       rating: 5,
-      review: "Professional team and excellent customer service. My car runs like new!",
-      date: "March 10, 2024",
-      avatar: "SA"
+      review: "I recently had an issue with my car, and I was dreading the whole repair process. A friend highly recommended Auto Garage All Star, and I can see why. From the moment I called, they were helpful and accommodating. They listened to my concerns without rushing me and scheduled a time for me to bring the car in that worked perfectly with my schedule.",
+      date: "Six Months Ago",
+      avatar: "VK"
     },
     {
-      name: "Mike Wilson",
-      rating: 4,
-      review: "Quick turnaround time and fair pricing. Very satisfied with the service.",
-      date: "March 5, 2024",
-      avatar: "MW"
-    },
-    {
-      name: "Emily Chen",
+      name: "Zain Sheikh",
       rating: 5,
-      review: "Best auto repair shop in Dubai! They fixed my AC issue in no time.",
-      date: "February 28, 2024",
-      avatar: "EC"
+      review: "My car’s starter motor stopped working and I honestly didn’t expect this level of service. They towed my car down from the 3rd floor parking, took it on recovery to the workshop, fixed the issue, and delivered it back to me again on recovery.",
+      date: "Three Months Ago",
+      avatar: "ZS"
     },
     {
-      name: "David Kumar",
+      name: "Nurulhuda Nordin",
       rating: 5,
-      review: "Transparent pricing and honest mechanics. Will definitely come back.",
-      date: "February 20, 2024",
-      avatar: "DK"
+      review: "I’m very impressed with the service provided by Ahsan. It was close to midnight, I was in the mall parking with my 3 children. I had flat tyre with my car and he came promptly, changed the tyre and his service is very professional. Highly recommend. Thank you Ahsan for the great assistance and service!",
+      date: "Four Months Ago",
+      avatar: "NN"
     },
     {
-      name: "Lisa George",
-      rating: 4,
-      review: "Very professional and knowledgeable staff. Great experience overall.",
-      date: "February 15, 2024",
-      avatar: "LG"
+      name: "Alisa Baulanger",
+      rating: 5,
+      review: "We had a flat tire at home and someone came very quickly to replace it with the spare wheel. In less than two hours, the car was back home with a brand-new tire. Fast and excellent service, highly recommended! Tourists from Luxembourg 🇱🇺",
+      date: "Four Months Ago",
+      avatar: "AB"
     }
   ];
 
   // Working YouTube Shorts/Reels URLs only
   const reviewVideos = [
     {
-      url: "https://youtube.com/shorts/W86FsEsACnE?si=gfh54y7L1VBveHoo"
+      url: "https://youtube.com/shorts/0zrFIpVrRYc?si=yscA8NlEYODiYPYw"
     },
     {
-      url: "https://youtube.com/shorts/NObnPcmkxqU?si=d7WzUOZqi5JwhAfj"
+      url: "https://youtube.com/shorts/sgkdjISTnp8?si=1sZew8OW3aLZ1H6G"
     },
     {
-      url: "https://youtube.com/shorts/-j41rR5NoQI?si=w_ns4OCGQsp-pp7g"
+      url: "https://youtube.com/shorts/EAVoPk5Xjt0?si=aicsOpakntX6lXDQ"
     },
+
     {
-      url: "https://youtube.com/shorts/jqLAqWkdbGw?si=14rUzmSoI6vQX0ge"
-    },
-    {
-      url: "https://youtube.com/shorts/W86FsEsACnE?si=gfh54y7L1VBveHoo"
+      url: "https://youtube.com/shorts/Nk6NFCvQPrk?si=VzYHJHhdJiPe4U-w"
     },
   ];
 
@@ -125,7 +116,7 @@ const Testimonial = () => {
     <div className='bg-[#fff] dark:bg-gray-950 py-20 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
       <div className='md:w-[90%] w-[95%] flex flex-col gap-y-3 items-center justify-center mx-auto'>
         <h1 className=' text-4xl md:text-5xl font-bold text-center'>Auto Repair and Maintenance Reviews</h1>
-        <p className='max-w-4xl text-center text-gray-500'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam aperiam impedit a vel ipsum maiores tempora temporibus! Reiciendis accusantium, ullam natus aperiam sapiente eligendi voluptatum, nulla libero sed quidem saepe!</p>
+    
         
         <div className='flex justify-center gap-4 mt-8 mb-12'>
           <button
