@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
-import bg from '@/public/herobg.jpg'
-const Hero = ({about}) => {
+const Hero = ({about, desc, bg}) => {
   return (
-    <div className=' relative '>
+    <div className=' relative flex items-center justify-center flex-col '>
         <Image src={bg} alt='bg-image' className=' h-[400px] w-full object-cover ' />
-         <div className=' bg-[#0000007a] absolute top-0 h-[400px] w-full '></div>
-         <div className=' absolute md:top-44 top-32 md:left-20 left-4 right-2 md:right-[50%] text-white '>
-            <h1 className=' lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold  uppercase'>{about}</h1>
-            <p className=''>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit ad, molestias rem perferendis autem asperiores cum. Accusamus blanditiis illum, ad, minus consequatur commodi consequuntur harum deleniti vero voluptas sequi illo?</p>
+         <div className=' bg-[#00000099] absolute top-0 h-[400px]  w-full '></div>
+         <div className=' absolute md:top-32 top-32  text-white flex flex-col gap-y-3 '>
+            <h1 className=' lg:text-5xl text-center md:text-4xl  sm:text-3xl text-2xl font-bold max-w-5xl  '>{about}</h1>
+            <p className=' text-center max-w-5xl text-center h-[100px] overflow-y-auto custom-scroll'>{desc}</p>
          </div>
     </div>
   )

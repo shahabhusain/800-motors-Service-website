@@ -9,7 +9,7 @@ import { FaStar, FaGoogle, FaYoutube } from 'react-icons/fa';
 import { RiVerifiedBadgeFill } from 'react-icons/ri';
 import { FcGoogle } from 'react-icons/fc';
 
-const Testimonial = () => {
+const Testimonial = ({span="Auto Repair and Maintenance Reviews"}) => {
   const [activeTab, setActiveTab] = useState('google');
   const [playingVideo, setPlayingVideo] = useState(null);
   const videoRefs = useRef({});
@@ -113,9 +113,9 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div className='bg-[#fff] dark:bg-gray-950 md:pb-20 pb-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
+    <div className='bg-[#fff] dark:bg-gray-950 mt-12 dark:mt-0 md:pb-20 dark:py-20 pb-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
       <div className='md:w-[90%] w-[95%] flex flex-col gap-y-3 items-center justify-center mx-auto'>
-        <h2 className=' text-3xl md:text-5xl font-bold text-center'>Auto Repair and Maintenance Reviews</h2>
+        <h2 className=' text-3xl md:text-5xl font-bold text-center'>{span}</h2>
     
         
         <div className='flex justify-center gap-4 mt-8 mb-12'>

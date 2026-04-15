@@ -6,12 +6,15 @@ import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useDispatch } from "react-redux";
+import { openModal } from "@/app/store/slice/authAppoitmentModelSlice";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [dropdownOffsets, setDropdownOffsets] = useState({});
+  const dispatch = useDispatch();
   const buttonRefs = useRef({});
   const timeoutRef = useRef(null);
   const pathname = usePathname();
@@ -312,9 +315,9 @@ const Header = () => {
 
             {/* Right Controls */}
             <div className="flex items-center gap-2 sm:gap-3">
-              <LanguageSwitcher />
+              {/* <LanguageSwitcher /> */}
               <ThemeToggle />
-              <button className="relative hidden md:block group overflow-hidden rounded-lg bg-orange-500 px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-500/25 dark:hover:shadow-orange-500/40">
+              <button   onClick={() => dispatch(openModal())} className="relative hidden md:block group overflow-hidden rounded-lg bg-orange-500 px-5 py-2 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-500/25 dark:hover:shadow-orange-500/40">
                 <span className="relative z-10">Book Now</span>
                 <span className="absolute inset-0 bg-gradient-to-r from-orange-400 to-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
               </button>

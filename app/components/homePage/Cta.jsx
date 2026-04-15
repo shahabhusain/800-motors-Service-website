@@ -13,12 +13,13 @@ const Cta = () => {
         {/* LEFT CONTENT */}
         <div className="text-white md:w-[60%] w-full">
 
-          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-4">
-            Contact 800 Motor Guru For Auto Repair Services in Dubai
-          </h1>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold leading-tight mb-4">
+Contact 800 Motor Guru for Complete car (auto) repair services in Dubai
+          </h2>
 
           <p className="text-white/80 text-sm sm:text-base mb-6">
-            800 Motor Guru provides fast contact and booking support for auto repair services across Dubai. The team handles booking, roadside assistance, diagnostics, and workshop repair for all car brands with quick response and clear guidance. 800 Motor Guru assists customers with battery service, engine repair, AC work, tyre change, fuel delivery, jump start, and general maintenance. The team ensures smooth communication from booking to final delivery of the vehicle.
+800 Motor Guru provides complete car repair services in Dubai with fast booking and reliable support for all vehicle types. The company offers engine repair, AC service, battery replacement, tyre service, diagnostics, and full maintenance with certified technicians. Customers can contact 800 Motor Guru through a call, on WhatsApp at +971 800 64878, or online at 80064878 to book a service quickly and receive professional assistance. The team ensures clear communication, transparent pricing, and free pick-up and drop-off across Dubai for convenient car repair service.
+
           </p>
 
           {/* BUTTONS */}

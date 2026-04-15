@@ -21,6 +21,9 @@ export const metadata = {
   title: "800 Motor Guru | Auto Repair Service in Dubai",
   description:
     "800 Motor Guru provides quick and reliable battery replacement anywhere in Dubai with genuine batteries and professional installation.",
+      alternates: {
+    canonical: "https://800motorguru.ae",
+  },
 };
 
 const page = () => {
@@ -36,8 +39,8 @@ const page = () => {
     <div>
       <Hero
         features={features}
-        span1="Automotive Services in Dubai: "
-        span2="Complete Car Repair and Solutions"
+        span1="Automotive Services in Dubai Complete "
+        span2=" Car Repair and Solutions"
         desc="Automotive services in Dubai cover car maintenance and repair for passenger cars, commercial vehicles, motorcycles, and off-road equipment. These automotive services in Dubai help car owners maintain performance, ensure safety, and reduce the risk of breakdown on the road. 800 Motor Guru provides complete automotive services in Dubai across roadside, mechanical, maintenance, and body repair categories. The company handles car battery replacement, fuel delivery, jump starts, engine repair, diagnostics, AC service, tire work, car denting, and painting. The workshop process includes inspection, problem identification, solution selection, and repair execution. This approach helps customers receive accurate service without delay. 800 Motor Guru operates with certified technicians, modern tools, and defined service steps for consistent results. 800 Motor Guru operates with 13 years of industry experience and a team of certified technicians for multi-brand car vehicles. The company uses modern diagnostic tools and follows clear service steps for accurate results. 800 Motor Guru has received over 2,000 positive Google reviews with high ratings, which reflect consistent service quality. The company provides transparent pricing before repair and ensures a quick response across Dubai for customer convenience."
         img={herobg}
       />

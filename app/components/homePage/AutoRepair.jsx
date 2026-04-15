@@ -28,7 +28,7 @@ const AutoRepair = () => {
     ];
 
     return (
-        <div className='relative mb-16 md:mb-20'>
+        <div className='relative mb-16 md:mb-20 dark:mb-0'>
 
             {/* Background */}
             <Image

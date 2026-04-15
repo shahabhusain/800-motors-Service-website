@@ -34,7 +34,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-white dark:bg-black text-gray-900 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300 pt-4">
+    <footer className="bg-white dark:bg-black text-gray-900 dark:text-white border-t border-gray-200 dark:border-gray-800 transition-colors duration-300 pt-8">
       {/* Main Footer */}
       <div className=" mx-auto md:w-[90%] w-[90%] pb-4 ">
         

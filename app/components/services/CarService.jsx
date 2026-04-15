@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import auto from '@/public/home/auto.jpeg'
-import { FaCar, FaWrench, FaShieldAlt, FaClock } from 'react-icons/fa'
+import auto from '@/public/home/battery.webp'
 
 const CarService = () => {
     const data = [
@@ -42,12 +41,12 @@ const CarService = () => {
                 <div className="text-center mb-10 md:mb-12 lg:mb-16">
 
                     <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4'>
-                        Car Service Offer in Dubai
+Car Service Offers in Dubai
+
                     </h1>
                     <p className='text-gray-600 dark:text-gray-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed'>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta obcaecati suscipit, 
-                        voluptatibus, alias nesciunt facere saepe, quia quidem ab qui exercitationem dolore 
-                        ea dolores? Laboriosam delectus natus corrupti animi cupiditate!
+800 Motor Guru provides seasonal and event-based car repair offers in Dubai to make vehicle maintenance more affordable for customers. The company applies discounts on routine servicing, diagnostics, and repair packages during special occasions. These offers are designed for all car brands, such as Japanese, German, American, British, French, Korean, and luxury brands, and help customers reduce maintenance costs while receiving professional repair services with certified technicians. Customers receive transparent pricing and can book services through call, WhatsApp, or online request.
+
                     </p>
                 </div>
 

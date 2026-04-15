@@ -13,7 +13,7 @@ const RepairEngine = () => {
           <Image 
             src={ac} 
             alt='Car Service Dubai' 
-            className='w-full rounded-2xl h-auto object-cover transition-transform duration-500 group-hover:scale-105'
+            className='w-full rounded-br-[20%] border-[6px] border-white shadow h-auto object-cover transition-transform duration-500 group-hover:scale-105'
           />
         </div>
       {/* Left Side - Content */}

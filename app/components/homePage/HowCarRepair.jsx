@@ -12,9 +12,7 @@ import freePickup from '@/public/home/freePickup.jpeg'
 import diagnose from '@/public/home/diagnose.webp'
 import repair from '@/public/home/repair.webp'
 
-const HowCarRepair = () => {
-    const data = [
-        {
+const HowCarRepair = ({data=[  {
             title: "Step 1: Book in 60 Second",
             desc: "The customer books the service online or by call within a few seconds by providing vehicle and location details.",
             color: "from-orange-500 to-red-500",
@@ -43,9 +41,7 @@ const HowCarRepair = () => {
             desc: "800 Motor Guru completes the service and returns the vehicle on the same day or delivers it back to the customer's location.",
             color: "from-indigo-500 to-blue-500",
             img:freePickup
-        },
-
-    ];
+        },], span1="How Car Repair Works in Dubai", span2="From Booking to Pickup", desc="Car repair in Dubai follows a simple process that starts with booking a service, includes inspection and repair, and ends with vehicle pickup or delivery."}) => {
 
     return (
           <div className=' bg-[#fff] dark:bg-gray-950 md:py-20 py-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
@@ -53,13 +49,13 @@ const HowCarRepair = () => {
             {/* Header Section */}
             <div className='text-center mb-12 flex items-center justify-center flex-col'>
                 <h2 className='text-3xl md:text-5xl max-w-5xl text-center  dark:text-white font-bold mb-4 text-gray-800'>
-                   How Car Repair Works in Dubai  <span className='text-orange-500 relative inline-block'>
-                        From Booking to Pickup
+                     {span1}  <span className='text-orange-500 relative inline-block'>
+                         {span2}
                     </span>
                 </h2>
-                <p className='text-gray-600 text-lg max-w-3xl mx-auto'>
-Car repair in Dubai follows a simple process that starts with booking a service, includes inspection and repair, and ends with vehicle pickup or delivery.
+                <p className='text-gray-600 text-lg max-w-3xl mx-auto h-[60px] overflow-y-auto custom-scroll'>
 
+                {desc}
                 </p>
             </div>
 

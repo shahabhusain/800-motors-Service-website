@@ -29,10 +29,10 @@ const Hero = ({ span1, span2, desc, features, img }) => {
         <div className="absolute inset-0 flex items-center justify-center w-full">
             <div className="md:w-[90%] w-[95%] mx-auto flex flex-col lg:flex-row items-center justify-between md:pt-32 pt-24 pb-20">    
                 {/* LEFT CONTENT */}
-                <div className="flex flex-col gap-y-4 lg:w-[60%] w-full">
+                <div className="flex flex-col gap-y-4 lg:w-[65%] w-full">
                     
                     {/* Headline */}
-                    <h1 className="lg:text-[44px] md:text-[34px] leading-tight md:leading-[3.2rem] lg:leading-[3.8rem] text-[30px] sm:text-[34px] max-w-[655px] uppercase font-bold text-white">
+                    <h1 className="lg:text-[45px] md:text-[34px] leading-tight max-w-[54rem] md:leading-[3.2rem] lg:leading-[3.8rem] text-[30px] sm:text-[34px]  font-bold text-white">
                         {span1}
                         <span className="text-orange-600">
                             {" "}
@@ -40,7 +40,7 @@ const Hero = ({ span1, span2, desc, features, img }) => {
                         </span>
                     </h1>
 
-                    <p className="md:text-xl custom-scroll text-base sm:text-lg max-w-2xl font-medium text-gray-200 h-[60px] overflow-y-auto">
+                    <p className="md:text-xl custom-scroll text-base sm:text-lg max-w-2xl font-medium text-gray-200 md:h-[60px] h-[50px] overflow-y-auto">
                         {desc}
                     </p>
 
@@ -87,7 +87,7 @@ const Hero = ({ span1, span2, desc, features, img }) => {
                 </div>
 
                 {/* RIGHT FORM */}
-                <div className="lg:w-[40%] w-full mt-8 lg:mt-0">
+                <div className="lg:w-[35%] w-full mt-8 lg:mt-0">
                     <Form />
                 </div>
             </div>

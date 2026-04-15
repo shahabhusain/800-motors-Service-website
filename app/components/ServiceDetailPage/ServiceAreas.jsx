@@ -42,9 +42,9 @@ const ServiceAreas = () => {
     { id: 15, area: "Al Falah", zone: "Al Falah City", icon: FaCity },
   ];
   return (
-    <div>
+    <div className='dark:bg-gray-950 dark:py-20 dark:border-b-[1px] dark:border-b-gray-700'>
          {/* Filtered Service Areas Section with Buttons */}
-      <div className=" w-[85%] my-20 mx-auto">
+      <div className=" w-[85%] my-20 dark:my-0 mx-auto">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold dark:text-white text-gray-900 mb-4">
             Our Service <span className="text-orange-600">Areas</span>
@@ -82,7 +82,7 @@ const ServiceAreas = () => {
         {activeCity === 'dubai' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {dubaiServiceAreas.map((area) => (
-              <div key={area.id} className="bg-white dark:bg-gray-950 rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
+              <div key={area.id} className="bg-white dark:bg-gray-900 rounded-lg shadow-md p-4 hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105">
                 <div className="flex items-center gap-3">
                   <area.icon className="w-6 h-6 text-orange-600" />
                   <div>

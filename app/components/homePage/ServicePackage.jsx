@@ -5,7 +5,7 @@ import PackageV6 from './packages/PackageV6'
 import PackageV8 from './packages/PackageV8'
 import PackageV12 from './packages/PackageV12'
 
-const ServicePackage = () => {
+const ServicePackage = ({desc="800 Motor Guru provides flexible car service packages in Dubai for different vehicle needs. The company offers Silver, Gold, and Platinum maintenance plans with options based on engine type, such as V4, V6, V8, and V12. These packages include minor and major services, oil replacement, inspection, and spare parts discounts to reduce long-term repair costs. The packages help customers manage maintenance with fixed pricing and scheduled service support.", span="800 Motor Guru Flexible", span1="Car Workshop Packages in Dubai"}) => {
     const [selectService, setSelectService] = useState("v4")
     const v4Packages = [
         {
@@ -19,7 +19,7 @@ const ServicePackage = () => {
                 price:" 444"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", "No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
 
@@ -34,7 +34,7 @@ const ServicePackage = () => {
                 price:" 788"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", " No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
 
@@ -49,7 +49,7 @@ const ServicePackage = () => {
                 price:"1230"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", "No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
     ]
@@ -66,7 +66,7 @@ const ServicePackage = () => {
                 price:" 765"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", "No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
 
@@ -81,7 +81,7 @@ const ServicePackage = () => {
                 price:" 1180"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", "No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
 
@@ -96,7 +96,7 @@ const ServicePackage = () => {
                 price:" 1473"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", "No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
     ]
@@ -115,7 +115,7 @@ const ServicePackage = () => {
                 price:" 853"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", " No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
 
@@ -130,7 +130,7 @@ const ServicePackage = () => {
                 price:" 1,245"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", " No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
 
@@ -146,7 +146,7 @@ const ServicePackage = () => {
                 price:" 1,643"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", "No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
 
@@ -167,7 +167,7 @@ const ServicePackage = () => {
                 price:"---"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", "No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ],
             button:"Not Available"
         },
@@ -183,7 +183,7 @@ const ServicePackage = () => {
                 price:"---"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", "No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ],
             button:"Not Available"
         },
@@ -199,16 +199,16 @@ const ServicePackage = () => {
                 price:" 3,413"
             },
             services:[
-                "3 Minor Services","2 Major Services", "2 No Time Limit", "15% Off Spare Parts", "15% Off Spare Parts", "Havoline Caltex Oil"
+                "3 Minor Services","2 Major Services", " No Time Limit", "15% Off Spare Parts", "Havoline Caltex Oil"
             ]
         },
     ]
   return (
     <div className='p flex flex-col items-center justify-center leading-[2rem] text-center md:text-left leading-tight bg-[#f8f8f8] dark:bg-gray-950 py-12 dark:border-b-[#f8f8f82e] dark:border-b-[1px] flex flex-col md:gap-y-6 gap-y-1'>
-   <h2 className=' text-3xl md:text-5xl font-bold max-w-5xl   text-center'>800 Motor Guru: Flexible 
- <span className=' text-orange-500'> Car Workshop Packages in </span> <span className=' text-orange-500'>in</span> Dubai</h2>
+   <h2 className=' text-3xl md:text-5xl font-bold max-w-5xl   text-center'>{span} 
+ <span className=' text-orange-500'> {span1} </span> </h2>
   
-   <p className=' md:text-[15px] text-[12px] text-black max-w-5xl text-center md:h-[70px] h-[40px] overflow-y-auto custom-scroll  '>800 Motor Guru provides flexible car service packages in Dubai for different vehicle needs. The company offers Silver, Gold, and Platinum maintenance plans with options based on engine type, such as V4, V6, V8, and V12. These packages include minor and major services, oil replacement, inspection, and spare parts discounts to reduce long-term repair costs. The packages help customers manage maintenance with fixed pricing and scheduled service support.</p>
+   <p className=' md:text-[15px] text-[12px] dark:text-white text-black max-w-5xl text-center md:h-[70px] h-[40px] overflow-y-auto custom-scroll  '>{desc}</p>
       <div className=' flex items-center gap-x-12 bg-[#fff] dark:bg-gray-900  p-2  rounded-xl mt-5'>
         <button onClick={()=>setSelectService("v4")} className={ ` font-medium${selectService === "v4" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[14px] md:rounded-xl rounded-sm`}>V4</button>
         <button onClick={()=>setSelectService("v6")} className={ ` font-medium${selectService === "v6" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[14px] md:rounded-xl rounded-sm`}>V6</button>

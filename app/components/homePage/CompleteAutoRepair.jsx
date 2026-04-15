@@ -68,7 +68,7 @@ const CompleteAutoRepair = () => {
             {/* Header Section */}
             <div className='text-center mb-12 flex flex-col items-center justify-center gap-y-3'>
                 <h2 className='text-3xl md:text-5xl max-w-5xl text-center dark:text-white font-bold mb-4 text-gray-800'>
-                    800 Motor Guru: Complete Auto Repair Solutions in <span className='text-orange-500 relative inline-block'>
+                    800 Motor Guru Complete Auto Repair Solutions in <span className='text-orange-500 relative inline-block'>
                         Dubai
                         
                     </span>
