@@ -204,19 +204,38 @@ const ServicePackage = ({desc="800 Motor Guru provides flexible car service pack
         },
     ]
   return (
-    <div className='p flex flex-col items-center justify-center leading-[2rem] text-center md:text-left leading-tight bg-[#f8f8f8] dark:bg-gray-950 py-12 dark:border-b-[#f8f8f82e] dark:border-b-[1px] flex flex-col md:gap-y-6 gap-y-1'>
-   <h2 className=' text-3xl md:text-5xl font-bold max-w-5xl   text-center'>{span} 
- <span className=' text-orange-500'> {span1} </span> </h2>
-  
-   <p className=' md:text-[15px] text-[12px] dark:text-white text-black max-w-5xl text-center md:h-[70px] h-[40px] overflow-y-auto custom-scroll  '>{desc}</p>
-      <div className=' flex items-center gap-x-12 bg-[#fff] dark:bg-gray-900  p-2  rounded-xl mt-5'>
-        <button onClick={()=>setSelectService("v4")} className={ ` font-medium${selectService === "v4" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[14px] md:rounded-xl rounded-sm`}>V4</button>
-        <button onClick={()=>setSelectService("v6")} className={ ` font-medium${selectService === "v6" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[14px] md:rounded-xl rounded-sm`}>V6</button>
-        <button onClick={()=>setSelectService("v8")} className={ ` font-medium${selectService === "v8" ? " bg-orange-500 text-white" : ""}  md:py-2 py-1  md:px-4 px-2 md:text-[16px] text-[14px] md:rounded-xl rounded-sm`}>V8</button>
-        <button onClick={()=>setSelectService("v12")} className={`font-medium ${selectService === "v12" ? " bg-orange-500 text-white" : ""} md:py-2 py-1 md:px-4 px-2 md:text-[16px] text-[14px] md:rounded-xl rounded-sm`}>V12</button>
-      </div>
-      <div className=' md:my-12 my-6 md:w-[65%] w-[95%] mx-auto '>
-         {selectService === "v4" ? <PakageV4 data={v4Packages} /> : selectService === "v6" ? <PackageV6 data={v6Packages} /> : selectService === "v8" ? <PackageV8 data={v8Packages} /> : selectService === "v12" ? <PackageV12 data={v12Packages} /> : null}
+    <div className='flex flex-col items-center justify-center bg-[#f8f8f8] dark:border-b-[#f8f8f82e] dark:border-b-[1px] to-white dark:bg-gray-950 py-16 md:py-24 px-4'>
+      <div className='max-w-6xl mx-auto w-full'>
+        <h2 className='text-4xl md:text-5xl lg:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent'>
+          {span} 
+          <span className='bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent'> {span1}</span>
+        </h2>
+        
+        <p className='text-sm md:text-base md:h-auto h-[60px] md:overflow-x-hidden overflow-x-scroll custom-scroll text-gray-600 dark:text-gray-300 max-w-4xl mx-auto text-center mb-12 leading-relaxed'>
+          {desc}
+        </p>
+        
+        <div className='flex justify-center mb-16'>
+          <div className='flex items-center gap-x-2 md:gap-x-3 bg-white dark:bg-gray-900/50 p-2 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-800 backdrop-blur-sm'>
+            {["v4", "v6", "v8", "v12"].map((type) => (
+              <button
+                key={type}
+                onClick={() => setSelectService(type)}
+                className={`font-bold transition-all duration-300 md:py-3 py-2 md:px-8 px-5 md:text-base text-sm rounded-xl ${
+                  selectService === type 
+                    ? "bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/30 scale-105" 
+                    : "text-gray-700 dark:text-gray-300 hover:text-orange-500 dark:hover:text-orange-400 hover:bg-orange-50 dark:hover:bg-gray-800/50"
+                }`}
+              >
+                {type.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        </div>
+        
+        <div className='w-full'>
+          {selectService === "v4" ? <PakageV4 data={v4Packages} /> : selectService === "v6" ? <PackageV6 data={v6Packages} /> : selectService === "v8" ? <PackageV8 data={v8Packages} /> : selectService === "v12" ? <PackageV12 data={v12Packages} /> : null}
+        </div>
       </div>
     </div>
   )

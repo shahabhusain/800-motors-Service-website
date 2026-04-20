@@ -2,8 +2,9 @@
 
 import React from 'react';
 import award from '@/public/home/award.jpeg';
+import herobg from '@/public/herobg.jpg';
 import Image from 'next/image';
-import herobg from '@/public/herobg.jpg'
+
 const AutoRepair = () => {
     const data = [
         {
@@ -27,54 +28,75 @@ const AutoRepair = () => {
     ];
 
     return (
-        <div className=' relative'>
-              <Image className=' h-[350px]' src={herobg} alt='bg-image' />
-              <div className='absolute bottom-0 w-full'>
-            <div className='w-full bg-[#000000b3] backdrop-blur-xl py-12 md:py-16'>
-                <div className='w-[92%] md:w-[90%] mx-auto flex flex-col md:flex-row gap-10 md:gap-12 items-center justify-between'>
+        <div className='relative w-full min-h-[500px] overflow-hidden'>
+            {/* Background Image */}
+            <div className='absolute inset-0 w-full h-full'>
+                <Image 
+                    className='w-full h-full object-cover' 
+                    src={herobg} 
+                    alt='auto repair background'
+                    fill
+                    priority
+                    sizes="100vw"
+                    style={{ objectPosition: "center" }}
+                />
+            </div>
+            
+            {/* Overlay */}
+            <div className='absolute inset-0 bg-black/70 w-full h-full'></div>
+            
+            {/* Content */}
+            <div className='relative z-10 w-full py-16 md:py-20'>
+                <div className='w-[92%] md:w-[90%] mx-auto flex flex-col lg:flex-row gap-10 lg:gap-12 items-center justify-between'>
+                    
                     {/* Left Content */}
-                    <div className='flex flex-col gap-y-4 md:w-1/2 text-center md:text-left'>
-                        <h2 className='text-white font-bold text-[26px] sm:text-[30px] md:text-[35px] lg:text-[40px] leading-snug'>
-                            Repair Your Autos from Best Car
-                            <span className='text-orange-500'> Service Center in Dubai</span>
+                    <div className='flex flex-col gap-y-5 lg:w-1/2 md:text-center text-start lg:text-left'>
+                        <h2 className='text-white font-bold text-3xl sm:text-4xl md:text-4xl lg:text-5xl leading-tight'>
+                            Repair Your Autos from Best 
+                            <span className='text-orange-500 block mt-2'>
+                                Service Center in Dubai Car
+                            </span>
                         </h2>
 
-                        <p className='text-white/90 text-[13px] sm:text-[14px] md:text-[15px] md:h-[70px] h-[50px] overflow-y-auto custom-scroll leading-relaxed'>
+                        <p className='text-gray-200 md:h-auto h-[60px] md:overflow-x-hidden overflow-x-scroll text-sm md:text-base leading-relaxed'>
                             800 Motor Guru is a top-rated car service company in Dubai with over 2,000 customer reviews and a five-star rating on Google. The company provides reliable auto repair services with certified technicians trained in engine diagnostics, electrical systems, and AC repair. It uses diagnostic tools such as computerized scanners, engine analyzers, and wheel alignment machines. 800 Motor Guru maintains clear pricing and defined service steps, which help customers understand the repair process before work starts.
                         </p>
                     </div>
 
                     {/* Cards */}
-                    <div className='flex flex-col md:flex-row md:justify-end gap-5 md:w-1/2'>
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:w-1/2'>
                         {data.map((item, index) => (
-                            <div key={index} className='relative group w-full sm:w-[180px] md:w-[200px] transition-all duration-300 hover:-translate-y-1'>
-                                <Image
-                                    className='w-full h-[220px] md:h-[250px] object-cover rounded-2xl'
-                                    src={item.awardImg}
-                                    alt='award'
-                                />
+                            <div key={index} className='relative group w-full transition-all duration-300 hover:-translate-y-1'>
+                                <div className='relative overflow-hidden rounded-2xl'>
+                                    <Image
+                                        className='w-full h-[240px] object-cover transition-transform duration-500 group-hover:scale-105'
+                                        src={item.awardImg}
+                                        alt={item.title}
+                                        width={300}
+                                        height={240}
+                                    />
 
-                                {/* Overlay Gradient */}
-                                <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent rounded-2xl'></div>
+                                    {/* Gradient Overlay */}
+                                    <div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent'></div>
 
-                                {/* Default Text */}
-                                <div className='absolute bottom-3 left-3 right-3 z-10 text-white group-hover:opacity-0 transition-opacity duration-300'>
-                                    <h2 className='text-[14px] font-bold mb-1'>{item.title}</h2>
-                                    <p className='text-[11px] text-white/80'>{item.desc}</p>
-                                </div>
+                                    {/* Default Content */}
+                                    <div className='absolute bottom-0 left-0 right-0 p-4 z-10 transition-all duration-300 group-hover:opacity-0'>
+                                        <h3 className='text-white text-sm font-bold mb-1'>{item.title}</h3>
+                                        <p className='text-gray-200 text-xs leading-relaxed'>{item.desc}</p>
+                                    </div>
 
-                                {/* Hover Content */}
-                                <div className='absolute inset-0 flex items-center justify-center text-white rounded-2xl bg-black/60 backdrop-blur-md p-4 opacity-0 group-hover:opacity-100 transition-all duration-300'>
-                                    <p className='text-[12px] md:text-[13px] text-center font-medium leading-relaxed'>
-                                        {item.hoverDesc}
-                                    </p>
+                                    {/* Hover Content */}
+                                    <div className='absolute inset-0 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20'>
+                                        <p className='text-gray-100 text-xs md:text-sm text-center leading-relaxed'>
+                                            {item.hoverDesc}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     );
 };

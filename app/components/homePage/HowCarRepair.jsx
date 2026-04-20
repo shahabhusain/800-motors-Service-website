@@ -44,120 +44,138 @@ const HowCarRepair = ({data=[  {
         },], span1="How Car Repair Works in Dubai", span2="From Booking to Pickup", desc="Car repair in Dubai follows a simple process that starts with booking a service, includes inspection and repair, and ends with vehicle pickup or delivery."}) => {
 
     return (
-          <div className=' bg-[#fff] dark:bg-gray-950 md:py-20 py-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
-              <div className='w-[90%] mx-auto'>
-            {/* Header Section */}
-            <div className='text-center mb-12 flex items-center justify-center flex-col'>
-                <h2 className='text-3xl md:text-5xl max-w-5xl text-center  dark:text-white font-bold mb-4 text-gray-800'>
-                     {span1}  <span className='text-orange-500 relative inline-block'>
-                         {span2}
-                    </span>
-                </h2>
-                <p className='text-gray-600 text-lg max-w-3xl mx-auto h-[60px] overflow-y-auto custom-scroll'>
+        <div className='bg-[#fff] to-white dark:bg-gray-950 dark:border-b-[#f8f8f82e] dark:border-b-[1px] py-16 md:py-24'>
+            <div className='max-w-7xl mx-auto px-4 md:px-6'>
+                {/* Header Section */}
+                <div className='text-center mb-16'>
+                    <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent'>
+                        {span1}  
+                        <span className='bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent'> {span2}</span>
+                    </h2>
+                    <p className='text-gray-600 dark:text-gray-300 text-base md:text-lg max-w-3xl mx-auto leading-relaxed'>
+                        {desc}
+                    </p>
+                </div>
 
-                {desc}
-                </p>
-            </div>
-
-            {/* Timeline Slider */}
-            <Swiper
-                modules={[Autoplay, Pagination, EffectFade]}
-                spaceBetween={24}
-                slidesPerView={1}
-                pagination={{ clickable: true }}
-                autoplay={{
-                    delay: 4000,
-                    disableOnInteraction: false,
-                }}
-                breakpoints={{
-                    640: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 24,
-                    },
-                    1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 24,
-                    },
-                    1280: {
-                        slidesPerView: 3,
-                        spaceBetween: 24,
-                    },
-                }}
-                className="howCarRepairSwiper"
-            >
-                {data.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <div className='group relative h-full mb-12'>
-                            {/* Card */}
-                            <div className='bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform p-6 hover:-translate-y-2 h-full flex flex-col md:flex-row  items-center justify-between gap-6'>
-                                
-                                <div className=''>
-                      
-                                    
-                                    
-                                    {/* Title */}
-                                    <h3 className='text-xl dark:text-white font-bold mb-3 text-gray-800 group-hover:text-orange-500 transition-colors duration-300'>
-                                        {item.title}
-                                    </h3>
-                                    
-                                    {/* Description */}
-                                    <p className='text-gray-600 leading-relaxed text-sm'>
-                                        {item.desc}
-                                    </p>
-                     
+                {/* Timeline Slider */}
+                <Swiper
+                    modules={[Autoplay, Pagination, EffectFade]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    }}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 24,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                        1280: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                    }}
+                    className="howCarRepairSwiper"
+                >
+                    {data.map((item, index) => (
+                        <SwiperSlide key={index}>
+                            <div className='group h-full mb-12'>
+                                {/* Card */}
+                                <div className='bg-white dark:bg-gray-900/80 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden hover:-translate-y-3 h-full backdrop-blur-sm border border-gray-100 dark:border-gray-800'>
+                                    <div className='p-6 md:p-8 flex flex-col items-center text-center gap-5'>
+                                        {/* Step Number Badge */}
+                                        <div className='w-14 h-14 rounded-full bg-gradient-to-r from-orange-500 to-orange-600 text-white flex items-center justify-center text-2xl font-bold shadow-lg shadow-orange-500/30'>
+                                            {index + 1}
+                                        </div>
+                                        
+                                        {/* Title */}
+                                        <h3 className='text-xl md:text-2xl font-bold text-gray-800 dark:text-white group-hover:text-orange-500 transition-colors duration-300'>
+                                            {item.title}
+                                        </h3>
+                                        
+                                        {/* Description */}
+                                        <p className='text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base'>
+                                            {item.desc}
+                                        </p>
+                                        
+                                        {/* Image */}
+                                        <div className='relative w-full h-48 md:h-52 rounded-xl overflow-hidden mt-2 shadow-md'>
+                                            <Image 
+                                                className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110' 
+                                                src={item.img} 
+                                                alt={item.title}
+                                                fill
+                                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                            />
+                                        </div>
+                                    </div>
                                 </div>
-                                <Image className=' md:w-[150px] w-full h-[150px]  rounded-lg object-cover' src={item.img} alt='image'/>
                             </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
 
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
-
-
-
-
-            {/* Add custom styles for animations */}
-            <style jsx>{`
-                @keyframes progress {
-                    0% {
-                        width: 0%;
+                {/* Custom styles */}
+                <style jsx global>{`
+                    .howCarRepairSwiper {
+                        padding-bottom: 3rem !important;
                     }
-                    100% {
-                        width: 100%;
+                    .howCarRepairSwiper .swiper-pagination {
+                        bottom: 0 !important;
                     }
-                }
-                .animate-progress {
-                    animation: progress 10s linear infinite;
-                }
-                .howCarRepairSwiper .swiper-button-next,
-                .howCarRepairSwiper .swiper-button-prev {
-                    color: #f97316;
-                    background: white;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-                }
-                .howCarRepairSwiper .swiper-button-next:after,
-                .howCarRepairSwiper .swiper-button-prev:after {
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-                .howCarRepairSwiper .swiper-pagination-bullet-active {
-                    background: #f97316;
-                }
-                .howCarRepairSwiper .swiper-pagination-bullet {
-                    background: #f97316;
-                    opacity: 0.3;
-                }
-            `}</style>
+                    .howCarRepairSwiper .swiper-pagination-bullet {
+                        width: 10px;
+                        height: 10px;
+                        background: #f97316;
+                        opacity: 0.3;
+                        transition: all 0.3s ease;
+                    }
+                    .howCarRepairSwiper .swiper-pagination-bullet-active {
+                        width: 28px;
+                        border-radius: 6px;
+                        background: #f97316;
+                        opacity: 1;
+                    }
+                    .howCarRepairSwiper .swiper-button-next,
+                    .howCarRepairSwiper .swiper-button-prev {
+                        color: #f97316;
+                        background: white;
+                        width: 46px;
+                        height: 46px;
+                        border-radius: 50%;
+                        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                        transition: all 0.3s ease;
+                    }
+                    .howCarRepairSwiper .swiper-button-next:hover,
+                    .howCarRepairSwiper .swiper-button-prev:hover {
+                        background: #f97316;
+                        color: white;
+                        transform: scale(1.08);
+                    }
+                    .howCarRepairSwiper .swiper-button-next:after,
+                    .howCarRepairSwiper .swiper-button-prev:after {
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    @media (max-width: 768px) {
+                        .howCarRepairSwiper .swiper-button-next,
+                        .howCarRepairSwiper .swiper-button-prev {
+                            display: none;
+                        }
+                    }
+                `}</style>
+            </div>
         </div>
-          </div>
     )
 }
 

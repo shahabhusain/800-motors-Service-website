@@ -28,88 +28,101 @@ const HowItWorks = () => {
     ];
 
     return (
-          <div className=' dark:bg-gray-950 dark:py-20 md:dark:py-10 dark:border-b-[#f8f8f82e] dark:border-b-[1px]'>
-              <div className='w-[90%] mx-auto md:my-20 my-10 dark:my-0'>
-            {/* Header Section */}
-            <div className='text-center flex flex-col gap-3 items-center justify-center mb-12'>
-                <h2 className='text-3xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800 dark:text-white'>
-                    How to Find Best Auto Repair Company <span className='text-orange-500'>Near Me?</span>
-                </h2>
-                <p className='text-lg text-gray-600 max-w-3xl mx-auto h-[60px] overflow-y-auto custom-scroll '>
-                    Customers in Dubai look for quick response, clear pricing, and reliable service when searching for an auto repair company nearby. 800 Motor Guru provides services across all areas of Dubai with fast booking, on-site support, and workshop repair options. The team reaches the customer location, inspects the vehicle, and offers the right solution without delay. This makes 800 Motor Guru a convenient and dependable choice for customers in any part of Dubai.
-                </p>
-            </div>
-
-            {/* Map and Buttons Section */}
-            <div className='flex flex-col lg:flex-row gap-8'>
-                {/* Map Section - Left Side */}
-                <div className='lg:w-2/3 rounded-xl overflow-hidden shadow-lg'>
-                    <iframe
-                        src={locations[activeLocation].map}
-                        width="100%"
-                        height="600"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title={`${locations[activeLocation].name} Map`}
-                        className="w-full"
-                    ></iframe>
+        <div className='bg-[#fff] dark:bg-gray-950 dark:border-b-[#f8f8f82e] dark:border-b-[1px] py-16 md:py-24'>
+            <div className='max-w-7xl mx-auto px-4 md:px-6'>
+                {/* Header Section */}
+                <div className='text-center mb-16'>
+                    <h2 className='text-4xl md:text-5xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent'>
+                        How to Find Best Auto Repair Company <span className='bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent'>Near Me?</span>
+                    </h2>
+                    <p className='text-gray-600 h-[60px] overflow-x-auto custom-scroll dark:text-gray-300 text-base md:text-lg max-w-4xl mx-auto leading-relaxed'>
+                        Customers in Dubai look for quick response, clear pricing, and reliable service when searching for an auto repair company nearby. 800 Motor Guru provides services across all areas of Dubai with fast booking, on-site support, and workshop repair options. The team reaches the customer location, inspects the vehicle, and offers the right solution without delay. This makes 800 Motor Guru a convenient and dependable choice for customers in any part of Dubai.
+                    </p>
                 </div>
 
-                {/* Buttons Section - Right Side */}
-                <div className='lg:w-1/3'>
-                    <div className='bg-gray-50 dark:bg-gray-900 rounded-xl p-6 shadow-lg'>
-                        <h3 className='text-xl font-bold mb-4 text-gray-800 dark:text-white'>
-                            Select Your Location
-                        </h3>
-                        <div className='flex flex-col gap-4'>
-                            {locations.map((item, index) => (
-                                <div key={index} className='flex flex-col gap-2'>
-                                    <button
-                                        onClick={() => setActiveLocation(index)}
-                                        className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 text-left ${
-                                            activeLocation === index
-                                                ? 'bg-gradient-to-r from-orange-600 to-orange-700 text-white shadow-lg'
-                                                : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
-                                        }`}
-                                    >
-                                        {item.name}
-                                    </button>
-                                    
-                                    {/* Description Below Each Button - Only shows for active location */}
-                                    {activeLocation === index && (
-                                        <div className='p-4 bg-orange-50 dark:bg-gray-800 rounded-lg border-l-4 border-orange-500 animate-fadeIn'>
-                                            <p className='text-gray-700 dark:text-gray-300 text-sm leading-relaxed'>
-                                                {item.description}
-                                            </p>
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
+                {/* Map and Buttons Section */}
+                <div className='flex flex-col lg:flex-row gap-8 lg:gap-10'>
+                    {/* Map Section - Left Side */}
+                    <div className='lg:w-2/3 overflow-hidden  transition-all duration-300 hover:shadow-3xl'>
+                        <iframe
+                            src={locations[activeLocation].map}
+                            width="100%"
+                            height="550"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title={`${locations[activeLocation].name} Map`}
+                            className="w-full"
+                        ></iframe>
+                    </div>
+
+                    {/* Buttons Section - Right Side */}
+                    <div className='lg:w-1/3'>
+                        <div className='bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-xl ring-1 ring-gray-100 dark:ring-gray-800 sticky top-24'>
+                            <div className='flex items-center gap-3 mb-6'>
+                                <div className='w-1 h-8 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full'></div>
+                                <h3 className='text-2xl font-bold text-gray-800 dark:text-white'>
+                                    Select Your Location
+                                </h3>
+                            </div>
+                            <div className='flex flex-col gap-3'>
+                                {locations.map((item, index) => (
+                                    <div key={index} className='flex flex-col gap-2'>
+                                        <button
+                                            onClick={() => setActiveLocation(index)}
+                                            className={`group w-full px-5 py-3.5 rounded-xl font-semibold transition-all duration-300 text-left ${
+                                                activeLocation === index
+                                                    ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg shadow-orange-500/25'
+                                                    : 'bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-orange-50 dark:hover:bg-gray-700 hover:text-orange-600 dark:hover:text-orange-400 border border-gray-200 dark:border-gray-700'
+                                            }`}
+                                        >
+                                            <div className='flex items-center justify-between'>
+                                                <span>{item.name}</span>
+                                                {activeLocation === index && (
+                                                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                    </svg>
+                                                )}
+                                            </div>
+                                        </button>
+                                        
+                                        {/* Description Below Each Button - Only shows for active location */}
+                                        {activeLocation === index && (
+                                            <div className='p-5 bg-gradient-to-r from-orange-50 to-amber-50 dark:from-gray-800 dark:to-gray-800/50 rounded-xl border-l-4 border-orange-500 animate-fadeIn'>
+                                                <p className='text-gray-700 dark:text-gray-300 text-sm leading-relaxed'>
+                                                    {item.description}
+                                                </p>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <style jsx>{`
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-10px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                    .animate-fadeIn {
+                        animation: fadeIn 0.3s ease-in-out;
+                    }
+                    .shadow-3xl {
+                        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+                    }
+                `}</style>
             </div>
-<style jsx>{`
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    .animate-fadeIn {
-        animation: fadeIn 0.3s ease-in-out;
-    }
-`}</style>
         </div>
-          </div>
     )
 }
 
 export default HowItWorks
-

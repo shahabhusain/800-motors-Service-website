@@ -6,7 +6,6 @@ import { closeModal, setLoading } from '@/app/store/slice/authAppoitmentModelSli
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, ArrowLeft, Mail, Phone, X } from 'lucide-react';
 import { FaServicestack, FaUser } from 'react-icons/fa';
-import { MdLocationPin } from "react-icons/md";
 
 const AppointmentModal = () => {
   const dispatch = useDispatch();
@@ -18,7 +17,6 @@ const AppointmentModal = () => {
     fullName: '',
     email: '',
     phone: '',
-    location: '',
     service: '',
     message: '',
   });
@@ -34,7 +32,6 @@ const AppointmentModal = () => {
     e.preventDefault();
     dispatch(setLoading(true));
     
-    // Simulate API call - replace with your actual API
     setTimeout(() => {
       console.log('Appointment Data:', formData);
       alert('Appointment booked successfully!');
@@ -44,7 +41,6 @@ const AppointmentModal = () => {
         fullName: '',
         email: '',
         phone: '',
-        location: '',
         service: '',
         message: '',
       });
@@ -54,95 +50,87 @@ const AppointmentModal = () => {
   if (!isModalOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[99999] flex items-center justify-center">
+    <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-[#00000096] bg-opacity-70 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/80 backdrop-blur-sm"
         onClick={() => dispatch(closeModal())}
       ></div>
       
       {/* Modal Content */}
-      <div className={`relative w-full max-w-2xl mx-4 ${locale === "ar" ? "ml-52" : ""}`}>
-        <div className="bg-[#f8f8f815] backdrop-blur-lg rounded-2xl px-6 pb-8 pt-4 transition-colors">
-          {/* Close Button */}
-          <button
-            onClick={() => dispatch(closeModal())}
-            className="absolute top-4 right-4 text-gray-400 hover:text-white transition z-10"
-          >
-            <X size={24} />
-          </button>
+      <div className="relative w-full max-w-md mx-auto">
+        <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+          {/* Header */}
+          <div className="relative bg-orange-600 px-6 py-4">
+            <button
+              onClick={() => dispatch(closeModal())}
+              className="absolute top-4 right-4 text-white/70 hover:text-white transition"
+            >
+              <X size={20} />
+            </button>
+            <h2 className='text-xl font-bold text-white text-center'>
+              Book Appointment
+            </h2>
+            <p className="text-white/70 text-xs text-center mt-1">
+              We'll get back to you within 30 minutes
+            </p>
+          </div>
           
-          <h2 className='text-[24px] text-white font-semibold uppercase text-center'>Book Appointment</h2>
-          
-          <form onSubmit={handleSubmit} className="space-y-5 mt-6">
-            <div className='w-full px-4 py-2 flex items-center gap-x-3 bg-[#00000029] text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition'>
-              <FaUser className='text-[15px] text-gray-400' />
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="p-6 space-y-4">
+            <div className='flex items-center gap-3 px-4 py-2.5 bg-white/10 text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition-all'>
+              <FaUser className='text-gray-400 text-sm' />
               <input
                 type="text"
                 name="fullName"
                 value={formData.fullName}
                 onChange={handleChange}
-                placeholder={t('placeholders.fullName') || "Full Name"}
+                placeholder="Full Name"
                 required
-                className="w-full focus:outline-none border-none bg-transparent text-white placeholder:text-gray-400"
+                className="w-full bg-transparent focus:outline-none text-white placeholder:text-gray-400 text-sm"
               />
             </div>
 
-            <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029] text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition'>
-              <Mail size={18} className='text-gray-400' />
+            <div className='flex items-center gap-3 px-4 py-2.5 bg-white/10 text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition-all'>
+              <Mail size={16} className='text-gray-400' />
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder={t('placeholders.email') || "Email Address"}
+                placeholder="Email Address"
                 required
-                className="w-full focus:outline-none border-none bg-transparent text-white placeholder:text-gray-400"
+                className="w-full bg-transparent focus:outline-none text-white placeholder:text-gray-400 text-sm"
               />
             </div>
 
-            <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029] text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition'>
-              <Phone size={18} className='text-gray-400' />
+            <div className='flex items-center gap-3 px-4 py-2.5 bg-white/10 text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition-all'>
+              <Phone size={16} className='text-gray-400' />
               <input
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder={t('placeholders.phone') || "Phone Number"}
+                placeholder="Phone Number"
                 required
-                className="w-full focus:outline-none border-none bg-transparent text-white placeholder:text-gray-400"
+                className="w-full bg-transparent focus:outline-none text-white placeholder:text-gray-400 text-sm"
               />
             </div>
 
-            <div className='flex items-center justify-between gap-x-3'>
-              <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029] text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition'>
-                <MdLocationPin className='text-[15px] text-gray-400' />
-                <input
-                  type="text"
-                  name="location"
-                  value={formData.location}
-                  onChange={handleChange}
-                  placeholder="Location"
-                  required
-                  className="w-full focus:outline-none border-none bg-transparent text-white placeholder:text-gray-400"
-                />
-              </div>
-              
-              <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029] text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition'>
-                <FaServicestack className='text-[15px] text-gray-400' />
-                <select 
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  required
-                  className='w-full focus:outline-none border-none bg-transparent text-white'
-                >
-                  <option className='bg-black text-gray-400' value="" disabled selected>Select Services</option>
-                  <option value="Tyre Replacement" className='bg-black text-white'>Tyre Replacement</option>
-                  <option value="Battery Replacement" className='bg-black text-white'>Battery Replacement</option>
-                  <option value="Engine Service" className='bg-black text-white'>Engine Service</option>
-                </select>
-              </div>
+            <div className='flex items-center gap-3 px-4 py-2.5 bg-white/10 text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition-all'>
+              <FaServicestack className='text-gray-400 text-sm' />
+              <select 
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                required
+                className='w-full bg-transparent focus:outline-none text-white text-sm'
+              >
+                <option value="" disabled className='bg-gray-800'>Select Service</option>
+                <option value="Tyre Replacement" className='bg-gray-800'>Tyre Replacement</option>
+                <option value="Battery Replacement" className='bg-gray-800'>Battery Replacement</option>
+                <option value="Engine Service" className='bg-gray-800'>Engine Service</option>
+              </select>
             </div>
 
             <div>
@@ -151,20 +139,20 @@ const AppointmentModal = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows="3"
-                placeholder="Additional Message"
-                className="w-full px-4 py-2 bg-[#00000029] text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none resize-none transition placeholder:text-gray-400"
+                placeholder="Additional Message (optional)"
+                className="w-full px-4 py-2.5 bg-white/10 text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none resize-none transition-all placeholder:text-gray-400 text-sm"
               ></textarea>
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-orange-800 disabled:cursor-not-allowed text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg text-lg"
+              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-orange-800 disabled:to-orange-800 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg text-base"
             >
-              {loading ? 'Booking...' : (t('submitButton') || 'Book Appointment')}
+              {loading ? 'Booking...' : 'Book Appointment'}
               {!loading && (locale === 'ar' ? 
-                <ArrowLeft className="w-5 h-5" /> : 
-                <ArrowRight className="w-5 h-5" />
+                <ArrowLeft className="w-4 h-4" /> : 
+                <ArrowRight className="w-4 h-4" />
               )}
             </button>
           </form>

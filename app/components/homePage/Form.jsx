@@ -1,92 +1,153 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { ArrowRight, ArrowLeft, Mail, Phone } from 'lucide-react';
 import { FaServicestack, FaUser } from 'react-icons/fa';
-import { MdLocationPin } from "react-icons/md";
+
 const Form = () => {
   const t = useTranslations('landingPage.form');
-  const locale = useLocale(); // You'll need to import useLocale from 'next-intl'
-  
+  const locale = useLocale();
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    service: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      console.log('Form Data:', formData);
+      alert('Quote requested successfully!');
+      setIsSubmitting(false);
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        service: '',
+        message: '',
+      });
+    }, 1000);
+  };
+
   return (
-    <div className={`mt-3 ${locale === "ar" ? " ml-52" : ""}`}>
-      {/* RIGHT FORM (Desktop) */}
-      <div className=" mt-12 md:mt-0 w-full mx-auto p">
-         
-        <div className="bg-[#f8f8f815] backdrop-blur-lg rounded-2xl  px-6 pb-8 pt-4 transition-colors">
-         <h2 className='text-[24px] text-white font-semibold uppercase'>Get a quote</h2>
-          <form className="space-y-5 mt-4">
-               <div className='w-full px-4 py-2 flex  items-center gap-x-3 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
-                <FaUser className=' text-[15px] text-gray-500' />
-                <input
+    <div className="w-full">
+      <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 shadow-2xl border border-white/20">
+        <h2 className='text-2xl font-bold text-white text-center mb-6'>
+          Get a Quote
+        </h2>
+        
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Full Name */}
+          <div className='flex items-center gap-3 px-4 py-2.5 bg-black/30 text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition-all'>
+            <FaUser className='text-gray-400 text-sm' />
+            <input
               type="text"
-              placeholder={t('placeholders.fullName')}
-              className=" w-full focus:outline-none border-none"
+              name="fullName"
+              value={formData.fullName}
+              onChange={handleChange}
+              placeholder={t('placeholders.fullName') || "Full Name"}
+              required
+              className="w-full bg-transparent focus:outline-none text-white placeholder:text-gray-400 text-sm"
             />
-               </div>
+          </div>
 
-               <div className=' flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
-                   <Mail size={18} className=' text-gray-500' />
-                      <input
+          {/* Email */}
+          <div className='flex items-center gap-3 px-4 py-2.5 bg-black/30 text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition-all'>
+            <Mail size={16} className='text-gray-400' />
+            <input
               type="email"
-              placeholder={t('placeholders.email')}
-              className=" w-full focus:outline-none border-none"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder={t('placeholders.email') || "Email Address"}
+              required
+              className="w-full bg-transparent focus:outline-none text-white placeholder:text-gray-400 text-sm"
             />
-               </div>
+          </div>
 
-       
-              <div className=' flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
-                <Phone size={18} className=' text-gray-500' />
-                    <input
+          {/* Phone */}
+          <div className='flex items-center gap-3 px-4 py-2.5 bg-black/30 text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition-all'>
+            <Phone size={16} className='text-gray-400' />
+            <input
               type="tel"
-              placeholder={t('placeholders.phone')}
-              className=" w-full focus:outline-none border-none"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder={t('placeholders.phone') || "Phone Number"}
+              required
+              className="w-full bg-transparent focus:outline-none text-white placeholder:text-gray-400 text-sm"
             />
-              </div>
-         
+          </div>
 
-               <div className='flex items-center justify-between gap-x-3'>
-                   <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
-                            <MdLocationPin className=' text-[15px] text-gray-500' />
-  <input
-              type="location"
-              placeholder="Location"
-              className="w-full focus:outline-none border-none"
-            />
-                   </div>
-                      <div className='flex items-center gap-x-3 w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none transition'>
-                            <FaServicestack className=' text-[15px] text-gray-500' />
-                             <select className='w-full focus:outline-none border-none'>
-                              <option  className=' bg-black text-white' value="Select Services" disabled selected>Select Services</option>
-                              <option value="Tyre Replacement" className=' bg-black text-white'>Tyre Replacement</option>
-                              <option value="Battery Replacement" className=' bg-black text-white'>Battery Replacement</option>
-                               <option value="Engine Service" className=' bg-black text-white'>Engine Service</option>
-
-                             </select>
-                   </div>
-               </div>
-            
-
-            {/* Message */}
-            <div>
-              <textarea
-                rows="3"
-                placeholder="Message"
-                className="w-full px-4 py-2 bg-[#00000029]  text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none resize-none transition"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 rounded-lg flex items-center justify-center gap-2 transition-all shadow-md hover:shadow-lg text-lg"
+          {/* Service Selection */}
+          <div className='flex items-center gap-3 px-4 py-2.5 bg-black/30 text-white rounded-lg focus-within:ring-2 focus-within:ring-orange-500 transition-all'>
+            <FaServicestack className='text-gray-400 text-sm' />
+            <select 
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              required
+              className='w-full bg-transparent focus:outline-none text-white text-sm'
             >
-              {t('submitButton')} 
-              {locale === 'ar' ? 
-                <ArrowLeft className="w-5 h-5" /> : 
-                <ArrowRight className="w-5 h-5" />
-              }
-            </button>
-          </form>
-        </div>
+              <option value="" disabled className='bg-gray-900'>Select Service</option>
+              <option value="Tyre Replacement" className='bg-gray-900'>Tyre Replacement</option>
+              <option value="Battery Replacement" className='bg-gray-900'>Battery Replacement</option>
+              <option value="Engine Service" className='bg-gray-900'>Engine Service</option>
+              <option value="AC Repair" className='bg-gray-900'>AC Repair</option>
+              <option value="Brake Service" className='bg-gray-900'>Brake Service</option>
+            </select>
+          </div>
+
+          {/* Message */}
+          <div>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="3"
+              placeholder="Additional Message (optional)"
+              className="w-full px-4 py-2.5 bg-black/30 text-white rounded-lg focus:ring-2 focus:ring-orange-500 outline-none resize-none transition-all placeholder:text-gray-400 text-sm"
+            ></textarea>
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-orange-800 disabled:to-orange-800 text-white font-semibold py-3 rounded-lg flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-xl text-base"
+          >
+            {isSubmitting ? (
+              <span>Processing...</span>
+            ) : (
+              <>
+                {t('submitButton') || "Request Quote"}
+                {locale === 'ar' ? 
+                  <ArrowLeft className="w-4 h-4" /> : 
+                  <ArrowRight className="w-4 h-4" />
+                }
+              </>
+            )}
+          </button>
+        </form>
+        
+        {/* Trust Badge */}
+        <p className="text-center text-white/60 text-xs mt-4">
+          No spam. We'll respond within 24 hours.
+        </p>
       </div>
     </div>
   );
